@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    $('[data-toggle="tooltip"]').tooltip();
 
     $(".colour-shifter").hover(
     	function(){ //mouseover
@@ -13,7 +14,6 @@ $(document).ready(function(){
         	img.attr("src",uri_badge)
     	}
     );
-
 
 
     $(".estadistica").on('click', function(event) {
@@ -32,16 +32,19 @@ $(document).ready(function(){
         $.ajax({url: url_action,
 
 				success: function(result){
-				//console.log(result);
-				$("#dashboard").modal();
-				$("#modalBody").html(result);
-                dragscroll.reset();
-                $('[data-toggle="tooltip"]').tooltip(); 
 
-        	}
-        	, error: function(xhr){
-            	alert("Error: " + xhr.status + " " + xhr.statusText);
-        	}
+    				//console.log(result);
+    				$("#dashboard").modal();
+    				$("#modalBody").html(result);
+                    dragscroll.reset();
+                    $('[data-toggle="tooltip"]').tooltip(); 
+
+            	},
+                
+            	error: function(xhr){
+                	alert("Error: " + xhr.status + " " + xhr.statusText);
+            	}
+
         });
     });
 
