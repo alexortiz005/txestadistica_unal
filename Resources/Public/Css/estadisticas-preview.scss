@@ -1,0 +1,77 @@
+.estadisticasPreview{
+	.tab-content{
+		padding: 20px;
+		background: whitesmoke;
+		margin-top: -45px;
+		box-shadow: 0px 0px 15px 15px #f5f5f5;
+		font-size: 18px;
+		border-radius: 5%;
+	}
+
+	.nav-tabs > li > a:hover{
+		background: #eeeeee;
+		box-shadow: 0px 0px 15px 15px #eeeeee;				
+	}
+
+	.nav-tabs > li > a{
+		margin-bottom: 22px;
+		border-radius: 10% 10% 0% 0%;
+	}
+
+	.nav-tabs > li{
+		margin-top: 30px;
+		border-radius: 10% 10% 0% 0%;
+		padding-bottom: 20px;
+	}
+
+	.nav-tabs li.active {
+		background: whitesmoke;
+		box-shadow: 0px 0px 15px 15px #f5f5f5;
+	}
+
+	.nav-tabs > li.active > a:hover{
+		background: whitesmoke;
+		box-shadow: 0px 0px 15px 15px #f5f5f5;
+	}
+
+	@keyframes in {
+		0%   {opacity: 1;}
+		10%  {opacity: 0;}
+		100% {opacity: 1;}
+	}
+
+	@keyframes out {
+		0%   {opacity: 1;}
+		10%  {opacity: 0;}
+		100% {opacity: 1;}
+	}
+
+
+	.unBadge:hover {
+		animation-name: in;
+		animation-duration: 1s;
+	}
+
+	.unBadgeImg {
+		animation-name: out;
+		animation-duration: 1s;
+	}
+
+	.unBadgeData{
+		text-align: center;
+		font-size: 25px;
+	}
+
+	.badgeData > h2{
+		font-weight: 900;
+		text-shadow: 0px 0px 5px #888888;
+	}
+
+	ul, ol {
+		margin-left: 0px;
+	}
+
+
+
+
+}

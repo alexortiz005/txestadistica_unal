@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-11-08T05:36:12Z" product-name="estadistica_unal">
+		<header/>
+		<body>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
+				<source>Categoria</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.alt_badge">
+				<source>Alt Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.estadisticas">
+				<source>Estadisticas</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion">
+				<source>Desagregacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.archivos">
+				<source>Archivos</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.atributos">
+				<source>Atributos</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo">
+				<source>Archivo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.contenido">
+				<source>Contenido</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.explicacion">
+				<source>Explicacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo">
+				<source>Atributo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo.contenido">
+				<source>Contenido</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica">
+				<source>Estadistica</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.descripcion">
+				<source>Descripcion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.total">
+				<source>Total</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.alt_badge">
+				<source>Alt Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.desagregaciones">
+				<source>Desagregaciones</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.atributos">
+				<source>Atributos</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

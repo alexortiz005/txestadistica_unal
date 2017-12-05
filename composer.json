@@ -1,0 +1,19 @@
+{
+    "name": "unal/estadistica-unal",
+    "type": "typo3-cms-extension",
+    "description": "Extension dise\u00f1ada para dar soporte a la exposicion de datos estadisticos para el proyecto de fortalecimiento de la actividad estadistica",
+    "authors": [
+        {
+            "name": "Alexis Ortiz",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unal\\EstadisticaUnal\\": "Classes"
+        }
+    }
+}

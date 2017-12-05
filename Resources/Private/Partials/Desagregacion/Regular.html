@@ -1,0 +1,93 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="container-fluid">
+
+	<div class="col-md-6 panelArchivos regularActual">
+		<!-- Inicio titulo panel historico-->
+		<h4>
+		<b>
+			<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.texto_tipo_historico" />
+			<f:format.case mode="lower">{desagregacion.nombreDisplay}</f:format.case>
+		</b>
+		</h4>
+		<!-- Fin titulo panel historico-->
+		<ul class="nav nav-pills nav-justified">
+			<f:for each="{desagregacion.archivos}" as="archivo" iteration="iterator">
+				<f:if condition="{archivo.tipo}==0">
+					<li><a data-toggle="pill" href="#archivo{archivo.nombreDisplay}{archivo.uid}">{archivo.nombreDisplay}</a></li>
+				</f:if>
+			</f:for>
+		</ul>
+
+		<div class="tab-content" style="margin-bottom: 0px">
+			<f:for each="{desagregacion.archivos}" as="archivo" iteration="iterator">
+				<f:if condition="{archivo.tipo}==0">
+
+					<div id="archivo{archivo.nombreDisplay}{archivo.uid}" class="player tab-pane fade">
+						    <iframe id="iframe{archivo.nombre}{archivo.uid}" src="/{archivo.contenido.originalResource.publicUrl}" frameborder="0"></iframe>		
+						    <button type="button" class="btn btn-info btn-block" 
+						    		data-toggle="tooltip" 
+						    		data-placement="bottom" 
+						    		title="Fullscreen" 
+						    		onclick="FullScreenHelper.toggle(document.getElementById('iframe{archivo.nombre}{archivo.uid}'));"
+						    		>
+						    	 <span class="glyphicon glyphicon-fullscreen">
+						    </button>			
+					</div>
+
+				</f:if>
+			</f:for>
+		</div>
+	</div>
+
+	<div class="col-md-6 panelArchivos regularHistorico">
+		<!-- Inicio titulo panel actual -->
+		<h4>
+		<b>
+			<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.texto_tipo_actual" />
+			<f:format.case mode="lower">{desagregacion.nombreDisplay}</f:format.case>
+		</b>
+		</h4>
+		<!-- Fin titulo panel actual-->
+		<ul class="nav nav-pills nav-justified">
+			<f:for each="{desagregacion.archivos}" as="archivo" iteration="iterator">
+				<f:if condition="{archivo.tipo}==1">
+					<li><a data-toggle="pill" href="#archivo{archivo.nombreDisplay}{archivo.uid}">{archivo.nombreDisplay}</a></li>
+				</f:if>
+			</f:for>
+		</ul>
+
+		<div class="tab-content" style="margin-bottom: 0px">
+			<f:for each="{desagregacion.archivos}" as="archivo" iteration="iterator">
+				<f:if condition="{archivo.tipo}==1">
+					<div id="archivo{archivo.nombreDisplay}{archivo.uid}" class="tab-pane fade">
+						<iframe id="iframe{archivo.nombre}{archivo.uid}" src="/{archivo.contenido.originalResource.publicUrl}" frameborder="0"></iframe>
+						<button type="button" class="btn btn-info btn-block" 
+						    		data-toggle="tooltip" 
+						    		data-placement="bottom" 
+						    		title="Fullscreen" 
+						    		onclick="FullScreenHelper.toggle(document.getElementById('iframe{archivo.nombre}{archivo.uid}'));"
+						    		>
+						    	 <span class="glyphicon glyphicon-fullscreen">
+						    </button>
+					</div>
+				</f:if>
+			</f:for>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $(".panelArchivos > .nav-pills").each(function() {
+                $( this ).children().first().addClass( "active" )
+            });
+
+            $(".panelArchivos > .tab-content").each(function() {
+                $( this ).children().first().addClass( "in active" )
+            });
+        });
+	</script>
+
+</div>
+</html>

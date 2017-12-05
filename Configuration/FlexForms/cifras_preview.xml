@@ -1,0 +1,95 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>General</sheetTitle>
+                    <sheetDescription>General Description</sheetDescription>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.estadisticas_a_mostrar>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_cifrasunalbe.xlf:plugin_cifraspreview_estadisticas</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>tx_estadisticaunal_domain_model_estadistica</allowed>
+                                <size>3</size>
+                                <maxitems>3</maxitems>
+                                <minitems>3</minitems>
+                                <show_thumbs>0</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.estadisticas_a_mostrar>
+                    <settings.badge_ver_mas>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_cifrasunalbe.xlf:plugin_cifraspreview_badge_btnvermas</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>file</internal_type>
+                                <allowed>png</allowed>
+                                <size>1</size>
+                                <uploadfolder>fileadmin/user_upload</uploadfolder>
+                                <show_thumbs>0</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.badge_ver_mas>
+
+                    <settings.altBadge_ver_mas>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_cifrasunalbe.xlf:plugin_cifraspreview_altBadge_btnvermas</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>file</internal_type>
+                                <allowed>png</allowed>
+                                <size>1</size>
+                                <uploadfolder>fileadmin/user_upload</uploadfolder>
+                                <show_thumbs>0</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.altBadge_ver_mas>
+
+                    <settings.texto_ver_mas>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_cifrasunalbe.xlf:plugin_cifraspreview_texto_btnvermas</label>
+                            <config>
+                                <type>input</type>
+                             </config>
+                        </TCEforms>
+                    </settings.texto_ver_mas>
+
+                    <settings.subtexto_ver_mas>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_cifrasunalbe.xlf:plugin_cifraspreview_subtexto_btnvermas</label>
+                            <config>
+                                <type>input</type>
+                             </config>
+                        </TCEforms>
+                    </settings.subtexto_ver_mas>
+
+                    <settings.link_ver_mas>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_cifrasunalbe.xlf:plugin_cifraspreview_link_btnvermas</label>
+                            <config>
+                                <type>input</type>
+                                <renderType>inputLink</renderType>
+                             </config>
+                        </TCEforms>
+                    </settings.link_ver_mas>
+
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

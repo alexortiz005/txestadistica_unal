@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-11-08T05:36:12Z" product-name="estadistica_unal">
+		<header/>
+		<body>
+			<trans-unit id="nombre.description">
+				<source>nombre</source>
+			</trans-unit>
+			<trans-unit id="nombre_display.description">
+				<source>nombreDisplay</source>
+			</trans-unit>
+			<trans-unit id="tipo.description">
+				<source>tipo</source>
+			</trans-unit>
+			<trans-unit id="archivos.description">
+				<source>archivos</source>
+			</trans-unit>
+			<trans-unit id="atributos.description">
+				<source>atributos</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
