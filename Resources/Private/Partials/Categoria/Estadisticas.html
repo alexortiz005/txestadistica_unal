@@ -36,7 +36,7 @@
 					<div class="unBadgeData col-md-12">
 						<h5>{estadistica.nombreDisplay}</h5>
 						<h6 style="display: none">
-							{f:uri.action(action: 'atributos', arguments: {estadistica: estadistica}, controller: 'Estadistica')}
+							{f:uri.page(pageUid: pagina_protocolo_pageuid,additionalParams:{estadisticaUid:estadistica.uid})}							
 						</h6>
 					</div>
 				</div>

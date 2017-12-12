@@ -45,12 +45,8 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Unal.EstadisticaUnal',
             'Showprotocolo',
-            [
-                'Categoria' => 'list, show',
-                'Desagregacion' => 'list, show',
-                'Archivo' => 'list, show',
-                'Atributo' => 'list, show',
-                'Estadistica' => 'list, show'
+            [                
+                'Atributo' => 'handle,list, show',
             ],
             // non-cacheable actions
             [

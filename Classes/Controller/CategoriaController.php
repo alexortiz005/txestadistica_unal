@@ -44,8 +44,15 @@ class CategoriaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function showAction(\Unal\EstadisticaUnal\Domain\Model\Categoria $categoria)
     {
+        $uri_pagina_protocolo = $this->settings['link_pagina_protocolo'];
+        $exploded_uri_pagina_protocolo = explode("=",$uri_pagina_protocolo);
+        $pagina_protocolo_pageuid = $exploded_uri_pagina_protocolo[1];
+
         $categorias = $this->categoriaRepository->findAll();
+        
         $this->view->assignMultiple([
+            'uri_pagina_protocolo' => $uri_pagina_protocolo,
+            'pagina_protocolo_pageuid' => $pagina_protocolo_pageuid,
             'categoria' => $categoria,
             'categorias' => $categorias
         ]);

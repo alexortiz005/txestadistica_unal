@@ -27,6 +27,8 @@ call_user_func(
 
             $_EXTKEY='estadistica_unal';
             $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
+
+            //pi_flexform value for cifras preview
             $frontendpluginName = 'Estadisticaspreview';
             $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
 
@@ -34,6 +36,16 @@ call_user_func(
             $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature]= 'select_key, pages, recursive';
 
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/cifras_preview.xml');
+    
+
+            //pi_flexform value for categorias
+            $frontendpluginName = 'Listcategorias';
+            $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
+
+            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature]= 'select_key';
+
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/categorias.xml');
 
 
             \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(

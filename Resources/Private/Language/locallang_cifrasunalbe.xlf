@@ -27,6 +27,9 @@
             <trans-unit id="plugin_cifraspreview_link_btnvermas">
 				<source>Link del botón ver mas</source>
 			</trans-unit>
+			<trans-unit id="plugin_categorias_pagina_protocolo">
+				<source>Página donde se encontraran los protocolos</source>
+			</trans-unit>
 
 		</body>
 	</file>
