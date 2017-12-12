@@ -58,12 +58,15 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
         $this->view->assign('estadistica', $estadistica);
         print_r($this->view->render());
         //detenemos la ejecucion para que solo envie parcialmente la vista
-        die();
+        die;
     }
 
+    /**
+     * @param \Unal\EstadisticaUnal\Domain\Model\Estadistica $estadistica
+     */
     public function atributosAction(\Unal\EstadisticaUnal\Domain\Model\Estadistica $estadistica)
     {
-        $this->view->assign('estadistica', $estadistica);       
+        $this->view->assign('estadistica', $estadistica);
     }
 
     /**

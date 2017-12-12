@@ -1,9 +1,16 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-{categoria.estadisticas}
 <table class="tx-estadistica-unal" >
 	<tr>
 		<td>
-			<f:translate key="tx_estadisticaunal_domain_model_categoria.nombreDisplay" />
+			<f:translate key="tx_estadisticaunal_domain_model_categoria.nombre" />
+		</td>
+		<td>
+		{categoria.nombre}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_estadisticaunal_domain_model_categoria.nombre_display" />
 		</td>
 		<td>
 		{categoria.nombreDisplay}
@@ -23,18 +30,6 @@
 		</td>
 		<td>
 				<f:image src="{categoria.altBadge.originalResource.publicUrl}" width="200"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_estadisticaunal_domain_model_categoria.estadisticas" />
-		</td>
-		<td>
-			<ul>
-				<f:for each="{categoria.estadisticas}" as="estadistica">
-					<li>{estadistica.estadistica}</li>
-				</f:for>
-			</ul>
 		</td>
 	</tr>
 </table>

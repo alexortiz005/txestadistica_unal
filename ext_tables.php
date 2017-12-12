@@ -14,10 +14,27 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Unal.EstadisticaUnal',
             'Listcategorias',
-            'Categorias Main'
+            'Categorias'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Unal.EstadisticaUnal',
+            'Showprotocolo',
+            'Protocolo'
         );
 
         if (TYPO3_MODE === 'BE') {
+
+            $_EXTKEY='estadistica_unal';
+            $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
+            $frontendpluginName = 'Estadisticaspreview';
+            $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
+
+            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature]= 'select_key, pages, recursive';
+
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/cifras_preview.xml');
+
 
             \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
                 'Unal.EstadisticaUnal',

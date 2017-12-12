@@ -4,7 +4,7 @@
             "config": {
                 "position": [
                     10,
-                    340.399993896484375
+                    340
                 ]
             },
             "name": "New Model Object",
@@ -96,7 +96,7 @@
             "config": {
                 "position": [
                     497,
-                    319.399993896484375
+                    319
                 ]
             },
             "name": "New Model Object",
@@ -189,7 +189,7 @@
             "config": {
                 "position": [
                     747,
-                    374.399993896484375
+                    374
                 ]
             },
             "name": "New Model Object",
@@ -279,7 +279,7 @@
             "config": {
                 "position": [
                     485,
-                    627.399993896484375
+                    627
                 ]
             },
             "name": "New Model Object",
@@ -349,7 +349,7 @@
             "config": {
                 "position": [
                     251,
-                    354.399993896484375
+                    354
                 ]
             },
             "name": "New Model Object",
@@ -524,7 +524,16 @@
                     "switchableActions": ""
                 },
                 "key": "listcategorias",
-                "name": "Categorias Main"
+                "name": "Categorias"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "key": "showprotocolo",
+                "name": "Protocolo"
             }
         ],
         "vendorName": "Unal"
@@ -592,7 +601,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-11-08 05:36",
+        "last_modified": "2017-12-11 04:34",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

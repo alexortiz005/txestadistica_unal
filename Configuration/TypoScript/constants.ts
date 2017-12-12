@@ -23,6 +23,25 @@ plugin.tx_estadisticaunal_listcategorias {
         # cat=plugin.tx_estadisticaunal_listcategorias/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:estadistica_unal/Resources/Private/Layouts/
     }
+    persistence {
+        # cat=plugin.tx_estadisticaunal_listcategorias//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+
+plugin.tx_estadisticaunal_showprotocolo {
+    view {
+        # cat=plugin.tx_estadisticaunal_showprotocolo/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:estadistica_unal/Resources/Private/Templates/
+        # cat=plugin.tx_estadisticaunal_showprotocolo/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:estadistica_unal/Resources/Private/Partials/
+        # cat=plugin.tx_estadisticaunal_showprotocolo/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:estadistica_unal/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_estadisticaunal_showprotocolo//a; type=string; label=Default storage PID
+        storagePid =
+    }
 }
 
 module.tx_estadisticaunal_cifrasunalbe {
