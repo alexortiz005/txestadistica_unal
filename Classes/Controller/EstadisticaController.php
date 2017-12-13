@@ -25,6 +25,15 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      */
     protected $estadisticaRepository = null;
 
+     /**
+     * categoriaRepository
+     *
+     * @var \Unal\EstadisticaUnal\Domain\Repository\CategoriaRepository
+     * @inject
+     */
+    protected $categoriaRepository = null;
+
+
     /**
      * action list
      *
@@ -99,5 +108,30 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
             'texto_boton_ver_mas' => $texto_boton_ver_mas,
             'subtexto_boton_ver_mas' => $subtexto_boton_ver_mas
         ]);
+    }
+
+
+      /**
+     * action handle
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributo
+     * @return void
+     */
+    public function protocoloAction()
+    {
+
+        if($this->request->hasArgument('estadistica')){
+
+            $uid=$this->request->getArgument('estadistica');
+            $estadistica=$this->estadisticaRepository->findByUid($uid);
+            $this->view->assign('estadistica',$estadistica );  
+
+        }else{
+
+            $categorias = $this->categoriaRepository->findAll();
+            $this->view->assign('categorias',$categorias );  
+
+        }
+        
     }
 }

@@ -7,6 +7,8 @@ $(document).ready(function(){
         var cantidad_elementos=bannerList.children().length
         var cantidad_faltante= cantidad_minima-cantidad_elementos
 
+        console.log(cantidad_faltante)
+
         if(cantidad_faltante>0){
 
             if(cantidad_faltante%2==0){

@@ -39,16 +39,5 @@ class AtributoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $this->view->assign('atributo', $atributo);
     }
 
-    /**
-     * action handle
-     *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributo
-     * @return void
-     */
-    public function handleAction()
-    {
-        print_r($this->request);
-        die('koko from handleAction');
-        $this->view->assign('atributo', $atributo);
-    }
+  
 }

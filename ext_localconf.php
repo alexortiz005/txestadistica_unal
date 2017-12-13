@@ -29,7 +29,7 @@ call_user_func(
                 'Desagregacion' => 'list, show',
                 'Archivo' => 'list, show',
                 'Atributo' => 'list, show',
-                'Estadistica' => 'list, show, modal, atributos'
+                'Estadistica' => 'list, show, modal'
             ],
             // non-cacheable actions
             [
@@ -46,7 +46,7 @@ call_user_func(
             'Unal.EstadisticaUnal',
             'Showprotocolo',
             [                
-                'Atributo' => 'handle,list, show',
+                'Estadistica' => 'protocolo'
             ],
             // non-cacheable actions
             [

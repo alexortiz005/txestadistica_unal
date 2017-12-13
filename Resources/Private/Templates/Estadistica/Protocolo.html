@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages />
+	<div class="container-fluid">
+		<f:if condition="{estadistica}">
+		    <f:then>
+				<f:render partial="Estadistica/Protocolo" arguments="{estadistica:estadistica}" />
+			</f:then>
+		    <f:else>
+			    <f:render partial="Categoria/ListProtocolo" arguments="{categorias:categorias}" />
+		    </f:else>		   
+		</f:if>
+	</div>
+</f:section>
+</html>
