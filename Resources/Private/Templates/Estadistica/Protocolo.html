@@ -4,13 +4,13 @@
 <f:section name="main">
 
 <f:flashMessages />
-	<div class="container-fluid">
+	<div class="protocolo container-fluid">
 		<f:if condition="{estadistica}">
 		    <f:then>
 				<f:render partial="Estadistica/Protocolo" arguments="{estadistica:estadistica}" />
 			</f:then>
 		    <f:else>
-			    <f:render partial="Categoria/ListProtocolo" arguments="{categorias:categorias}" />
+			    <f:render partial="Categoria/ListProtocolo" arguments="{categorias:categorias,texto:texto}" />
 		    </f:else>		   
 		</f:if>
 	</div>

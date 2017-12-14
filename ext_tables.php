@@ -48,6 +48,15 @@ call_user_func(
             \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/categorias.xml');
 
 
+            //pi_flexform value for protocolo
+            $frontendpluginName = 'Showprotocolo';
+            $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
+
+            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/protocolo.xml');
+
+
             \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
                 'Unal.EstadisticaUnal',
                 'web', // Make module a submodule of 'web'

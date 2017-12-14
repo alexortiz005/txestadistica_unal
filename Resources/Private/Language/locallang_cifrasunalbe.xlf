@@ -30,6 +30,9 @@
 			<trans-unit id="plugin_categorias_pagina_protocolo">
 				<source>Página donde se encontraran los protocolos</source>
 			</trans-unit>
+			<trans-unit id="plugin_showprotocolo_texto">
+				<source>Texto que acompañara la lista de protocolos</source>
+			</trans-unit>
 
 		</body>
 	</file>

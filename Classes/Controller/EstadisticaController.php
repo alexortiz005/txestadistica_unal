@@ -128,8 +128,14 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
 
         }else{
 
+
+            $texto= $this->settings['texto_protocolos'];   
             $categorias = $this->categoriaRepository->findAll();
-            $this->view->assign('categorias',$categorias );  
+
+            $this->view->assignMultiple([
+                'texto' => $texto,
+                'categorias' => $categorias
+            ]);  
 
         }
         
