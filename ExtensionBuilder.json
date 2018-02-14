@@ -279,7 +279,7 @@
             "config": {
                 "position": [
                     485,
-                    627
+                    586
                 ]
             },
             "name": "New Model Object",
@@ -324,9 +324,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "nombreDisplay",
-                            "propertyType": "String",
-                            "uid": "1496229072971"
+                            "propertyName": "contenido",
+                            "propertyType": "RichText",
+                            "uid": "7492461599"
                         },
                         {
                             "allowedFileTypes": "",
@@ -334,9 +334,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "contenido",
-                            "propertyType": "RichText",
-                            "uid": "7492461599"
+                            "propertyName": "tipo",
+                            "propertyType": "Select",
+                            "uid": "1119447860935"
                         }
                     ]
                 },
@@ -348,8 +348,8 @@
         {
             "config": {
                 "position": [
-                    251,
-                    354
+                    253,
+                    327
                 ]
             },
             "name": "New Model Object",
@@ -465,6 +465,66 @@
                             "uid": "1420406514387"
                         }
                     ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    223,
+                    626
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "TipoAtributo",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "725452541595"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombre",
+                            "propertyType": "String",
+                            "uid": "805365503966"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombreDisplay",
+                            "propertyType": "String",
+                            "uid": "561032931308"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
                 }
             }
         }
@@ -601,7 +661,7 @@
         }
     ],
     "log": {
-        "last_modified": "2017-12-11 04:34",
+        "last_modified": "2018-02-14 01:22",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

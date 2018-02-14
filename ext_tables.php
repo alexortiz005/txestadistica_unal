@@ -25,38 +25,6 @@ call_user_func(
 
         if (TYPO3_MODE === 'BE') {
 
-            $_EXTKEY='estadistica_unal';
-            $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
-
-            //pi_flexform value for cifras preview
-            $frontendpluginName = 'Estadisticaspreview';
-            $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
-
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature]= 'select_key, pages, recursive';
-
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/cifras_preview.xml');
-    
-
-            //pi_flexform value for categorias
-            $frontendpluginName = 'Listcategorias';
-            $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
-
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature]= 'select_key';
-
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/categorias.xml');
-
-
-            //pi_flexform value for protocolo
-            $frontendpluginName = 'Showprotocolo';
-            $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
-
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/protocolo.xml');
-
-
             \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
                 'Unal.EstadisticaUnal',
                 'web', // Make module a submodule of 'web'
@@ -90,6 +58,9 @@ call_user_func(
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_estadistica', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_estadistica');
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_tipoatributo', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_tipoatributo.xlf');
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_tipoatributo');
 
     }
 );

@@ -13,9 +13,9 @@ namespace Unal\EstadisticaUnal\Domain\Model;
  ***/
 
 /**
- * Atributo
+ * TipoAtributo
  */
-class Atributo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class TipoAtributo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * nombre
@@ -25,18 +25,11 @@ class Atributo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $nombre = '';
 
     /**
-     * contenido
+     * nombreDisplay
      *
      * @var string
      */
-    protected $contenido = '';
-
-    /**
-     * tipo
-     *
-     * @var int
-     */
-    protected $tipo = 0;
+    protected $nombreDisplay = '';
 
     /**
      * Returns the nombre
@@ -60,44 +53,23 @@ class Atributo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the contenido
+     * Returns the nombreDisplay
      *
-     * @return string $contenido
+     * @return string $nombreDisplay
      */
-    public function getContenido()
+    public function getNombreDisplay()
     {
-        return $this->contenido;
+        return $this->nombreDisplay;
     }
 
     /**
-     * Sets the contenido
+     * Sets the nombreDisplay
      *
-     * @param string $contenido
+     * @param string $nombreDisplay
      * @return void
      */
-    public function setContenido($contenido)
+    public function setNombreDisplay($nombreDisplay)
     {
-        $this->contenido = $contenido;
-    }
-
-    /**
-     * Returns the tipo
-     *
-     * @return int $tipo
-     */
-    public function getTipo()
-    {
-        return $this->tipo;
-    }
-
-    /**
-     * Sets the tipo
-     *
-     * @param int $tipo
-     * @return void
-     */
-    public function setTipo($tipo)
-    {
-        $this->tipo = $tipo;
+        $this->nombreDisplay = $nombreDisplay;
     }
 }

@@ -133,8 +133,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_desagregacion.tipo_regular', 0],
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_desagregacion.tipo_geografico', 1],
+                    ['-- Label --', 0],
                 ],
                 'size' => 1,
                 'maxitems' => 1,

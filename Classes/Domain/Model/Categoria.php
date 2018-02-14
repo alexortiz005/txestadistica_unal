@@ -8,7 +8,7 @@ namespace Unal\EstadisticaUnal\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
+ *  (c) 2018 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
  *
  ***/
 
@@ -51,7 +51,6 @@ class Categoria extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * estadisticas
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Estadistica>
-     * @cascade remove
      */
     protected $estadisticas = null;
 
@@ -96,6 +95,27 @@ class Categoria extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+    }
+
+    /**
+     * Returns the nombreDisplay
+     *
+     * @return string $nombreDisplay
+     */
+    public function getNombreDisplay()
+    {
+        return $this->nombreDisplay;
+    }
+
+    /**
+     * Sets the nombreDisplay
+     *
+     * @param string $nombreDisplay
+     * @return void
+     */
+    public function setNombreDisplay($nombreDisplay)
+    {
+        $this->nombreDisplay = $nombreDisplay;
     }
 
     /**
@@ -181,26 +201,5 @@ class Categoria extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setEstadisticas(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $estadisticas)
     {
         $this->estadisticas = $estadisticas;
-    }
-
-    /**
-     * Returns the nombreDisplay
-     *
-     * @return string $nombreDisplay
-     */
-    public function getNombreDisplay()
-    {
-        return $this->nombreDisplay;
-    }
-
-    /**
-     * Sets the nombreDisplay
-     *
-     * @param string $nombreDisplay
-     * @return void
-     */
-    public function setNombreDisplay($nombreDisplay)
-    {
-        $this->nombreDisplay = $nombreDisplay;
     }
 }

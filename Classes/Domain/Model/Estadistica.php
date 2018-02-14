@@ -8,7 +8,7 @@ namespace Unal\EstadisticaUnal\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
+ *  (c) 2018 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
  *
  ***/
 
@@ -65,7 +65,6 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * desagregaciones
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Desagregacion>
-     * @cascade remove
      */
     protected $desagregaciones = null;
 
@@ -118,6 +117,27 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+    }
+
+    /**
+     * Returns the nombreDisplay
+     *
+     * @return string $nombreDisplay
+     */
+    public function getNombreDisplay()
+    {
+        return $this->nombreDisplay;
+    }
+
+    /**
+     * Sets the nombreDisplay
+     *
+     * @param string $nombreDisplay
+     * @return void
+     */
+    public function setNombreDisplay($nombreDisplay)
+    {
+        $this->nombreDisplay = $nombreDisplay;
     }
 
     /**
@@ -205,6 +225,49 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * Adds a Desagregacion
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacione
+     * @return void
+     */
+    public function addDesagregacione(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacione)
+    {
+        $this->desagregaciones->attach($desagregacione);
+    }
+
+    /**
+     * Removes a Desagregacion
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacioneToRemove The Desagregacion to be removed
+     * @return void
+     */
+    public function removeDesagregacione(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacioneToRemove)
+    {
+        $this->desagregaciones->detach($desagregacioneToRemove);
+    }
+
+    /**
+     * Returns the desagregaciones
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Desagregacion> $desagregaciones
+     */
+    public function getDesagregaciones()
+    {
+        return $this->desagregaciones;
+    }
+
+    /**
+     * Sets the desagregaciones
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Desagregacion> $desagregaciones
+     * @return void
+     */
+    public function setDesagregaciones(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $desagregaciones)
+    {
+        $this->desagregaciones = $desagregaciones;
+    }
+
+    /**
      * Adds a Atributo
      *
      * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributo
@@ -245,69 +308,5 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAtributos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $atributos)
     {
         $this->atributos = $atributos;
-    }
-
-    /**
-     * Adds a Desagreagacion
-     *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacione
-     * @return void
-     */
-    public function addDesagregacione(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacione)
-    {
-        $this->desagregaciones->attach($desagregacione);
-    }
-
-    /**
-     * Removes a Desagreagacion
-     *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacioneToRemove The Desagregacion to be removed
-     * @return void
-     */
-    public function removeDesagregacione(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacioneToRemove)
-    {
-        $this->desagregaciones->detach($desagregacioneToRemove);
-    }
-
-    /**
-     * Returns the desagregaciones
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Desagregacion> desagregaciones
-     */
-    public function getDesagregaciones()
-    {
-        return $this->desagregaciones;
-    }
-
-    /**
-     * Sets the desagregaciones
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Desagregacion> $desagregaciones
-     * @return void
-     */
-    public function setDesagregaciones(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $desagregaciones)
-    {
-        $this->desagregaciones = $desagregaciones;
-    }
-
-    /**
-     * Returns the nombreDisplay
-     *
-     * @return string $nombreDisplay
-     */
-    public function getNombreDisplay()
-    {
-        return $this->nombreDisplay;
-    }
-
-    /**
-     * Sets the nombreDisplay
-     *
-     * @param string $nombreDisplay
-     * @return void
-     */
-    public function setNombreDisplay($nombreDisplay)
-    {
-        $this->nombreDisplay = $nombreDisplay;
     }
 }

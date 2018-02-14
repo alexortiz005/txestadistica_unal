@@ -6,17 +6,17 @@ namespace Unal\EstadisticaUnal\Tests\Unit\Domain\Model;
  *
  * @author Alexis Ortiz <eaortiz@unal.edu.co>
  */
-class AtributoTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class TipoAtributoTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \Unal\EstadisticaUnal\Domain\Model\Atributo
+     * @var \Unal\EstadisticaUnal\Domain\Model\TipoAtributo
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = new \Unal\EstadisticaUnal\Domain\Model\Atributo();
+        $this->subject = new \Unal\EstadisticaUnal\Domain\Model\TipoAtributo();
     }
 
     protected function tearDown()
@@ -52,49 +52,24 @@ class AtributoTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getContenidoReturnsInitialValueForString()
+    public function getNombreDisplayReturnsInitialValueForString()
     {
         self::assertSame(
             '',
-            $this->subject->getContenido()
+            $this->subject->getNombreDisplay()
         );
     }
 
     /**
      * @test
      */
-    public function setContenidoForStringSetsContenido()
+    public function setNombreDisplayForStringSetsNombreDisplay()
     {
-        $this->subject->setContenido('Conceived at T3CON10');
+        $this->subject->setNombreDisplay('Conceived at T3CON10');
 
         self::assertAttributeEquals(
             'Conceived at T3CON10',
-            'contenido',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getTipoReturnsInitialValueForInt()
-    {
-        self::assertSame(
-            0,
-            $this->subject->getTipo()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setTipoForIntSetsTipo()
-    {
-        $this->subject->setTipo(12);
-
-        self::assertAttributeEquals(
-            12,
-            'tipo',
+            'nombreDisplay',
             $this->subject
         );
     }

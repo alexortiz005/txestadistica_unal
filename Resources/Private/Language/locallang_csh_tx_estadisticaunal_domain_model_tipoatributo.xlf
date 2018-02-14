@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-12-11T16:34:10Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-02-14T01:22:14Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="nombre.description">
@@ -8,9 +8,6 @@
 			</trans-unit>
 			<trans-unit id="nombre_display.description">
 				<source>nombreDisplay</source>
-			</trans-unit>
-			<trans-unit id="contenido.description">
-				<source>contenido</source>
 			</trans-unit>
 		</body>
 	</file>

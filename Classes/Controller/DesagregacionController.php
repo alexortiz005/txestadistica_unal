@@ -8,7 +8,7 @@ namespace Unal\EstadisticaUnal\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
+ *  (c) 2018 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
  *
  ***/
 
@@ -24,18 +24,18 @@ class DesagregacionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      */
     public function listAction()
     {
-        $desagregacions = $this->desagreagacionRepository->findAll();
-        $this->view->assign('desagreagacions', $desagreagacions);
+        $desagregacions = $this->desagregacionRepository->findAll();
+        $this->view->assign('desagregacions', $desagregacions);
     }
 
     /**
      * action show
      *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Desagreagacion $desagreagacion
+     * @param \Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacion
      * @return void
      */
-    public function showAction(\Unal\EstadisticaUnal\Domain\Model\Desagreagacion $desagreagacion)
+    public function showAction(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacion)
     {
-        $this->view->assign('desagreagacion', $desagreagacion);
+        $this->view->assign('desagregacion', $desagregacion);
     }
 }

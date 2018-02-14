@@ -8,12 +8,12 @@ namespace Unal\EstadisticaUnal\Domain\Model;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2017 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
+ *  (c) 2018 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
  *
  ***/
 
 /**
- * Desagreagacion
+ * Desagregacion
  */
 class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
@@ -42,7 +42,6 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * archivos
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Archivo>
-     * @cascade remove
      */
     protected $archivos = null;
 
@@ -95,6 +94,27 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+    }
+
+    /**
+     * Returns the nombreDisplay
+     *
+     * @return string $nombreDisplay
+     */
+    public function getNombreDisplay()
+    {
+        return $this->nombreDisplay;
+    }
+
+    /**
+     * Sets the nombreDisplay
+     *
+     * @param string $nombreDisplay
+     * @return void
+     */
+    public function setNombreDisplay($nombreDisplay)
+    {
+        $this->nombreDisplay = $nombreDisplay;
     }
 
     /**
@@ -202,26 +222,5 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAtributos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $atributos)
     {
         $this->atributos = $atributos;
-    }
-
-    /**
-     * Returns the nombreDisplay
-     *
-     * @return string $nombreDisplay
-     */
-    public function getNombreDisplay()
-    {
-        return $this->nombreDisplay;
-    }
-
-    /**
-     * Sets the nombreDisplay
-     *
-     * @param string $nombreDisplay
-     * @return void
-     */
-    public function setNombreDisplay($nombreDisplay)
-    {
-        $this->nombreDisplay = $nombreDisplay;
     }
 }
