@@ -8,7 +8,7 @@ namespace Unal\EstadisticaUnal\Controller;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- *  (c) 2018 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
+ *  (c) 2017 Alexis Ortiz <eaortiz@unal.edu.co>, Unal
  *
  ***/
 
