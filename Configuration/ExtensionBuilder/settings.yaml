@@ -52,16 +52,16 @@ overwriteSettings:
 
   Resources:
     Private:
-      #Language: merge
+      Language: keep
       Templates: keep
 
   user_extension.svg: keep
 
-ext_localconf.php: merge
+ext_localconf.php: keep
 
-ext_tables.php: merge
+ext_tables.php: keep
 
-ext_tables.sql: merge
+ext_tables.sql: keep
 
 ## use static date attribute in xliff files ##
 #staticDateInXliffFiles: 2017-08-20T21:05:00Z

@@ -4,7 +4,7 @@
             "config": {
                 "position": [
                     10,
-                    339
+                    338.5454559326171875
                 ]
             },
             "name": "New Model Object",
@@ -96,7 +96,7 @@
             "config": {
                 "position": [
                     495,
-                    318
+                    317.5454559326171875
                 ]
             },
             "name": "New Model Object",
@@ -189,7 +189,7 @@
             "config": {
                 "position": [
                     745,
-                    373
+                    372.5454559326171875
                 ]
             },
             "name": "New Model Object",
@@ -289,7 +289,7 @@
             "config": {
                 "position": [
                     485,
-                    585
+                    584.5454559326171875
                 ]
             },
             "name": "New Model Object",
@@ -358,8 +358,8 @@
         {
             "config": {
                 "position": [
-                    251,
-                    326
+                    250,
+                    325.5454559326171875
                 ]
             },
             "name": "New Model Object",
@@ -415,7 +415,7 @@
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
                             "propertyName": "descripcion",
-                            "propertyType": "String",
+                            "propertyType": "RichText",
                             "uid": "28441454781"
                         },
                         {
@@ -481,8 +481,8 @@
         {
             "config": {
                 "position": [
-                    221,
-                    625
+                    220,
+                    624.5454559326171875
                 ]
             },
             "name": "New Model Object",
@@ -671,7 +671,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-02-14 09:01",
+        "last_modified": "2018-02-14 09:41",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

@@ -130,10 +130,12 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_estadistica.descripcion',
             'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
             ],
+            'defaultExtras' => 'richtext:rte_transform'
         ],
         'total' => [
             'exclude' => true,
