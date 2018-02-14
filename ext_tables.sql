@@ -96,6 +96,7 @@ CREATE TABLE tx_estadisticaunal_domain_model_archivo (
 
 	nombre varchar(255) DEFAULT '' NOT NULL,
 	nombre_display varchar(255) DEFAULT '' NOT NULL,
+	link text,
 	contenido int(11) unsigned NOT NULL default '0',
 	tipo int(11) DEFAULT '0' NOT NULL,
 	explicacion text,

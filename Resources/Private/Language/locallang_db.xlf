@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2017-12-11T16:34:10Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-02-14T21:01:34Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
@@ -48,6 +48,9 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_archivo.nombre_display">
 				<source>Nombre Display</source>
 			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.link">
+				<source>Link</source>
+			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_archivo.contenido">
 				<source>Contenido</source>
 			</trans-unit>
@@ -63,11 +66,11 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_atributo.nombre">
 				<source>Nombre</source>
 			</trans-unit>
-			<trans-unit id="tx_estadisticaunal_domain_model_atributo.nombre_display">
-				<source>Nombre Display</source>
-			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_atributo.contenido">
 				<source>Contenido</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo.tipo">
+				<source>Tipo</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica">
 				<source>Estadistica</source>
@@ -95,6 +98,15 @@
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.atributos">
 				<source>Atributos</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo">
+				<source>Tipo Atributo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo.nombre_display">
+				<source>Nombre Display</source>
 			</trans-unit>
 		</body>
 	</file>

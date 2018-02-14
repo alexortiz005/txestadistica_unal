@@ -77,6 +77,31 @@ class ArchivoTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
+    public function getLinkReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getLink()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setLinkForStringSetsLink()
+    {
+        $this->subject->setLink('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'link',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getContenidoReturnsInitialValueForFileReference()
     {
         self::assertEquals(

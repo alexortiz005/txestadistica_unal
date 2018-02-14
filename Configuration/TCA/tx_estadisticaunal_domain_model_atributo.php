@@ -134,11 +134,9 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'items' => [                    
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_atributo.tipo', '--div--'],
+                'items' => [
+                    ['-- Label --', 0],
                 ],
-                'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatributo',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatributo.pid=###CURRENT_PID###',
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''
