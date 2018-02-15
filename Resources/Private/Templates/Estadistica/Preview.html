@@ -54,7 +54,7 @@
 						<div id="tab{iterator.index}" class="tab-pane fade in active">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
-									<h4>{estadistica.descripcion}</h4>
+									<h4>{estadistica.descripcion-> f:format.stripTags()}</h4>
 								</div>
 							</div>
 						</div>
@@ -63,7 +63,7 @@
 						<div id="tab{iterator.index}" class="tab-pane fade ">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
-									<h4>{estadistica.descripcion}</h4>
+									<h4>{estadistica.descripcion-> f:format.stripTags()}</h4>
 								</div>
 							</div>
 						</div>
