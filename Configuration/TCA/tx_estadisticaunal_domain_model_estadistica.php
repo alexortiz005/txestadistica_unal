@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'nombre,nombre_display,descripcion,total,badge,alt_badge,desagregaciones,atributos',
+        'searchFields' => 'nombre,nombre_display,descripcion,texto_protocolo,total,badge,alt_badge,desagregaciones,atributos',
         'iconfile' => 'EXT:estadistica_unal/Resources/Public/Icons/tx_estadisticaunal_domain_model_estadistica.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, nombre_display, descripcion, total, badge, alt_badge, desagregaciones, atributos',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, nombre_display, descripcion, texto_protocolo, total, badge, alt_badge, desagregaciones, atributos',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, nombre_display, descripcion, total, badge, alt_badge, desagregaciones, atributos, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, nombre_display, descripcion, texto_protocolo, total, badge, alt_badge, desagregaciones, atributos, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -129,6 +129,17 @@ return [
         'descripcion' => [
             'exclude' => true,
             'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_estadistica.descripcion',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+            ],
+            'defaultExtras' => 'richtext:rte_transform'
+        ],
+        'texto_protocolo' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_estadistica.texto_protocolo',
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
@@ -245,6 +256,8 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_desagregacion',
+                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_desagregacion.pid=###CURRENT_PID###',
+                'enableMultiSelectFilterTextfield' => true,
                 'MM' => 'tx_estadisticaunal_estadistica_desagregacion_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
@@ -287,6 +300,8 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_atributo',
+                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_atributo.pid=###CURRENT_PID###',
+                'enableMultiSelectFilterTextfield' => true,
                 'MM' => 'tx_estadisticaunal_estadistica_atributo_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,

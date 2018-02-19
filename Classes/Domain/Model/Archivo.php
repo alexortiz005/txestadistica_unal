@@ -54,6 +54,13 @@ class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $explicacion = '';
 
     /**
+     * link
+     *
+     * @var string
+     */
+    protected $link = '';
+
+    /**
      * Returns the nombre
      *
      * @return string $nombre
@@ -114,6 +121,27 @@ class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setContenido(\TYPO3\CMS\Extbase\Domain\Model\FileReference $contenido)
     {
         $this->contenido = $contenido;
+    }
+
+    /**
+     * Returns the link
+     *
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $link
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * Sets the link
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $link
+     * @return void
+     */
+    public function setLink(\TYPO3\CMS\Extbase\Domain\Model\FileReference $link)
+    {
+        $this->link = $link;
     }
 
     /**

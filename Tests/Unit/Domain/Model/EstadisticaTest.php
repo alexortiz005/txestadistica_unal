@@ -102,6 +102,31 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
+    public function getTextoProtocoloReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getTextoProtocolo()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setTextoProtocoloForStringSetsTextoProtocolo()
+    {
+        $this->subject->setTextoProtocolo('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'textoProtocolo',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getTotalReturnsInitialValueForInt()
     {
         self::assertSame(

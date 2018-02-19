@@ -84,6 +84,9 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.descripcion">
 				<source>Descripcion</source>
 			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.texto_protocolo">
+				<source>Texto Protocolo</source>
+			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.total">
 				<source>Total</source>
 			</trans-unit>

@@ -139,6 +139,7 @@ return [
                 ],
                 'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatributo',
                 'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatributo.pid=###CURRENT_PID###',
+                'enableMultiSelectFilterTextfield' => true,
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''

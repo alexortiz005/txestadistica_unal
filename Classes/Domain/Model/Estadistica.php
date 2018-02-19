@@ -76,6 +76,13 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $atributos = null;
 
     /**
+     * textoProtocolo
+     *
+     * @var string
+     */
+    protected $textoProtocolo = '';
+
+    /**
      * __construct
      */
     public function __construct()
@@ -308,5 +315,26 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAtributos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $atributos)
     {
         $this->atributos = $atributos;
+    }
+
+    /**
+     * Returns the textoProtocolo
+     *
+     * @return string $textoProtocolo
+     */
+    public function getTextoProtocolo()
+    {
+        return $this->textoProtocolo;
+    }
+
+    /**
+     * Sets the textoProtocolo
+     *
+     * @param string $textoProtocolo
+     * @return void
+     */
+    public function setTextoProtocolo($textoProtocolo)
+    {
+        $this->textoProtocolo = $textoProtocolo;
     }
 }

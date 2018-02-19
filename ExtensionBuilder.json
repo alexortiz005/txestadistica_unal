@@ -4,7 +4,7 @@
             "config": {
                 "position": [
                     10,
-                    338.5454559326171875
+                    338
                 ]
             },
             "name": "New Model Object",
@@ -96,7 +96,7 @@
             "config": {
                 "position": [
                     495,
-                    317.5454559326171875
+                    317
                 ]
             },
             "name": "New Model Object",
@@ -189,7 +189,7 @@
             "config": {
                 "position": [
                     745,
-                    372.5454559326171875
+                    372
                 ]
             },
             "name": "New Model Object",
@@ -289,7 +289,7 @@
             "config": {
                 "position": [
                     485,
-                    584.5454559326171875
+                    584
                 ]
             },
             "name": "New Model Object",
@@ -359,7 +359,7 @@
             "config": {
                 "position": [
                     250,
-                    325.5454559326171875
+                    325
                 ]
             },
             "name": "New Model Object",
@@ -417,6 +417,16 @@
                             "propertyName": "descripcion",
                             "propertyType": "RichText",
                             "uid": "28441454781"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "textoProtocolo",
+                            "propertyType": "RichText",
+                            "uid": "1460230345308"
                         },
                         {
                             "allowedFileTypes": "",
@@ -482,7 +492,7 @@
             "config": {
                 "position": [
                     220,
-                    624.5454559326171875
+                    624
                 ]
             },
             "name": "New Model Object",
@@ -671,7 +681,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-02-14 09:41",
+        "last_modified": "2018-02-19 05:30",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }
