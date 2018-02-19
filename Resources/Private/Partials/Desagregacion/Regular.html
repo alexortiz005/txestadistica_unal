@@ -24,7 +24,7 @@
 				<f:if condition="{archivo.tipo}==0">
 
 					<div id="archivo{archivo.nombreDisplay}{archivo.uid}" class="player tab-pane fade">
-						    <iframe id="iframe{archivo.nombre}{archivo.uid}" src="/{archivo.contenido.originalResource.publicUrl}" frameborder="0"></iframe>		
+						    <iframe id="iframe{archivo.nombre}{archivo.uid}" src="{f:if(condition: archivo.link, then: '{archivo.link}', else: '/{archivo.contenido.originalResource.publicUrl}')}" frameborder="0"></iframe>		
 						    <button type="button" class="btn btn-info btn-block" 
 						    		data-toggle="tooltip" 
 						    		data-placement="bottom" 
@@ -61,7 +61,7 @@
 			<f:for each="{desagregacion.archivos}" as="archivo" iteration="iterator">
 				<f:if condition="{archivo.tipo}==1">
 					<div id="archivo{archivo.nombreDisplay}{archivo.uid}" class="tab-pane fade">
-						<iframe id="iframe{archivo.nombre}{archivo.uid}" src="/{archivo.contenido.originalResource.publicUrl}" frameborder="0"></iframe>
+						<iframe id="iframe{archivo.nombre}{archivo.uid}" src="{f:if(condition: archivo.link, then: '{archivo.link}', else: '/{archivo.contenido.originalResource.publicUrl}')}" frameborder="0"></iframe>
 						<button type="button" class="btn btn-info btn-block" 
 						    		data-toggle="tooltip" 
 						    		data-placement="bottom" 
