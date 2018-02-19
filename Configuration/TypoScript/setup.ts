@@ -67,6 +67,7 @@ page{
         full-screen-helper = EXT:estadistica_unal/Resources/Public/Css/full-screen-helper.css
         list-categorias = EXT:estadistica_unal/Resources/Public/Css/list-categorias.scss
         estadisticas-preview = EXT:estadistica_unal/Resources/Public/Css/estadisticas-preview.scss
+        estadisticas-unal = EXT:estadistica_unal/Resources/Public/Css/estadisticas-unal.scss
     }
     
     includeJS{
