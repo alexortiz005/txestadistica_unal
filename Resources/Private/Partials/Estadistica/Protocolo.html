@@ -1,11 +1,56 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<div class="panel panel-default">
+<div class="panel panel-default panel-protocolo">
 	<div class="panel-heading"><h4>{estadistica.nombreDisplay}</h4></div>
   	<div class="panel-body">
-
 		<p><f:format.html>{estadistica.textoProtocolo}</f:format.html></p>
+		<div class="atributos">
+			<ul class="nav nav-pills nav-justified">
+				<li class="active">
+					<a data-toggle="pill" href="#home">
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.atributos_generales" />
+					</a>
+				</li>
+				<li>
+					<a data-toggle="pill" href="#menu1">
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.desagregaciones_tematicas" />
+					</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
+					<table>
+					  <col width="10%"> 
+					  <tr>
+					    <th>
+					    	<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:atributo.description" />
+					    </th>
+					    <th>
+					    	<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:definicion.description" />
+					    </th>
+					  </tr>		
+					  <tr>
+					    <td>Alfreds Futterkiste</td>
+					    <td>Maria Anders</td>
+					  </tr>	
+					  <tr>
+					    <td>Alfreds Futterkiste</td>
+					    <td>Maria Anders</td>
+					  </tr>			  
+					</table>
+
+					
+				</div>
+				<div id="menu1" class="tab-pane fade">
+					<h3>Menu 1</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+		</div>
 	</div>
+	
+	
 </div>
 
 </html>

@@ -8,7 +8,7 @@
 
 		<ul class="nav nav-tabs">
 			<f:for each="{estadisticas_a_mostrar}" as="estadistica" iteration="iterator">
-				<li class="{f:if(condition:'{i.isFirst}',then:'active',else:'')} col-md-3 col-sm-6 col-xs-6">
+				<li class="{f:if(condition:'{iterator.isFirst}',then:'active',else:'')} col-md-3 col-sm-6 col-xs-6">
 					<a class="colour-shifter" data-toggle="tab" href="#tab{iterator.index}">
 						<div class="row">
 							<div class="col-md-12">

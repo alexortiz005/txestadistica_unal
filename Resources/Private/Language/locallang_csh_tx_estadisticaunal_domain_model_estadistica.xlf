@@ -27,6 +27,12 @@
 			<trans-unit id="atributos.description">
 				<source>atributos</source>
 			</trans-unit>
+			<trans-unit id="protocolo.atributos_generales">
+				<source>Atributos generales del indicador</source>
+			</trans-unit>
+			<trans-unit id="protocolo.desagregaciones_tematicas">
+				<source>Desagregaciones temáticas del indicador</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
