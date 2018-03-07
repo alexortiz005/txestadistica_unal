@@ -48,7 +48,7 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * atributos
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Atributo>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion>
      */
     protected $atributos = null;
 
@@ -184,10 +184,10 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Atributo
      *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributo
+     * @param \Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion $atributo
      * @return void
      */
-    public function addAtributo(\Unal\EstadisticaUnal\Domain\Model\Atributo $atributo)
+    public function addAtributo(\Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion $atributo)
     {
         $this->atributos->attach($atributo);
     }
@@ -195,10 +195,10 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Atributo
      *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributoToRemove The Atributo to be removed
+     * @param \Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion $atributoToRemove The AtributoDesagregacion to be removed
      * @return void
      */
-    public function removeAtributo(\Unal\EstadisticaUnal\Domain\Model\Atributo $atributoToRemove)
+    public function removeAtributo(\Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion $atributoToRemove)
     {
         $this->atributos->detach($atributoToRemove);
     }
@@ -206,7 +206,7 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the atributos
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Atributo> $atributos
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion> atributos
      */
     public function getAtributos()
     {
@@ -216,7 +216,7 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the atributos
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Atributo> $atributos
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion> $atributos
      * @return void
      */
     public function setAtributos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $atributos)

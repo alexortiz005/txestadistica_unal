@@ -13,9 +13,9 @@ namespace Unal\EstadisticaUnal\Controller;
  ***/
 
 /**
- * AtributoController
+ * AtributoDesagregacionController
  */
-class AtributoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class AtributoDesagregacionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
      * action list
@@ -38,6 +38,4 @@ class AtributoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     {
         $this->view->assign('atributo', $atributo);
     }
-
-  
 }

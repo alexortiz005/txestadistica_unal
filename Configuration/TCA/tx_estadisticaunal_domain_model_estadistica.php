@@ -299,8 +299,8 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_estadisticaunal_domain_model_atributo',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_atributo.pid=###CURRENT_PID###',
+                'foreign_table' => 'tx_estadisticaunal_domain_model_atributoestadistica',
+                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_atributoestadistica.pid=###CURRENT_PID###',
                 'enableMultiSelectFilterTextfield' => true,
                 'MM' => 'tx_estadisticaunal_estadistica_atributo_mm',
                 'size' => 10,
@@ -328,7 +328,7 @@ return [
                         'title' => 'Create new', // todo define label: LLL:EXT:.../Resources/Private/Language/locallang_tca.xlf:wizard.add
                         'icon' => 'EXT:backend/Resources/Public/Images/FormFieldWizard/wizard_add.gif',
                         'params' => [
-                            'table' => 'tx_estadisticaunal_domain_model_atributo',
+                            'table' => 'tx_estadisticaunal_domain_model_atributoestadistica',
                             'pid' => '###CURRENT_PID###',
                             'setValue' => 'prepend'
                         ],

@@ -39,6 +39,13 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $descripcion = '';
 
     /**
+     * textoProtocolo
+     *
+     * @var string
+     */
+    protected $textoProtocolo = '';
+
+    /**
      * total
      *
      * @var int
@@ -71,16 +78,9 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * atributos
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Atributo>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica>
      */
     protected $atributos = null;
-
-    /**
-     * textoProtocolo
-     *
-     * @var string
-     */
-    protected $textoProtocolo = '';
 
     /**
      * __construct
@@ -275,49 +275,6 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Adds a Atributo
-     *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributo
-     * @return void
-     */
-    public function addAtributo(\Unal\EstadisticaUnal\Domain\Model\Atributo $atributo)
-    {
-        $this->atributos->attach($atributo);
-    }
-
-    /**
-     * Removes a Atributo
-     *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributoToRemove The Atributo to be removed
-     * @return void
-     */
-    public function removeAtributo(\Unal\EstadisticaUnal\Domain\Model\Atributo $atributoToRemove)
-    {
-        $this->atributos->detach($atributoToRemove);
-    }
-
-    /**
-     * Returns the atributos
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Atributo> $atributos
-     */
-    public function getAtributos()
-    {
-        return $this->atributos;
-    }
-
-    /**
-     * Sets the atributos
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Atributo> $atributos
-     * @return void
-     */
-    public function setAtributos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $atributos)
-    {
-        $this->atributos = $atributos;
-    }
-
-    /**
      * Returns the textoProtocolo
      *
      * @return string $textoProtocolo
@@ -336,5 +293,48 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTextoProtocolo($textoProtocolo)
     {
         $this->textoProtocolo = $textoProtocolo;
+    }
+
+    /**
+     * Adds a Atributo
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica $atributo
+     * @return void
+     */
+    public function addAtributo(\Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica $atributo)
+    {
+        $this->atributos->attach($atributo);
+    }
+
+    /**
+     * Removes a Atributo
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica $atributoToRemove The AtributoEstadistica to be removed
+     * @return void
+     */
+    public function removeAtributo(\Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica $atributoToRemove)
+    {
+        $this->atributos->detach($atributoToRemove);
+    }
+
+    /**
+     * Returns the atributos
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica> atributos
+     */
+    public function getAtributos()
+    {
+        return $this->atributos;
+    }
+
+    /**
+     * Sets the atributos
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica> $atributos
+     * @return void
+     */
+    public function setAtributos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $atributos)
+    {
+        $this->atributos = $atributos;
     }
 }

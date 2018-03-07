@@ -13,9 +13,9 @@ namespace Unal\EstadisticaUnal\Domain\Model;
  ***/
 
 /**
- * Archivo
+ * AtributoEstadistica
  */
-class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class AtributoEstadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * nombre
@@ -32,19 +32,11 @@ class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $nombreDisplay = '';
 
     /**
-     * link
+     * contenido
      *
      * @var string
      */
-    protected $link = '';
-
-    /**
-     * contenido
-     *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @cascade remove
-     */
-    protected $contenido = null;
+    protected $contenido = '';
 
     /**
      * tipo
@@ -52,13 +44,6 @@ class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var int
      */
     protected $tipo = 0;
-
-    /**
-     * explicacion
-     *
-     * @var string
-     */
-    protected $explicacion = '';
 
     /**
      * Returns the nombre
@@ -105,7 +90,7 @@ class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the contenido
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $contenido
+     * @return string $contenido
      */
     public function getContenido()
     {
@@ -115,33 +100,12 @@ class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the contenido
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $contenido
+     * @param string $contenido
      * @return void
      */
-    public function setContenido(\TYPO3\CMS\Extbase\Domain\Model\FileReference $contenido)
+    public function setContenido($contenido)
     {
         $this->contenido = $contenido;
-    }
-
-    /**
-     * Returns the link
-     *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $link
-     */
-    public function getLink()
-    {
-        return $this->link;
-    }
-
-    /**
-     * Sets the link
-     *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $link
-     * @return void
-     */
-    public function setLink(\TYPO3\CMS\Extbase\Domain\Model\FileReference $link)
-    {
-        $this->link = $link;
     }
 
     /**
@@ -163,26 +127,5 @@ class Archivo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTipo($tipo)
     {
         $this->tipo = $tipo;
-    }
-
-    /**
-     * Returns the explicacion
-     *
-     * @return string $explicacion
-     */
-    public function getExplicacion()
-    {
-        return $this->explicacion;
-    }
-
-    /**
-     * Sets the explicacion
-     *
-     * @param string $explicacion
-     * @return void
-     */
-    public function setExplicacion($explicacion)
-    {
-        $this->explicacion = $explicacion;
     }
 }

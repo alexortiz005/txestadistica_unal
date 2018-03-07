@@ -41,27 +41,27 @@
 
 overwriteSettings:
   Classes:
-    Controller: keep
+    Controller: merge
     Domain:
       Model: merge
-      Repository: keep
+      Repository: merge
 
   Configuration:
     #TCA merge not possible - use overrides directory
-    TypoScript: keep
+    TypoScript: merge
 
   Resources:
     Private:
-      Language: keep
+      Language: merge
       Templates: keep
 
   user_extension.svg: keep
 
-ext_localconf.php: keep
+ext_localconf.php: merge
 
-ext_tables.php: keep
+ext_tables.php: merge
 
-ext_tables.sql: keep
+ext_tables.sql: merge
 
 ## use static date attribute in xliff files ##
 #staticDateInXliffFiles: 2017-08-20T21:05:00Z

@@ -25,14 +25,13 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      */
     protected $estadisticaRepository = null;
 
-     /**
+    /**
      * categoriaRepository
      *
      * @var \Unal\EstadisticaUnal\Domain\Repository\CategoriaRepository
      * @inject
      */
     protected $categoriaRepository = null;
-
 
     /**
      * action list
@@ -110,8 +109,7 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
         ]);
     }
 
-
-      /**
+    /**
      * action handle
      *
      * @param \Unal\EstadisticaUnal\Domain\Model\Atributo $atributo
@@ -119,25 +117,17 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      */
     public function protocoloAction()
     {
-
-        if($this->request->hasArgument('estadistica')){
-
-            $uid=$this->request->getArgument('estadistica');
-            $estadistica=$this->estadisticaRepository->findByUid($uid);
-            $this->view->assign('estadistica',$estadistica );  
-
-        }else{
-
-
-            $texto= $this->settings['texto_protocolos'];   
+        if ($this->request->hasArgument('estadistica')) {
+            $uid = $this->request->getArgument('estadistica');
+            $estadistica = $this->estadisticaRepository->findByUid($uid);
+            $this->view->assign('estadistica', $estadistica);
+        } else {
+            $texto = $this->settings['texto_protocolos'];
             $categorias = $this->categoriaRepository->findAll();
-
             $this->view->assignMultiple([
                 'texto' => $texto,
                 'categorias' => $categorias
-            ]);  
-
+            ]);
         }
-        
     }
 }

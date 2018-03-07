@@ -267,7 +267,7 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getAtributosReturnsInitialValueForAtributo()
+    public function getAtributosReturnsInitialValueForAtributoEstadistica()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         self::assertEquals(
@@ -279,9 +279,9 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setAtributosForObjectStorageContainingAtributoSetsAtributos()
+    public function setAtributosForObjectStorageContainingAtributoEstadisticaSetsAtributos()
     {
-        $atributo = new \Unal\EstadisticaUnal\Domain\Model\Atributo();
+        $atributo = new \Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica();
         $objectStorageHoldingExactlyOneAtributos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneAtributos->attach($atributo);
         $this->subject->setAtributos($objectStorageHoldingExactlyOneAtributos);
@@ -298,7 +298,7 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addAtributoToObjectStorageHoldingAtributos()
     {
-        $atributo = new \Unal\EstadisticaUnal\Domain\Model\Atributo();
+        $atributo = new \Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica();
         $atributosObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -315,7 +315,7 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeAtributoFromObjectStorageHoldingAtributos()
     {
-        $atributo = new \Unal\EstadisticaUnal\Domain\Model\Atributo();
+        $atributo = new \Unal\EstadisticaUnal\Domain\Model\AtributoEstadistica();
         $atributosObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()

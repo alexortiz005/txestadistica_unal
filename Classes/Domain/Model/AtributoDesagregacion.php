@@ -15,7 +15,7 @@ namespace Unal\EstadisticaUnal\Domain\Model;
 /**
  * Atributo
  */
-class Atributo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class AtributoDesagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * nombre
@@ -23,6 +23,13 @@ class Atributo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $nombre = '';
+
+    /**
+     * nombreDisplay
+     *
+     * @var string
+     */
+    protected $nombreDisplay = '';
 
     /**
      * contenido
@@ -99,5 +106,26 @@ class Atributo extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTipo($tipo)
     {
         $this->tipo = $tipo;
+    }
+
+    /**
+     * Returns the nombreDisplay
+     *
+     * @return string $nombreDisplay
+     */
+    public function getNombreDisplay()
+    {
+        return $this->nombreDisplay;
+    }
+
+    /**
+     * Sets the nombreDisplay
+     *
+     * @param string $nombreDisplay
+     * @return void
+     */
+    public function setNombreDisplay($nombreDisplay)
+    {
+        $this->nombreDisplay = $nombreDisplay;
     }
 }

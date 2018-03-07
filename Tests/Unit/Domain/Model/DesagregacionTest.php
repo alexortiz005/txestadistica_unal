@@ -165,7 +165,7 @@ class DesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getAtributosReturnsInitialValueForAtributo()
+    public function getAtributosReturnsInitialValueForAtributoDesagregacion()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         self::assertEquals(
@@ -177,9 +177,9 @@ class DesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setAtributosForObjectStorageContainingAtributoSetsAtributos()
+    public function setAtributosForObjectStorageContainingAtributoDesagregacionSetsAtributos()
     {
-        $atributo = new \Unal\EstadisticaUnal\Domain\Model\Atributo();
+        $atributo = new \Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion();
         $objectStorageHoldingExactlyOneAtributos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneAtributos->attach($atributo);
         $this->subject->setAtributos($objectStorageHoldingExactlyOneAtributos);
@@ -196,7 +196,7 @@ class DesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addAtributoToObjectStorageHoldingAtributos()
     {
-        $atributo = new \Unal\EstadisticaUnal\Domain\Model\Atributo();
+        $atributo = new \Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion();
         $atributosObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -213,7 +213,7 @@ class DesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeAtributoFromObjectStorageHoldingAtributos()
     {
-        $atributo = new \Unal\EstadisticaUnal\Domain\Model\Atributo();
+        $atributo = new \Unal\EstadisticaUnal\Domain\Model\AtributoDesagregacion();
         $atributosObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()

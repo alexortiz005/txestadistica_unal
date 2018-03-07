@@ -288,8 +288,8 @@
         {
             "config": {
                 "position": [
-                    485,
-                    584
+                    496,
+                    539
                 ]
             },
             "name": "New Model Object",
@@ -302,7 +302,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "Atributo",
+                "name": "AtributoDesagregacion",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -327,6 +327,16 @@
                             "propertyName": "nombre",
                             "propertyType": "String",
                             "uid": "942191080304"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombreDisplay",
+                            "propertyType": "String",
+                            "uid": "1483096369406"
                         },
                         {
                             "allowedFileTypes": "",
@@ -491,8 +501,8 @@
         {
             "config": {
                 "position": [
-                    220,
-                    624
+                    749,
+                    530
                 ]
             },
             "name": "New Model Object",
@@ -505,7 +515,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "TipoAtributo",
+                "name": "TipoAtributoDesagregacion",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -540,6 +550,146 @@
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
                             "uid": "561032931308"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    245,
+                    540
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "AtributoEstadistica",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1466780546962"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombre",
+                            "propertyType": "String",
+                            "uid": "409994079388"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombreDisplay",
+                            "propertyType": "String",
+                            "uid": "1221051941825"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "contenido",
+                            "propertyType": "RichText",
+                            "uid": "1018826998602"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "tipo",
+                            "propertyType": "Select",
+                            "uid": "1209796062931"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    749,
+                    685
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "TipoAtributoEstadistica",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1252806700407"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombre",
+                            "propertyType": "String",
+                            "uid": "1163693878318"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombreDisplay",
+                            "propertyType": "String",
+                            "uid": "1023885435851"
                         }
                     ]
                 },
@@ -645,18 +795,6 @@
         },
         {
             "src": {
-                "moduleId": 4,
-                "terminal": "relationWire_1",
-                "uid": "1420406514387"
-            },
-            "tgt": {
-                "moduleId": 3,
-                "terminal": "SOURCES",
-                "uid": "720531953828"
-            }
-        },
-        {
-            "src": {
                 "moduleId": 1,
                 "terminal": "relationWire_0",
                 "uid": "603788437072"
@@ -678,10 +816,22 @@
                 "terminal": "SOURCES",
                 "uid": "720531953828"
             }
+        },
+        {
+            "src": {
+                "moduleId": 4,
+                "terminal": "relationWire_1",
+                "uid": "1420406514387"
+            },
+            "tgt": {
+                "moduleId": 6,
+                "terminal": "SOURCES",
+                "uid": "1466780546962"
+            }
         }
     ],
     "log": {
-        "last_modified": "2018-02-19 05:30",
+        "last_modified": "2018-03-07 02:49",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }
