@@ -142,7 +142,7 @@ CREATE TABLE tx_estadisticaunal_domain_model_atributodesagregacion (
 	nombre varchar(255) DEFAULT '' NOT NULL,
 	nombre_display varchar(255) DEFAULT '' NOT NULL,
 	contenido text,
-	tipo int(11) DEFAULT '0' NOT NULL,
+	tipo int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -223,9 +223,9 @@ CREATE TABLE tx_estadisticaunal_domain_model_estadistica (
 );
 
 #
-# Table structure for table 'tx_estadisticaunal_domain_model_tipoatributodesagregacion'
+# Table structure for table 'tx_estadisticaunal_domain_model_tipoatrdesagregacion'
 #
-CREATE TABLE tx_estadisticaunal_domain_model_tipoatributodesagregacion (
+CREATE TABLE tx_estadisticaunal_domain_model_tipoatrdesagregacion (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -274,7 +274,7 @@ CREATE TABLE tx_estadisticaunal_domain_model_atributoestadistica (
 	nombre varchar(255) DEFAULT '' NOT NULL,
 	nombre_display varchar(255) DEFAULT '' NOT NULL,
 	contenido text,
-	tipo int(11) DEFAULT '0' NOT NULL,
+	tipo int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -307,9 +307,9 @@ CREATE TABLE tx_estadisticaunal_domain_model_atributoestadistica (
 );
 
 #
-# Table structure for table 'tx_estadisticaunal_domain_model_tipoatributoestadistica'
+# Table structure for table 'tx_estadisticaunal_domain_model_tipoatrestadistica'
 #
-CREATE TABLE tx_estadisticaunal_domain_model_tipoatributoestadistica (
+CREATE TABLE tx_estadisticaunal_domain_model_tipoatrestadistica (
 
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
@@ -390,6 +390,20 @@ CREATE TABLE tx_estadisticaunal_desagregacion_atributo_mm (
 );
 
 #
+# Table structure for table 'tx_estadisticaunal_atributodesagregacion_tipoatrdesagregacion_mm'
+#
+CREATE TABLE tx_estadisticaunal_atributodesagregacion_tipoatrdesagregacion_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+	PRIMARY KEY (uid_local,uid_foreign),
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
+#
 # Table structure for table 'tx_estadisticaunal_estadistica_desagregacion_mm'
 #
 CREATE TABLE tx_estadisticaunal_estadistica_desagregacion_mm (
@@ -407,6 +421,20 @@ CREATE TABLE tx_estadisticaunal_estadistica_desagregacion_mm (
 # Table structure for table 'tx_estadisticaunal_estadistica_atributo_mm'
 #
 CREATE TABLE tx_estadisticaunal_estadistica_atributo_mm (
+	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+
+	PRIMARY KEY (uid_local,uid_foreign),
+	KEY uid_local (uid_local),
+	KEY uid_foreign (uid_foreign)
+);
+
+#
+# Table structure for table 'tx_estadisticaunal_atributoestadistica_tipoatrestadistica_mm'
+#
+CREATE TABLE tx_estadisticaunal_atributoestadistica_tipoatrestadistica_mm (
 	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
 	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
 	sorting int(11) unsigned DEFAULT '0' NOT NULL,

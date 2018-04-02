@@ -15,7 +15,7 @@ namespace Unal\EstadisticaUnal\Domain\Model;
 /**
  * TipoAtributoEstadistica
  */
-class TipoAtributoEstadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class TipoAtrEstadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * nombre

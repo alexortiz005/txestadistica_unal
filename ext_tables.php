@@ -92,14 +92,14 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_estadistica', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf');
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_estadistica');
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_tipoatributodesagregacion', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_tipoatributodesagregacion.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_tipoatributodesagregacion');
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_tipoatrdesagregacion', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_tipoatrdesagregacion.xlf');
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_tipoatrdesagregacion');
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_atributoestadistica', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributoestadistica.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_atributoestadistica');
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_atributoestadistica', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributoestadistica.xlf');
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_atributoestadistica');
 
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_tipoatributoestadistica', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_tipoatributoestadistica.xlf');
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_tipoatributoestadistica');
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_tipoatrestadistica', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_tipoatrestadistica.xlf');
+       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_estadisticaunal_domain_model_tipoatrestadistica');
 
     }
 );

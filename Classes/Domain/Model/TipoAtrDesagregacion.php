@@ -15,7 +15,7 @@ namespace Unal\EstadisticaUnal\Domain\Model;
 /**
  * TipoAtributo
  */
-class TipoAtributoDesagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class TipoAtrDesagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
     /**
      * nombre

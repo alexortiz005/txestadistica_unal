@@ -1,7 +1,7 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_tipoatributoestadistica',
+        'title' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_tipoatrestadistica',
         'label' => 'nombre',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -17,7 +17,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'nombre,nombre_display',
-        'iconfile' => 'EXT:estadistica_unal/Resources/Public/Icons/tx_estadisticaunal_domain_model_tipoatributoestadistica.gif'
+        'iconfile' => 'EXT:estadistica_unal/Resources/Public/Icons/tx_estadisticaunal_domain_model_tipoatrestadistica.gif'
     ],
     'interface' => [
         'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, nombre, nombre_display',
@@ -53,8 +53,8 @@ return [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatributoestadistica',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatributoestadistica.pid=###CURRENT_PID### AND tx_estadisticaunal_domain_model_tipoatributoestadistica.sys_language_uid IN (-1,0)',
+                'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatrestadistica',
+                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatrestadistica.pid=###CURRENT_PID### AND tx_estadisticaunal_domain_model_tipoatrestadistica.sys_language_uid IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
@@ -110,7 +110,7 @@ return [
 
         'nombre' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_tipoatributoestadistica.nombre',
+            'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_tipoatrestadistica.nombre',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -119,7 +119,7 @@ return [
         ],
         'nombre_display' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_tipoatributoestadistica.nombre_display',
+            'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_tipoatrestadistica.nombre_display',
             'config' => [
                 'type' => 'input',
                 'size' => 30,

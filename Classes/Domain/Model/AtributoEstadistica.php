@@ -41,9 +41,9 @@ class AtributoEstadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * tipo
      *
-     * @var int
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\TipoAtrEstadistica>
      */
-    protected $tipo = 0;
+    protected $tipo = null;
 
     /**
      * Returns the nombre
@@ -109,9 +109,53 @@ class AtributoEstadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
+     * __construct
+     */
+    public function __construct()
+    {
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->tipo = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
+     * Adds a TipoAtrEstadistica
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\TipoAtrEstadistica $tipo
+     * @return void
+     */
+    public function addTipo(\Unal\EstadisticaUnal\Domain\Model\TipoAtrEstadistica $tipo)
+    {
+        $this->tipo->attach($tipo);
+    }
+
+    /**
+     * Removes a TipoAtrEstadistica
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\TipoAtrEstadistica $tipoToRemove The TipoAtrEstadistica to be removed
+     * @return void
+     */
+    public function removeTipo(\Unal\EstadisticaUnal\Domain\Model\TipoAtrEstadistica $tipoToRemove)
+    {
+        $this->tipo->detach($tipoToRemove);
+    }
+
+    /**
      * Returns the tipo
      *
-     * @return int $tipo
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\TipoAtrEstadistica> $tipo
      */
     public function getTipo()
     {
@@ -121,10 +165,10 @@ class AtributoEstadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the tipo
      *
-     * @param int $tipo
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\TipoAtrEstadistica> $tipo
      * @return void
      */
-    public function setTipo($tipo)
+    public function setTipo(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tipo)
     {
         $this->tipo = $tipo;
     }

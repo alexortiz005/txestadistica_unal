@@ -347,21 +347,23 @@
                             "propertyName": "contenido",
                             "propertyType": "RichText",
                             "uid": "7492461599"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "tipo",
-                            "propertyType": "Select",
-                            "uid": "1119447860935"
                         }
                     ]
                 },
                 "relationGroup": {
-                    "relations": []
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "tipo",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingleBox",
+                            "uid": "767845023125"
+                        }
+                    ]
                 }
             }
         },
@@ -515,7 +517,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "TipoAtributoDesagregacion",
+                "name": "TipoAtrDesagregacion",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -620,21 +622,23 @@
                             "propertyName": "contenido",
                             "propertyType": "RichText",
                             "uid": "1018826998602"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "tipo",
-                            "propertyType": "Select",
-                            "uid": "1209796062931"
                         }
                     ]
                 },
                 "relationGroup": {
-                    "relations": []
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "tipo",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingleBox",
+                            "uid": "596064620564"
+                        }
+                    ]
                 }
             }
         },
@@ -655,7 +659,7 @@
                     "_default4_delete": false,
                     "customActions": []
                 },
-                "name": "TipoAtributoEstadistica",
+                "name": "TipoAtrEstadistica",
                 "objectsettings": {
                     "addDeletedField": true,
                     "addHiddenField": true,
@@ -828,10 +832,34 @@
                 "terminal": "SOURCES",
                 "uid": "1466780546962"
             }
+        },
+        {
+            "src": {
+                "moduleId": 3,
+                "terminal": "relationWire_0",
+                "uid": "767845023125"
+            },
+            "tgt": {
+                "moduleId": 5,
+                "terminal": "SOURCES",
+                "uid": "725452541595"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 6,
+                "terminal": "relationWire_0",
+                "uid": "596064620564"
+            },
+            "tgt": {
+                "moduleId": 7,
+                "terminal": "SOURCES",
+                "uid": "1252806700407"
+            }
         }
     ],
     "log": {
-        "last_modified": "2018-03-07 02:49",
+        "last_modified": "2018-04-02 05:18",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

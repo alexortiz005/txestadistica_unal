@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-03-07T02:49:28Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-04-02T17:18:01Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
@@ -105,13 +105,13 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.atributos">
 				<source>Atributos</source>
 			</trans-unit>
-			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion">
-				<source>Tipo Atributo Desagregacion</source>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion">
+				<source>Tipo Atr Desagregacion</source>
 			</trans-unit>
-			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion.nombre">
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion.nombre">
 				<source>Nombre</source>
 			</trans-unit>
-			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion.nombre_display">
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion.nombre_display">
 				<source>Nombre Display</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_atributoestadistica">
@@ -128,6 +128,24 @@
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_atributoestadistica.tipo">
 				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica">
+				<source>Tipo Atr Estadistica</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion">
+				<source>Tipo Atributo Desagregacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion.nombre_display">
+				<source>Nombre Display</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributoestadistica">
 				<source>Tipo Atributo Estadistica</source>

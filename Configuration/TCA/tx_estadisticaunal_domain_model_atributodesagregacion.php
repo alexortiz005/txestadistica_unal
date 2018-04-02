@@ -143,16 +143,12 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
-                'items' => [                    
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_atributo.tipo', '--div--'],
-                ],
-                'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatributodesagregacion',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatributodesagregacion.pid=###CURRENT_PID###',
-                'enableMultiSelectFilterTextfield' => true,
+                'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatrdesagregacion',
+                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatrdesagregacion.pid=###CURRENT_PID###',
+                'MM' => 'tx_estadisticaunal_atributodesagregacion_tipoatrdesagregacion_mm',
                 'size' => 1,
-                'maxitems' => 1,
-                'eval' => ''
             ],
+            
         ],
     
     ],

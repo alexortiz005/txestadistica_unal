@@ -102,10 +102,11 @@ class AtributoDesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getTipoReturnsInitialValueForInt()
+    public function getTipoReturnsInitialValueForTipoAtrDesagregacion()
     {
-        self::assertSame(
-            0,
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
             $this->subject->getTipo()
         );
     }
@@ -113,14 +114,51 @@ class AtributoDesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setTipoForIntSetsTipo()
+    public function setTipoForObjectStorageContainingTipoAtrDesagregacionSetsTipo()
     {
-        $this->subject->setTipo(12);
+        $tipo = new \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion();
+        $objectStorageHoldingExactlyOneTipo = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneTipo->attach($tipo);
+        $this->subject->setTipo($objectStorageHoldingExactlyOneTipo);
 
         self::assertAttributeEquals(
-            12,
+            $objectStorageHoldingExactlyOneTipo,
             'tipo',
             $this->subject
         );
+    }
+
+    /**
+     * @test
+     */
+    public function addTipoToObjectStorageHoldingTipo()
+    {
+        $tipo = new \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion();
+        $tipoObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $tipoObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($tipo));
+        $this->inject($this->subject, 'tipo', $tipoObjectStorageMock);
+
+        $this->subject->addTipo($tipo);
+    }
+
+    /**
+     * @test
+     */
+    public function removeTipoFromObjectStorageHoldingTipo()
+    {
+        $tipo = new \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion();
+        $tipoObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $tipoObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($tipo));
+        $this->inject($this->subject, 'tipo', $tipoObjectStorageMock);
+
+        $this->subject->removeTipo($tipo);
     }
 }
