@@ -26,6 +26,16 @@
 			padding-right:10%;
 		}
 
+		.protocolo-desagregaciones{
+
+			table{
+				th{
+					font-size:1em;
+				}
+			}
+
+		}
+
 		table{
 			margin-bottom:10px;
 			th {
@@ -34,6 +44,7 @@
 			    border-left: 2px solid #c5c6c7;
 			    padding:10px;
 			    font-size:1.7em;
+			    vertical-align:middle;
 			}
 			tr:nth-child(even) {
 				background: #dfdfdf;

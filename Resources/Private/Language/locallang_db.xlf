@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-04-02T17:18:01Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-04-03T05:54:14Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
@@ -105,6 +105,9 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.atributos">
 				<source>Atributos</source>
 			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tipos_atr_desagregaciones">
+				<source>Tipos Atr Desagregaciones</source>
+			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion">
 				<source>Tipo Atr Desagregacion</source>
 			</trans-unit>
@@ -137,6 +140,9 @@
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica.nombre_display">
 				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tipos_atr_estadisticas">
+				<source>Tipos Atr Estadisticas</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion">
 				<source>Tipo Atributo Desagregacion</source>

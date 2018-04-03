@@ -44,9 +44,39 @@
 
 					
 				</div>
-				<div id="menu1" class="tab-pane fade">
-					<h3>Menu 1</h3>
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div id="menu1" class="tab-pane fade protocolo-desagregaciones">
+					<table>
+					  <col width="10%"> 
+						<tr>
+							<th>
+								<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:desagregacion.description" />
+							</th>
+							<f:for each="{estadistica.tiposAtrDesagregaciones}" as="tipo">
+							<th>
+								{tipo.nombreDisplay}
+							</th>
+							</f:for>							
+						</tr>		
+					  	<f:for each="{estadistica.desagregaciones}" as="desagregacion">			  		
+							<tr>
+								<td>
+									{desagregacion.nombreDisplay}
+								</td>
+								<!--me excuso con la persona que tenga que leer este codigo, pero fue la unica manera que pude lograr esto-->
+								<f:for each="{estadistica.tiposAtrDesagregaciones}" as="aux_tipo_desagregacion">			  		
+								<td>
+									<f:for each="{desagregacion.atributos}" as="atributo">
+										<f:for each="{atributo.tipo}" as="tipo_atributo">
+											<f:if condition="({tipo_atributo.uid} == {aux_tipo_desagregacion.uid})">
+											  <f:format.html>{atributo.contenido}</f:format.html>
+											</f:if>
+										</f:for>
+									</f:for>									
+								</td>
+								</f:for>								
+							</tr>							  
+						</f:for>					 		  
+					</table>
 				</div>
 			</div>
 		</div>

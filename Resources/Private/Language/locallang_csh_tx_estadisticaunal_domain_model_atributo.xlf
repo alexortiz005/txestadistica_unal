@@ -15,6 +15,9 @@
 			<trans-unit id="definicion.description">
 				<source>Definición</source>
 			</trans-unit>
+			<trans-unit id="desagregacion.description">
+				<source>Desagregación temática</source>
+			</trans-unit>
 			<trans-unit id="tipo.description">
 				<source>tipo</source>
 			</trans-unit>

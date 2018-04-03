@@ -135,6 +135,9 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.atributos">
 				<source>Atributos</source>
 			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tipos_atr_estadisticas">
+			        <source>Tipos Atr Estadisticas</source>
+			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion">
 				<source>Tipo Atr Desagregacion</source>
 			</trans-unit>
@@ -197,6 +200,9 @@
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_archivo.tipo_departamental">
 				<source>Departamental</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tipos_atr_estadisticas">
+			        <source>Tipos de Atributos Estadisticas</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion">
 				<source>Tipo Atributo Desagregacion</source>

@@ -83,6 +83,13 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $atributos = null;
 
     /**
+     * tiposAtrDesagregaciones
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion>
+     */
+    protected $tiposAtrDesagregaciones = null;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -103,6 +110,7 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->desagregaciones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->atributos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->tiposAtrDesagregaciones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -336,5 +344,48 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAtributos(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $atributos)
     {
         $this->atributos = $atributos;
+    }
+
+    /**
+     * Adds a TipoAtrDesagregacion
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion $tiposAtrDesagregacione
+     * @return void
+     */
+    public function addTiposAtrDesagregacione(\Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion $tiposAtrDesagregacione)
+    {
+        $this->tiposAtrDesagregaciones->attach($tiposAtrDesagregacione);
+    }
+
+    /**
+     * Removes a TipoAtrDesagregacion
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion $tiposAtrDesagregacioneToRemove The TipoAtrDesagregacion to be removed
+     * @return void
+     */
+    public function removeTiposAtrDesagregacione(\Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion $tiposAtrDesagregacioneToRemove)
+    {
+        $this->tiposAtrDesagregaciones->detach($tiposAtrDesagregacioneToRemove);
+    }
+
+    /**
+     * Returns the tiposAtrDesagregaciones
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion> $tiposAtrDesagregaciones
+     */
+    public function getTiposAtrDesagregaciones()
+    {
+        return $this->tiposAtrDesagregaciones;
+    }
+
+    /**
+     * Sets the tiposAtrDesagregaciones
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion> $tiposAtrDesagregaciones
+     * @return void
+     */
+    public function setTiposAtrDesagregaciones(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tiposAtrDesagregaciones)
+    {
+        $this->tiposAtrDesagregaciones = $tiposAtrDesagregaciones;
     }
 }

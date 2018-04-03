@@ -326,4 +326,67 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 
         $this->subject->removeAtributo($atributo);
     }
+
+    /**
+     * @test
+     */
+    public function getTiposAtrDesagregacionesReturnsInitialValueForTipoAtrDesagregacion()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getTiposAtrDesagregaciones()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setTiposAtrDesagregacionesForObjectStorageContainingTipoAtrDesagregacionSetsTiposAtrDesagregaciones()
+    {
+        $tiposAtrDesagregacione = new \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion();
+        $objectStorageHoldingExactlyOneTiposAtrDesagregaciones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneTiposAtrDesagregaciones->attach($tiposAtrDesagregacione);
+        $this->subject->setTiposAtrDesagregaciones($objectStorageHoldingExactlyOneTiposAtrDesagregaciones);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneTiposAtrDesagregaciones,
+            'tiposAtrDesagregaciones',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function addTiposAtrDesagregacioneToObjectStorageHoldingTiposAtrDesagregaciones()
+    {
+        $tiposAtrDesagregacione = new \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion();
+        $tiposAtrDesagregacionesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $tiposAtrDesagregacionesObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($tiposAtrDesagregacione));
+        $this->inject($this->subject, 'tiposAtrDesagregaciones', $tiposAtrDesagregacionesObjectStorageMock);
+
+        $this->subject->addTiposAtrDesagregacione($tiposAtrDesagregacione);
+    }
+
+    /**
+     * @test
+     */
+    public function removeTiposAtrDesagregacioneFromObjectStorageHoldingTiposAtrDesagregaciones()
+    {
+        $tiposAtrDesagregacione = new \Unal\EstadisticaUnal\Domain\Model\TipoAtrDesagregacion();
+        $tiposAtrDesagregacionesObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $tiposAtrDesagregacionesObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($tiposAtrDesagregacione));
+        $this->inject($this->subject, 'tiposAtrDesagregaciones', $tiposAtrDesagregacionesObjectStorageMock);
+
+        $this->subject->removeTiposAtrDesagregacione($tiposAtrDesagregacione);
+    }
 }
