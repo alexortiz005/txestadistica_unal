@@ -75,7 +75,26 @@ page{
         jquery = EXT:estadistica_unal/Resources/Public/Js/jquery-3.2.1.js
         dragscroll = EXT:estadistica_unal/Resources/Public/Js/dragscroll.js
         estadistica-unal = EXT:estadistica_unal/Resources/Public/Js/estadistica-unal.js
+        modal-estadisticas = EXT:estadistica_unal/Resources/Public/Js/modal-estadisticas.js
         full-screen-helper = EXT:estadistica_unal/Resources/Public/Js/full-screen-helper.js
     }
 }
 
+
+ajaxContentEstadisticasListCategorias = PAGE
+ajaxContentEstadisticasListCategorias {
+    typeNum = 476
+
+    # add plugin
+    10 < tt_content.list.20.estadisticaunal_listcategorias
+
+    # disable header code
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type: application/json, utf-8
+
+        xhtml_cleaning = 0
+        admPanel = 0
+        debug = 0
+    }
+}

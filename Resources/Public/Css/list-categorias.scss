@@ -300,8 +300,12 @@ a{
 		    padding-top: 0px;
 			padding-bottom: 0px;
 
-		}
+		}	
+		
+		
+	}
 
+	.halfTabPane{
 		@media screen and (min-width: 992px) {
 			width :49.1%;			
 		}
@@ -309,20 +313,18 @@ a{
 		@media screen and (max-width: 992px) {
 			width :100%;
 		}
-		
-		
 	}
 
 
-	.regularHistorico{
+	.regularActual{
 		float: right !important;
 	}
 
-	.regularActual  .nav li.active > a{
+	.regularHistorico  .nav li.active > a{
 		background-color: #88ad84!important;
 	}
 
-	.regularHistorico  .nav li.active > a{
+	.regularActual  .nav li.active > a{
 		background-color: #debfbf	!important;
 	}
 

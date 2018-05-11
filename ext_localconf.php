@@ -26,7 +26,7 @@ call_user_func(
             'Listcategorias',
             [
                 'Categoria' => 'list, show',
-                'Desagregacion' => 'list, show',
+                'Desagregacion' => 'list, show, getArchivos',
                 'Archivo' => 'list, show',
                 'Atributo' => 'list, show',
                 'Estadistica' => 'list, show, modal'

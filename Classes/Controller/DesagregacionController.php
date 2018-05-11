@@ -24,18 +24,45 @@ class DesagregacionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      */
     public function listAction()
     {
-        $desagregacions = $this->desagreagacionRepository->findAll();
-        $this->view->assign('desagreagacions', $desagreagacions);
+        $desagregacions = $this->desagregacionRepository->findAll();
+        $this->view->assign('desagregacions', $desagregacions);
     }
 
     /**
      * action show
      *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Desagreagacion $desagreagacion
+     * @param \Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacion
      * @return void
      */
-    public function showAction(\Unal\EstadisticaUnal\Domain\Model\Desagreagacion $desagreagacion)
+    public function showAction(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacion)
     {
-        $this->view->assign('desagreagacion', $desagreagacion);
+        $this->view->assign('desagregacion', $desagregacion);
+    }
+
+    /**
+     * action show
+     *
+     * @param \Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacion
+     * @return void
+     */
+    public function getArchivosAction(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacion)
+    {
+        print_r();
+
+        $archivos=$desagregacion->getArchivos();
+
+        $archivos_as_array=[];
+
+
+        foreach ($archivos as $key => $archivo) {
+            foreach ((array)$archivo as $key => $value) {
+                if(is_array($value))
+                    $archivos_as_array[]=$value;                
+            }
+            
+        }
+       
+
+        return  json_encode($archivos_as_array);
     }
 }
