@@ -1,3 +1,85 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
+
+<div class="container-fluid">
+
+	<div class="row">
+
+		<div class="col-md-1 visible-md-block visible-lg-block"></div>
+
+		<f:for each="{estadisticas}" as="estadistica" iteration="iterator">
+			<f:if condition="{iterator.index}%5==0 && {iterator.index}>0">
+				<f:then>
+					<div class="col-md-1 visible-md-block visible-lg-block"></div>
+					<div class="clearfix visible-md-block visible-lg-block"> </div>
+					<div class="col-md-1 visible-md-block visible-lg-block"></div>
+				</f:then>
+			</f:if>
+			<f:if condition="{iterator.index}%3==0 && {iterator.index}>0">
+				<f:then>
+					<div class="clearfix visible-sm-block"> </div>
+				</f:then>
+			</f:if>
+			<f:if condition="{iterator.index}%2==0 && {iterator.index}>0">
+				<f:then>
+					<div class="clearfix visible-xs-block"> </div>
+				</f:then>
+			</f:if>
+			<f:link.action class="col-md-2 col-sm-4 col-xs-6 unBadge estadistica colour-shifter" action="modal" arguments="{estadistica: estadistica}" pageType="476" controller="Estadistica" data="{nombre:'{estadistica.nombreDisplay}',url:'{f:uri.action(action: \'protocolo\', arguments: {estadistica:estadistica}, controller: \'Estadistica\', pageUid: pagina_protocolo_pageuid)}'}">
+				<div class="row ">
+					<div class="col-md-12">
+						<img src="{estadistica.badge.originalResource.publicUrl}"
+							 data-altbadge="{estadistica.altBadge.originalResource.publicUrl}"
+							 data-badge="{estadistica.badge.originalResource.publicUrl}"
+							 class="unBadgeImg img-responsive" width=100%>
+					</div>
+					<div class="unBadgeData col-md-12">
+						<h5>{estadistica.nombreDisplay}</h5>
+					</div>
+				</div>
+			</f:link.action>
+			
+		</f:for>
+	</div>
+</div>
+
+<!-- Modal -->
+<div id="dashboard" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg">
+
+		<!-- Modal content-->
+		<div class="modal-content unModal-content">
+
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+				<div class="close closePipe" >|</div>
+				<button type="button" class="close" ><span class="glyphicon glyphicon-share-alt"></span></button>
+				<h3 class="modal-title">
+
+					<a id="linkDashboardTitle">						
+						<span  id="modalTitle"></span>
+					</a>
+
+					<small>
+						<span class="glyphicon glyphicon-question-sign" 
+							  data-placement="bottom" 
+							  data-toggle="tooltip" 
+							  title="
+							  	<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_estadistica.tooltip_dashboard" />
+							  ">							  
+						</span>
+					</small>
+				</h3>
+			</div>
+
+
+			<div class="modal-body" id="modalBody">
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
 </html>

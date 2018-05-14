@@ -16,23 +16,6 @@
 	        <ul class="nav nav-pills nav-justified" id="pillsArchivosDesagregacionRegularHistorico"></ul>
 
 	        <div class="tab-content" id="tabContentArchivosDesagregacionRegularHistorico" style="margin-bottom: 0px">
-	            <f:for each="{desagregacion.archivos}" as="archivo" iteration="iterator">
-	                <f:if condition="{archivo.tipo}==0">
-
-	                    <div id="archivo{archivo.nombreDisplay}{archivo.uid}" class="player tab-pane fade">
-	                            <iframe id="iframe{archivo.nombre}{archivo.uid}" src="{f:if(condition: archivo.link, then: '{archivo.link}', else: '/{archivo.contenido.originalResource.publicUrl}')}" frameborder="0"></iframe>       
-	                            <button type="button" class="btn btn-info btn-block" 
-	                                    data-toggle="tooltip" 
-	                                    data-placement="bottom" 
-	                                    title="Fullscreen" 
-	                                    onclick="FullScreenHelper.toggle(document.getElementById('iframe{archivo.nombre}{archivo.uid}'));"
-	                                    >
-	                                 <span class="glyphicon glyphicon-fullscreen">
-	                            </button>           
-	                    </div>
-
-	                </f:if>
-	            </f:for>
 	        </div>
 	    </div>
 
@@ -48,36 +31,10 @@
 	        <ul class="nav nav-pills nav-justified" id="pillsArchivosDesagregacionRegularActual"></ul>
 
 	        <div class="tab-content"  id="tabContentArchivosDesagregacionRegularActual" style="margin-bottom: 0px">
-	            <f:for each="{desagregacion.archivos}" as="archivo" iteration="iterator">
-	                <f:if condition="{archivo.tipo}==1">
-	                    <div id="archivo{archivo.nombreDisplay}{archivo.uid}" class="tab-pane fade">
-	                        <iframe id="iframe{archivo.nombre}{archivo.uid}" src="{f:if(condition: archivo.link, then: '{archivo.link}', else: '/{archivo.contenido.originalResource.publicUrl}')}" frameborder="0"></iframe>
-	                        <button type="button" class="btn btn-info btn-block" 
-	                                    data-toggle="tooltip" 
-	                                    data-placement="bottom" 
-	                                    title="Fullscreen" 
-	                                    onclick="FullScreenHelper.toggle(document.getElementById('iframe{archivo.nombre}{archivo.uid}'));"
-	                                    >
-	                                 <span class="glyphicon glyphicon-fullscreen">
-	                            </button>
-	                    </div>
-	                </f:if>
-	            </f:for>
 	        </div>
 
 	    </div>
 
-	    <script type="text/javascript">
-	        $(document).ready(function(){
-	            $(".panelArchivos > .nav-pills").each(function() {
-	                $( this ).children().first().addClass( "active" )
-	            });
-
-	            $(".panelArchivos > .tab-content").each(function() {
-	                $( this ).children().first().addClass( "in active" )
-	            });
-	        });
-	    </script>
 	</div>     
 </div>
 

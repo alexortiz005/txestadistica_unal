@@ -60,7 +60,7 @@ $(document).on("click",".desagregacion",function(event){
                 ajaxCallGetArchivosDesagregacionRegular(urlGetArchivos);
             });
 
-             $("#tabPaneDesagregacionRegular").addClass("in active");
+            $("#tabPaneDesagregacionRegular").addClass("in active");
            
             $("#tabPaneDesagregacionRegular").fadeIn(500);
         }else{
@@ -101,8 +101,8 @@ function updateTabPaneDesagregacionRegular(archivos){
     $("#panelArchivosDesagregacionRegularActual").removeClass();
     $("#pillsArchivosDesagregacionRegularHistorico").empty();
     $("#pillsArchivosDesagregacionRegularActual").empty();
-    $("#tabContentArchivosDesagregacionRegularHistorico").empty();
-    $("#tabContentArchivosDesagregacionRegularActual").empty();
+    //$("#tabContentArchivosDesagregacionRegularHistorico").empty();
+    //$("#tabContentArchivosDesagregacionRegularActual").empty();
 
     var archivos_historicos= []
     var archivos_actuales= []
@@ -145,22 +145,27 @@ function updateTabPaneDesagregacionRegular(archivos){
 
     archivos_historicos.forEach(function (archivo,index) {
 
-        var pillArchivo = $("<li><a data-toggle=\"pill\" href=\"#archivo"+archivo['nombre']+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
-       
-        var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
-        paneArchivo.attr("id","archivo"+archivo['nombre']+archivo['uid']);
-
-        var iframe = $("<iframe frameborder=\"0\"></iframe>");
-        iframe.attr("id","iframe"+archivo['nombre']+archivo['uid']);
-        iframe.attr("src",archivo['link']);
-
-        var buttonFullscreen=$("<button type=\"button\" class=\"btn btn-info btn-block\"data-toggle=\"tooltip\"data-placement=\"bottom\"title=\"Pantalla Completa\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['nombre']+archivo['uid']+"'));\"> <span class=\"glyphicon glyphicon-fullscreen\"> </button> ")
-
-        paneArchivo.append(iframe);
-        paneArchivo.append(buttonFullscreen);
-
+        var pillArchivo = $("<li><a data-toggle=\"pill\" href=\"#archivo"+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
         $("#pillsArchivosDesagregacionRegularHistorico").append(pillArchivo);
-        $("#tabContentArchivosDesagregacionRegularHistorico").append(paneArchivo);
+
+        var archivoPrescedente=$("#archivo"+archivo['uid']);
+
+        if(archivoPrescedente.length==0){
+            var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
+            paneArchivo.attr("id","archivo"+archivo['uid']);
+
+            var iframe = $("<iframe frameborder=\"0\"></iframe>");
+            iframe.attr("id","iframe"+archivo['uid']);
+            iframe.attr("src",archivo['link']);
+
+            var buttonFullscreen=$("<button type=\"button\" class=\"btn btn-info btn-block\"data-toggle=\"tooltip\"data-placement=\"bottom\"title=\"Pantalla Completa\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['uid']+"'));\"> <span class=\"glyphicon glyphicon-fullscreen\"> </button> ")
+
+            paneArchivo.append(iframe);
+            paneArchivo.append(buttonFullscreen);
+
+            $("#tabContentArchivosDesagregacionRegularHistorico").append(paneArchivo);
+        }
+       
         
     });
 
@@ -168,28 +173,33 @@ function updateTabPaneDesagregacionRegular(archivos){
 
     archivos_actuales.forEach(function (archivo,index) {
         
-        var pillArchivo = $("<li><a data-toggle=\"pill\" href=\"#archivo"+archivo['nombre']+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
-        
-        var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
-        paneArchivo.attr("id","archivo"+archivo['nombre']+archivo['uid']);
-
-        var iframe = $("<iframe frameborder=\"0\"></iframe>");
-        iframe.attr("id","iframe"+archivo['nombre']+archivo['uid']);
-        iframe.attr("src",archivo['link']);
-
-        var buttonFullscreen=$("<button type=\"button\" class=\"btn btn-info btn-block\"data-toggle=\"tooltip\"data-placement=\"bottom\"title=\"Pantalla Completa\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['nombre']+archivo['uid']+"'));\"> <span class=\"glyphicon glyphicon-fullscreen\"> </button> ")
-
-        paneArchivo.append(iframe);
-        paneArchivo.append(buttonFullscreen);
-
+        var pillArchivo = $("<li><a data-toggle=\"pill\" href=\"#archivo"+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
         $("#pillsArchivosDesagregacionRegularActual").append(pillArchivo);
-        $("#tabContentArchivosDesagregacionRegularActual").append(paneArchivo);
+
+        var archivoPrescedente=$("#archivo"+archivo['uid']);
+
+        if(archivoPrescedente.length==0){
+            var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
+            paneArchivo.attr("id","archivo"+archivo['uid']);
+
+            var iframe = $("<iframe frameborder=\"0\"></iframe>");
+            iframe.attr("id","iframe"+archivo['uid']);
+            iframe.attr("src",archivo['link']);
+
+            var buttonFullscreen=$("<button type=\"button\" class=\"btn btn-info btn-block\"data-toggle=\"tooltip\"data-placement=\"bottom\"title=\"Pantalla Completa\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['uid']+"'));\"> <span class=\"glyphicon glyphicon-fullscreen\"> </button> ")
+
+            paneArchivo.append(iframe);
+            paneArchivo.append(buttonFullscreen);
+
+            $("#tabContentArchivosDesagregacionRegularActual").append(paneArchivo);
+        }
+        
     });
 
     $("#pillsArchivosDesagregacionRegularActual").find("a").first().trigger("click");
 
 
-     $('[data-toggle="tooltip"]').tooltip(); 
+    $('[data-toggle="tooltip"]').tooltip(); 
 
    
 
