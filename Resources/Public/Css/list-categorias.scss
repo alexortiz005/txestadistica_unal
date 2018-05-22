@@ -125,14 +125,13 @@ a{
 @media (min-width: 768px){
 	.modal-dialog {
 		width: 700px;
+	}	
+	.modal-lg {
+		width: 92%;
 	}			
 }
 
-@media (min-width: 992px){
-	.modal-lg {
-		width: 1150px;
-	}	
-}
+
 
 .blurry-box{
 	padding: 0.6%;
@@ -254,6 +253,7 @@ a{
 			box-shadow: none;
 			padding: unset;			
     		text-align: center;
+    		margin:5px;
 		}
 
 		.nav-pills{			
@@ -273,7 +273,7 @@ a{
 
 	iframe{
 		width: 100%;
-		height: 25em;
+		height: 50vh;
 	}	
 
 	.panelArchivos{
@@ -285,7 +285,7 @@ a{
 		}
 
 		font-size: 16px;
-		padding: 15px;
+		padding: 5px 5px 15px 5px;
 	    font-size: 16px;
 	    background-color: white;
 	    border-radius: 20px;
@@ -320,11 +320,11 @@ a{
 		float: right !important;
 	}
 
-	.regularHistorico  .nav li.active > a{
+	.nav li.active > a.historico {
 		background-color: #88ad84!important;
 	}
 
-	.regularActual  .nav li.active > a{
+	.nav li.active > a.actual{
 		background-color: #debfbf	!important;
 	}
 
@@ -354,6 +354,14 @@ a{
 
 		.nav li.active > a{
 			background-color: #636363;
+		}
+
+		.tab-content{
+			.nav li > a{
+				margin: 3px;
+    			box-shadow: 0px 0px 15px rgba(136, 136, 136, 0.5);
+			}
+
 		}
 
 		.nav li > a{

@@ -145,7 +145,7 @@ function updateTabPaneDesagregacionRegular(archivos){
 
     archivos_historicos.forEach(function (archivo,index) {
 
-        var pillArchivo = $("<li><a data-toggle=\"pill\" href=\"#archivo"+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
+        var pillArchivo = $("<li><a class=\"historico\" data-toggle=\"pill\" href=\"#archivo"+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
         $("#pillsArchivosDesagregacionRegularHistorico").append(pillArchivo);
 
         var archivoPrescedente=$("#archivo"+archivo['uid']);
@@ -173,7 +173,7 @@ function updateTabPaneDesagregacionRegular(archivos){
 
     archivos_actuales.forEach(function (archivo,index) {
         
-        var pillArchivo = $("<li><a data-toggle=\"pill\" href=\"#archivo"+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
+        var pillArchivo = $("<li><a class=\"actual\" data-toggle=\"pill\" href=\"#archivo"+archivo['uid']+"\">"+archivo['nombreDisplay']+"</a></li>"); 
         $("#pillsArchivosDesagregacionRegularActual").append(pillArchivo);
 
         var archivoPrescedente=$("#archivo"+archivo['uid']);
