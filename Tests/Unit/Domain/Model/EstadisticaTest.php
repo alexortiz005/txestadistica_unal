@@ -127,10 +127,10 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getTotalReturnsInitialValueForInt()
+    public function getTotalReturnsInitialValueForString()
     {
         self::assertSame(
-            0,
+            '',
             $this->subject->getTotal()
         );
     }
@@ -138,12 +138,12 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function setTotalForIntSetsTotal()
+    public function setTotalForStringSetsTotal()
     {
-        $this->subject->setTotal(12);
+        $this->subject->setTotal('Conceived at T3CON10');
 
         self::assertAttributeEquals(
-            12,
+            'Conceived at T3CON10',
             'total',
             $this->subject
         );

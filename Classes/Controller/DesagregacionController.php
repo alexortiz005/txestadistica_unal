@@ -48,21 +48,15 @@ class DesagregacionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
     public function getArchivosAction(\Unal\EstadisticaUnal\Domain\Model\Desagregacion $desagregacion)
     {
         print_r();
-
-        $archivos=$desagregacion->getArchivos();
-
-        $archivos_as_array=[];
-
-
+        $archivos = $desagregacion->getArchivos();
+        $archivos_as_array = [];
         foreach ($archivos as $key => $archivo) {
-            foreach ((array)$archivo as $key => $value) {
-                if(is_array($value))
-                    $archivos_as_array[]=$value;                
+            foreach ((array) $archivo as $key => $value) {
+                if (is_array($value)) {
+                    $archivos_as_array[] = $value;
+                }
             }
-            
         }
-       
-
-        return  json_encode($archivos_as_array);
+        return json_encode($archivos_as_array);
     }
 }

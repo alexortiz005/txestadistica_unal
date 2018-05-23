@@ -16,7 +16,7 @@ call_user_func(
                 'Categoria' => '',
                 'Desagregacion' => '',
                 'Archivo' => '',
-                'Atributo' => '',
+                'AtributoDesagregacion' => '',
                 'Estadistica' => ''
             ]
         );
@@ -36,11 +36,10 @@ call_user_func(
                 'Categoria' => '',
                 'Desagregacion' => '',
                 'Archivo' => '',
-                'Atributo' => '',
+                'AtributoDesagregacion' => '',
                 'Estadistica' => ''
             ]
         );
-        
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Unal.EstadisticaUnal',
@@ -53,7 +52,7 @@ call_user_func(
                 'Categoria' => '',
                 'Desagregacion' => '',
                 'Archivo' => '',
-                'Atributo' => '',
+                'AtributoDesagregacion' => '',
                 'Estadistica' => ''
             ]
         );

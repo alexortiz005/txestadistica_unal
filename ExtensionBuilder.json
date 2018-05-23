@@ -334,16 +334,6 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "nombreDisplay",
-                            "propertyType": "String",
-                            "uid": "1483096369406"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
                             "propertyName": "contenido",
                             "propertyType": "RichText",
                             "uid": "7492461599"
@@ -447,7 +437,7 @@
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
                             "propertyName": "total",
-                            "propertyType": "Integer",
+                            "propertyType": "Text",
                             "uid": "1421541228105"
                         },
                         {

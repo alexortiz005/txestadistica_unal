@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-04-02T17:18:01Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-22T22:38:21Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
@@ -95,9 +95,6 @@
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion.nombre">
 				<source>Nombre</source>
-			</trans-unit>
-			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion.nombre_display">
-				<source>Nombre Display</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion.contenido">
 				<source>Contenido</source>

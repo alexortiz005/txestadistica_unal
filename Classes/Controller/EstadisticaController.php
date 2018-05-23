@@ -64,8 +64,7 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
     public function modalAction(\Unal\EstadisticaUnal\Domain\Model\Estadistica $estadistica)
     {
         $this->view->assign('estadistica', $estadistica);
-    }   
-
+    }
 
     /**
      * @param \Unal\EstadisticaUnal\Domain\Model\Estadistica $estadistica

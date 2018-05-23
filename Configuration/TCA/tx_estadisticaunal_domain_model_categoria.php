@@ -225,8 +225,6 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_estadistica',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_estadistica.pid=###CURRENT_PID###',
-                'enableMultiSelectFilterTextfield' => true,
                 'MM' => 'tx_estadisticaunal_categoria_estadistica_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,

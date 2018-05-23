@@ -20,7 +20,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <table  class="tx_estadisticaunal" >
 	<tr>
 		<th><f:translate key="tx_estadisticaunal_domain_model_atributodesagregacion.nombre" /></th>
-		<th><f:translate key="tx_estadisticaunal_domain_model_atributodesagregacion.nombre_display" /></th>
 		<th><f:translate key="tx_estadisticaunal_domain_model_atributodesagregacion.contenido" /></th>
 		<th> </th>
 		<th> </th>
@@ -29,7 +28,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	<f:for each="{atributoDesagregacions}" as="atributoDesagregacion">
 		<tr>
 			<td><f:link.action action="show" arguments="{atributoDesagregacion : atributoDesagregacion}"> {atributoDesagregacion.nombre}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{atributoDesagregacion : atributoDesagregacion}"> {atributoDesagregacion.nombreDisplay}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{atributoDesagregacion : atributoDesagregacion}"> {atributoDesagregacion.contenido}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{atributoDesagregacion : atributoDesagregacion}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{atributoDesagregacion : atributoDesagregacion}">Delete</f:link.action></td>

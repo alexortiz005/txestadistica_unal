@@ -48,7 +48,7 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * total
      *
-     * @var int
+     * @var string
      */
     protected $total = 0;
 
@@ -174,27 +174,6 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setDescripcion($descripcion)
     {
         $this->descripcion = $descripcion;
-    }
-
-    /**
-     * Returns the total
-     *
-     * @return int $total
-     */
-    public function getTotal()
-    {
-        return $this->total;
-    }
-
-    /**
-     * Sets the total
-     *
-     * @param int $total
-     * @return void
-     */
-    public function setTotal($total)
-    {
-        $this->total = $total;
     }
 
     /**
@@ -387,5 +366,26 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTiposAtrDesagregaciones(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tiposAtrDesagregaciones)
     {
         $this->tiposAtrDesagregaciones = $tiposAtrDesagregaciones;
+    }
+
+    /**
+     * Returns the total
+     *
+     * @return string total
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+
+    /**
+     * Sets the total
+     *
+     * @param int $total
+     * @return void
+     */
+    public function setTotal($total)
+    {
+        $this->total = $total;
     }
 }

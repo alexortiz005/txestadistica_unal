@@ -52,31 +52,6 @@ class AtributoDesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getNombreDisplayReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getNombreDisplay()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setNombreDisplayForStringSetsNombreDisplay()
-    {
-        $this->subject->setNombreDisplay('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'nombreDisplay',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getContenidoReturnsInitialValueForString()
     {
         self::assertSame(
