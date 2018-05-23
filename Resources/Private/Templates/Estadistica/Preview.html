@@ -6,9 +6,9 @@
 <f:flashMessages />
 	<div class="container-fluid estadisticasPreview" style="margin-top: 10px">
 
-		<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs nav-justified">
 			<f:for each="{estadisticas_a_mostrar}" as="estadistica" iteration="iterator">
-				<li class="{f:if(condition:'{iterator.isFirst}',then:'active',else:'')} col-md-3 col-sm-6 col-xs-6">
+				<li class="{f:if(condition:'{iterator.isFirst}',then:'active',else:'')} tabPreviewEstadistica switchingTab">
 					<a class="colour-shifter" data-toggle="tab" href="#tab{iterator.index}">
 						<div class="row">
 							<div class="col-md-12">
@@ -27,7 +27,7 @@
 				</li>
 			</f:for>
 
-				<li class="col-md-3 col-sm-6 col-xs-6">
+				<li class="tabPreviewEstadistica">
 					<f:link.typolink class="colour-shifter" parameter="{uri_link_boton_ver_mas}" >
 						<div class="row">
 							<div class="col-md-12">
@@ -54,7 +54,7 @@
 						<div id="tab{iterator.index}" class="tab-pane fade in active">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
-									<h4>{estadistica.descripcion-> f:format.stripTags()}</h4>
+									<p>{estadistica.descripcion-> f:format.stripTags()}</p>
 								</div>
 							</div>
 						</div>
@@ -63,7 +63,7 @@
 						<div id="tab{iterator.index}" class="tab-pane fade ">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
-									<h4>{estadistica.descripcion-> f:format.stripTags()}</h4>
+									<p>{estadistica.descripcion-> f:format.stripTags()}</p>
 								</div>
 							</div>
 						</div>

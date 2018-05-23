@@ -55,4 +55,11 @@ $(document).ready(function(){
     	}
     );
 
+
+    var tabsPreviewEstadistica = $('.tabPreviewEstadistica');
+
+    tabsPreviewEstadistica.width((100/tabsPreviewEstadistica.length)+"%");
+
+
+
 });

@@ -20,7 +20,7 @@
                                 <internal_type>db</internal_type>
                                 <allowed>tx_estadisticaunal_domain_model_estadistica</allowed>
                                 <size>3</size>
-                                <maxitems>3</maxitems>
+                                <maxitems>10</maxitems>
                                 <minitems>3</minitems>
                                 <show_thumbs>0</show_thumbs>
                             </config>
