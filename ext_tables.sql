@@ -140,7 +140,6 @@ CREATE TABLE tx_estadisticaunal_domain_model_atributodesagregacion (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	nombre varchar(255) DEFAULT '' NOT NULL,
-	nombre_display varchar(255) DEFAULT '' NOT NULL,
 	contenido text,
 	tipo int(11) unsigned DEFAULT '0' NOT NULL,
 

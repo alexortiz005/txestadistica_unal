@@ -1,3 +1,5 @@
+var countPreviewChange=0;
+
 $(document).ready(function(){
 
     function initBannerList(){
@@ -55,11 +57,60 @@ $(document).ready(function(){
     	}
     );
 
+    $('.switchingTab').click(function() {
+      countPreviewChange=0;
+    });
 
-    var tabsPreviewEstadistica = $('.tabPreviewEstadistica');
 
-    tabsPreviewEstadistica.width((100/tabsPreviewEstadistica.length)+"%");
+    period=$('#periodoTransicion').val();
+
+
+    initWidthPreviewtabs();
+    initPreviewFlow(period);
+
+    
 
 
 
 });
+
+function initWidthPreviewtabs(){
+
+    var tabsPreviewEstadistica = $('.tabPreviewEstadistica');
+    tabsPreviewEstadistica.width((100/tabsPreviewEstadistica.length)+"%");
+
+}
+
+function initPreviewFlow(period){  
+    setInterval(function() { previewFlowChanger(period) }, 1);
+
+}
+
+function previewFlowChanger(period){
+    countPreviewChange++;
+    if(countPreviewChange==period){      
+        countPreviewChange=0;
+        nextTabPreview();
+    }
+}
+
+function nextTabPreview(){
+
+    var switchingTabs =$('.switchingTab');
+    var switchingTabsSize=switchingTabs.length;
+    var nextIndex=0;
+
+    switchingTabs.each(function(index){
+        if($(this).hasClass('active')){
+            nextIndex=(index+1)%switchingTabsSize;
+        }
+
+        $(this).find("a").blur();
+    });
+
+
+    var nextTab = switchingTabs.eq(nextIndex);
+
+    nextTab.find("a").trigger("click");
+
+}

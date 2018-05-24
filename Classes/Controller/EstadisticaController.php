@@ -82,11 +82,16 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
      */
     public function previewAction()
     {
+
+
         $uri_badge_ver_mas = 'fileadmin/user_upload/' . $this->settings['badge_ver_mas'];
         $uri_altBadge_ver_mas = 'fileadmin/user_upload/' . $this->settings['altBadge_ver_mas'];
         $uri_link_boton_ver_mas = $this->settings['link_ver_mas'];
         $texto_boton_ver_mas = $this->settings['texto_ver_mas'];
         $subtexto_boton_ver_mas = $this->settings['subtexto_ver_mas'];
+        $periodoTransicion = $this->settings['periodo'];
+        
+
         //se obtienen las uids que el editor selecciono en el backend a traves de la variable settings
         $uids_estadisticas_a_mostrar = explode(',', $this->settings['estadisticas_a_mostrar']);
         //se crea un arreglo que contenera las estadisticas que se van a mostrar en el preview
@@ -102,6 +107,7 @@ class EstadisticaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCont
             'uri_altBadge_ver_mas' => $uri_altBadge_ver_mas,
             'uri_link_boton_ver_mas' => $uri_link_boton_ver_mas,
             'texto_boton_ver_mas' => $texto_boton_ver_mas,
+            'periodoTransicion' => $periodoTransicion,
             'subtexto_boton_ver_mas' => $subtexto_boton_ver_mas
         ]);
     }

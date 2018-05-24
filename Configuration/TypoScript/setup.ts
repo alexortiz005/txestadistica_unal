@@ -76,6 +76,7 @@ page{
         dragscroll = EXT:estadistica_unal/Resources/Public/Js/dragscroll.js
         estadistica-unal = EXT:estadistica_unal/Resources/Public/Js/estadistica-unal.js
         modal-estadisticas = EXT:estadistica_unal/Resources/Public/Js/modal-estadisticas.js
+        protocolo = EXT:estadistica_unal/Resources/Public/Js/protocolo.js
         full-screen-helper = EXT:estadistica_unal/Resources/Public/Js/full-screen-helper.js
     }
 }

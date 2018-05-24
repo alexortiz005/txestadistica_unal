@@ -20,16 +20,18 @@
 
 			<div class="tab-content">
 				<div id="home" class="tab-pane fade in active">
-					<table>
+					<table class="header-fixed">
 					  <col width="10%"> 
-						<tr>
-							<th>
-								<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:atributo.description" />
-							</th>
-							<th>
-								<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:definicion.description" />
-							</th>
-						</tr>		
+					  	<thead>					  		
+							<tr>
+								<th>
+									<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:atributo.description" />
+								</th>
+								<th>
+									<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:definicion.description" />
+								</th>
+							</tr>		
+					  	</thead>
 					  	<f:for each="{estadistica.atributos}" as="atributo">
 							<tr>
 								<td>
