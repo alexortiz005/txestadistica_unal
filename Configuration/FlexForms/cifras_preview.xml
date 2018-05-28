@@ -11,21 +11,21 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <settings.estadisticas_a_mostrar>
+                    <settings.indicadores_a_mostrar>
                         <TCEforms>
                             <exclude>1</exclude>
                             <label>LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_cifrasunalbe.xlf:plugin_cifraspreview_estadisticas</label>
                             <config>
                                 <type>group</type>
                                 <internal_type>db</internal_type>
-                                <allowed>tx_estadisticaunal_domain_model_estadistica</allowed>
-                                <size>3</size>
-                                <maxitems>10</maxitems>
-                                <minitems>3</minitems>
+                                <allowed>tx_estadisticaunal_domain_model_indicador</allowed>
+                                <size>5</size>
+                                <maxitems>100</maxitems>
+                                <minitems>5</minitems>
                                 <show_thumbs>0</show_thumbs>
                             </config>
                         </TCEforms>
-                    </settings.estadisticas_a_mostrar>
+                    </settings.indicadores_a_mostrar>
                     <settings.badge_ver_mas>
                         <TCEforms>
                             <exclude>1</exclude>

@@ -74,7 +74,6 @@ call_user_func(
 
         }
 
-
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('estadistica_unal', 'Configuration/TypoScript', 'Estadistica Unal');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_categoria', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_categoria.xlf');

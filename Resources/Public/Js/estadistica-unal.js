@@ -1,4 +1,6 @@
-var countPreviewChange=0;
+var countPreviewChange=1;
+
+var period=1;
 
 $(document).ready(function(){
 
@@ -55,41 +57,84 @@ $(document).ready(function(){
         	var uri_badge = img.data("badge")
         	img.attr("src",uri_badge)
     	}
-    );
-
-    $('.switchingTab').click(function() {
-      countPreviewChange=0;
-    });
-
+    );    
 
     period=$('#periodoTransicion').val();
 
-
     initWidthPreviewtabs();
-    initPreviewFlow(period);
-
-    
-
+    initPreviewFlow();   
 
 
 });
 
+$(document).on("click", ".tempTab, .switchingTab", function() {
+    $('.tempTab').remove();
+    countPreviewChange=period;
+    index=$(this).data('index');
+    putFiveIndicadoresCenteredAtIndex(index);
+});
+
+
+
+function putFiveIndicadoresCenteredAtIndex(index){
+
+
+    var indicadores = $('#poolIndicadores').children();
+
+    var k= 0
+
+    for (var j = index+2; j >=index-2; j--) {
+        var newIndicador = indicadores.eq(j%indicadores.length).clone()
+        newIndicador.addClass('tempTab')
+        newIndicador.removeClass('switchingTab')        
+        newIndicador.removeClass('active')
+
+        if(k==2){
+            newIndicador.addClass('active')
+            newIndicador.find('.colour-shifter').each(function() {
+                var imgOriginal = $(this).find('.unBadgeImgOriginal')                       
+                var imgAlternative = $(this).find('.unBadgeImgAlternative')
+                imgOriginal.addClass('hidden');
+                imgAlternative.removeClass('hidden');                       
+           });
+        }else{
+
+            newIndicador.find('.colour-shifter').each(function() {
+                var imgOriginal = $(this).find('.unBadgeImgOriginal')                       
+                var imgAlternative = $(this).find('.unBadgeImgAlternative')
+                imgAlternative.addClass('hidden');
+                imgOriginal.removeClass('hidden'); 
+
+            });
+        }             
+         
+        $('#previewIndicadores').prepend(newIndicador);
+       
+        k++
+
+    }
+
+    
+
+}
+
 function initWidthPreviewtabs(){
 
-    var tabsPreviewEstadistica = $('.tabPreviewEstadistica');
-    tabsPreviewEstadistica.width((100/tabsPreviewEstadistica.length)+"%");
+    var tabsPreviewIndicador = $('.tabPreviewIndicador');
+    // tabsPreviewIndicador.width((100/tabsPreviewIndicador.length)+"%");
+    tabsPreviewIndicador.width((100/6)+"%");
 
 }
 
-function initPreviewFlow(period){  
-    setInterval(function() { previewFlowChanger(period) }, 1);
+function initPreviewFlow(){  
+    setInterval(function() { previewFlowChanger() }, 1);
 
 }
 
-function previewFlowChanger(period){
-    countPreviewChange++;
-    if(countPreviewChange==period){      
-        countPreviewChange=0;
+function previewFlowChanger(){
+    countPreviewChange--;
+    if(countPreviewChange==0){      
+        countPreviewChange=period;
         nextTabPreview();
     }
 }
@@ -112,5 +157,6 @@ function nextTabPreview(){
     var nextTab = switchingTabs.eq(nextIndex);
 
     nextTab.find("a").trigger("click");
+    nextTab.trigger("click");
 
 }

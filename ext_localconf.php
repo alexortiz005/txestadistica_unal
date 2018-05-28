@@ -5,11 +5,17 @@ call_user_func(
     function()
     {
 
-         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Unal.EstadisticaUnal',
             'Estadisticaspreview',
             [
-                'Estadistica' => 'preview,list, show'
+                'Indicador' => 'preview',
+                'Categoria' => 'list, show',
+                'Desagregacion' => 'list, show',
+                'Archivo' => 'list, show',
+                'AtributoDesagregacion' => 'list, show',
+                'Estadistica' => 'list, show'
+                
             ],
             // non-cacheable actions
             [
@@ -17,7 +23,8 @@ call_user_func(
                 'Desagregacion' => '',
                 'Archivo' => '',
                 'AtributoDesagregacion' => '',
-                'Estadistica' => ''
+                'Estadistica' => '',
+                'Indicador' => ''
             ]
         );
 
@@ -37,7 +44,8 @@ call_user_func(
                 'Desagregacion' => '',
                 'Archivo' => '',
                 'AtributoDesagregacion' => '',
-                'Estadistica' => ''
+                'Estadistica' => '',
+                'Indicador' => ''
             ]
         );
 
@@ -53,7 +61,8 @@ call_user_func(
                 'Desagregacion' => '',
                 'Archivo' => '',
                 'AtributoDesagregacion' => '',
-                'Estadistica' => ''
+                'Estadistica' => '',
+                'Indicador' => ''
             ]
         );
 

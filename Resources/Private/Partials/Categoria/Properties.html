@@ -5,6 +5,7 @@
 			<f:translate key="tx_estadisticaunal_domain_model_categoria.nombre" />
 		</td>
 		<td>
+		{categoria.nombre}
 		</td>
 	</tr>
 	<tr>
@@ -12,6 +13,7 @@
 			<f:translate key="tx_estadisticaunal_domain_model_categoria.nombre_display" />
 		</td>
 		<td>
+		{categoria.nombreDisplay}
 		</td>
 	</tr>
 	<tr>
@@ -19,6 +21,7 @@
 			<f:translate key="tx_estadisticaunal_domain_model_categoria.badge" />
 		</td>
 		<td>
+				<f:image src="{categoria.badge.originalResource.publicUrl}" width="200"/>
 		</td>
 	</tr>
 	<tr>
@@ -26,6 +29,7 @@
 			<f:translate key="tx_estadisticaunal_domain_model_categoria.alt_badge" />
 		</td>
 		<td>
+				<f:image src="{categoria.altBadge.originalResource.publicUrl}" width="200"/>
 		</td>
 	</tr>
 </table>
