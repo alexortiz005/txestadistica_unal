@@ -77,31 +77,6 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getDescripcionReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getDescripcion()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setDescripcionForStringSetsDescripcion()
-    {
-        $this->subject->setDescripcion('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'descripcion',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getTextoProtocoloReturnsInitialValueForString()
     {
         self::assertSame(
@@ -120,31 +95,6 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         self::assertAttributeEquals(
             'Conceived at T3CON10',
             'textoProtocolo',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function getTotalReturnsInitialValueForString()
-    {
-        self::assertSame(
-            '',
-            $this->subject->getTotal()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setTotalForStringSetsTotal()
-    {
-        $this->subject->setTotal('Conceived at T3CON10');
-
-        self::assertAttributeEquals(
-            'Conceived at T3CON10',
-            'total',
             $this->subject
         );
     }
@@ -388,5 +338,68 @@ class EstadisticaTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
         $this->inject($this->subject, 'tiposAtrDesagregaciones', $tiposAtrDesagregacionesObjectStorageMock);
 
         $this->subject->removeTiposAtrDesagregacione($tiposAtrDesagregacione);
+    }
+
+    /**
+     * @test
+     */
+    public function getIndicadoresReturnsInitialValueForIndicador()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getIndicadores()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setIndicadoresForObjectStorageContainingIndicadorSetsIndicadores()
+    {
+        $indicadore = new \Unal\EstadisticaUnal\Domain\Model\Indicador();
+        $objectStorageHoldingExactlyOneIndicadores = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneIndicadores->attach($indicadore);
+        $this->subject->setIndicadores($objectStorageHoldingExactlyOneIndicadores);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneIndicadores,
+            'indicadores',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function addIndicadoreToObjectStorageHoldingIndicadores()
+    {
+        $indicadore = new \Unal\EstadisticaUnal\Domain\Model\Indicador();
+        $indicadoresObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $indicadoresObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($indicadore));
+        $this->inject($this->subject, 'indicadores', $indicadoresObjectStorageMock);
+
+        $this->subject->addIndicadore($indicadore);
+    }
+
+    /**
+     * @test
+     */
+    public function removeIndicadoreFromObjectStorageHoldingIndicadores()
+    {
+        $indicadore = new \Unal\EstadisticaUnal\Domain\Model\Indicador();
+        $indicadoresObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $indicadoresObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($indicadore));
+        $this->inject($this->subject, 'indicadores', $indicadoresObjectStorageMock);
+
+        $this->subject->removeIndicadore($indicadore);
     }
 }

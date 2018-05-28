@@ -37,7 +37,7 @@ class EstadisticaControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $estadisticaRepository = $this->getMockBuilder(\Unal\EstadisticaUnal\Domain\Repository\EstadisticaRepository::class)
+        $estadisticaRepository = $this->getMockBuilder(\::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();

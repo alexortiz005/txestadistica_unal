@@ -95,8 +95,8 @@
         {
             "config": {
                 "position": [
-                    495,
-                    317
+                    501,
+                    295
                 ]
             },
             "name": "New Model Object",
@@ -188,8 +188,8 @@
         {
             "config": {
                 "position": [
-                    745,
-                    372
+                    773,
+                    288
                 ]
             },
             "name": "New Model Object",
@@ -360,8 +360,8 @@
         {
             "config": {
                 "position": [
-                    250,
-                    325
+                    243,
+                    215
                 ]
             },
             "name": "New Model Object",
@@ -379,7 +379,7 @@
                     "addDeletedField": true,
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": true,
+                    "aggregateRoot": false,
                     "categorizable": false,
                     "description": "",
                     "mapToTable": "",
@@ -416,29 +416,9 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "descripcion",
-                            "propertyType": "RichText",
-                            "uid": "28441454781"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
                             "propertyName": "textoProtocolo",
                             "propertyType": "RichText",
                             "uid": "1460230345308"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "total",
-                            "propertyType": "Text",
-                            "uid": "1421541228105"
                         },
                         {
                             "allowedFileTypes": "",
@@ -496,6 +476,17 @@
                             "relationWire": "[wired]",
                             "renderType": "selectMultipleSideBySide",
                             "uid": "1043721064176"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "indicadores",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectMultipleSideBySide",
+                            "uid": "1469741095455"
                         }
                     ]
                 }
@@ -505,7 +496,7 @@
             "config": {
                 "position": [
                     749,
-                    530
+                    525
                 ]
             },
             "name": "New Model Object",
@@ -646,8 +637,8 @@
         {
             "config": {
                 "position": [
-                    749,
-                    685
+                    9,
+                    577
                 ]
             },
             "name": "New Model Object",
@@ -695,6 +686,106 @@
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
                             "uid": "1023885435851"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    529,
+                    118
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Indicador",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "334708760534"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombre",
+                            "propertyType": "String",
+                            "uid": "392771324360"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "nombreDisplay",
+                            "propertyType": "String",
+                            "uid": "451492773861"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "subtext",
+                            "propertyType": "String",
+                            "uid": "101442491739"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "descripcion",
+                            "propertyType": "RichText",
+                            "uid": "393054102410"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "badge",
+                            "propertyType": "Image",
+                            "uid": "755803287297"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "altBadge",
+                            "propertyType": "Image",
+                            "uid": "420064756252"
                         }
                     ]
                 },
@@ -869,10 +960,22 @@
                 "terminal": "SOURCES",
                 "uid": "725452541595"
             }
+        },
+        {
+            "src": {
+                "moduleId": 4,
+                "terminal": "relationWire_3",
+                "uid": "1469741095455"
+            },
+            "tgt": {
+                "moduleId": 8,
+                "terminal": "SOURCES",
+                "uid": "334708760534"
+            }
         }
     ],
     "log": {
-        "last_modified": "2018-05-22 10:38",
+        "last_modified": "2018-05-28 03:51",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }

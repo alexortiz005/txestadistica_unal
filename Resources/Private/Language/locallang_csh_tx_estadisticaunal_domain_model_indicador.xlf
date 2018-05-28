@@ -9,17 +9,17 @@
 			<trans-unit id="nombre_display.description">
 				<source>nombreDisplay</source>
 			</trans-unit>
-			<trans-unit id="link.description">
-				<source>link</source>
+			<trans-unit id="subtext.description">
+				<source>subtext</source>
 			</trans-unit>
-			<trans-unit id="contenido.description">
-				<source>contenido</source>
+			<trans-unit id="descripcion.description">
+				<source>descripcion</source>
 			</trans-unit>
-			<trans-unit id="tipo.description">
-				<source>tipo</source>
+			<trans-unit id="badge.description">
+				<source>badge</source>
 			</trans-unit>
-			<trans-unit id="explicacion.description">
-				<source>explicacion</source>
+			<trans-unit id="alt_badge.description">
+				<source>altBadge</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-22T22:38:21Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-28T03:51:56Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="nombre.description">
@@ -9,14 +9,8 @@
 			<trans-unit id="nombre_display.description">
 				<source>nombreDisplay</source>
 			</trans-unit>
-			<trans-unit id="descripcion.description">
-				<source>descripcion</source>
-			</trans-unit>
 			<trans-unit id="texto_protocolo.description">
 				<source>textoProtocolo</source>
-			</trans-unit>
-			<trans-unit id="total.description">
-				<source>total</source>
 			</trans-unit>
 			<trans-unit id="badge.description">
 				<source>badge</source>
@@ -32,6 +26,15 @@
 			</trans-unit>
 			<trans-unit id="tipos_atr_desagregaciones.description">
 				<source>tiposAtrDesagregaciones</source>
+			</trans-unit>
+			<trans-unit id="indicadores.description">
+				<source>indicadores</source>
+			</trans-unit>
+			<trans-unit id="descripcion.description">
+				<source>descripcion</source>
+			</trans-unit>
+			<trans-unit id="total.description">
+				<source>total</source>
 			</trans-unit>
 			<trans-unit id="tipos_atr_estadisticas.description">
 				<source>tiposAtrEstadisticas</source>

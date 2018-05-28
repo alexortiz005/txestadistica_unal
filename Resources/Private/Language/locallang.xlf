@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-22T22:38:21Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-28T03:51:56Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
@@ -168,6 +168,27 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica.nombre_display">
 				<source>Nombre Display</source>
 			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador">
+				<source>Indicador</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.subtext">
+				<source>Subtext</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.descripcion">
+				<source>Descripcion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.alt_badge">
+				<source>Alt Badge</source>
+			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria.plural">
 				<source>Categorías</source>
 			</trans-unit>
@@ -197,6 +218,12 @@
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_archivo.tipo_departamental">
 				<source>Departamental</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.descripcion">
+				<source>Descripcion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.total">
+				<source>Total</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tipos_atr_estadisticas">
 			        <source>Tipos de Atributos Estadisticas</source>
