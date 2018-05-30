@@ -61,8 +61,8 @@ $(document).ready(function(){
 
     period=$('#periodoTransicion').val();
 
-    initWidthPreviewtabs();
-    initPreviewFlow();   
+    //initWidthPreviewtabs();
+    //initPreviewFlow();   
 
 
 });
@@ -73,6 +73,60 @@ $(document).on("click", ".tempTab, .switchingTab", function() {
     index=$(this).data('index');
     putFiveIndicadoresCenteredAtIndex(index);
 });
+
+$('#indicadores').slick({
+    centerMode: true,
+    centerPadding: '1%',
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: $('#periodoTransicion').val(),
+    slidesToShow: 5,
+    focusOnSelect: true,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+    ]
+});
+
+// On before slide change
+$('#indicadores').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $('.tabPreviewIndicador').removeClass("active"); 
+    $('.slick-center').find(".tabPreviewIndicador").addClass('active');  
+    $('.slick-center').find(".tabPreviewIndicador").find('a').trigger('click')
+    $('.slick-center').find(".unBadgeImgAlternative").removeClass('hidden');
+    $('.slick-center').find(".unBadgeImgOriginal").addClass('hidden');
+
+
+})
+
+$('#indicadores').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.tabPreviewIndicador').removeClass("active");
+    $(".slick-slide").find(".unBadgeImgAlternative").addClass('hidden');
+    $(".slick-slide").find(".unBadgeImgOriginal").removeClass('hidden');
+
+
+})
+
+
+$('.slick-center').find('a').trigger('click')
+
+
 
 
 
@@ -108,7 +162,7 @@ function putFiveIndicadoresCenteredAtIndex(index){
             });
         }             
          
-        $('#previewIndicadores').prepend(newIndicador);
+        $('#indicadores').prepend(newIndicador);
        
         k++
 

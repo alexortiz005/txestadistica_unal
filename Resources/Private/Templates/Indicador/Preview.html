@@ -5,18 +5,19 @@
 
 <f:flashMessages />
 
-<input type="hidden" value="{periodoTransicion}" id="periodoTransicion">
+	<input type="hidden" value="{periodoTransicion}" id="periodoTransicion">
 
 	<div class="container-fluid indicadoresPreview" style="margin-top: 10px">
+	
 
-		<ul class="nav nav-tabs nav-justified hidden" id="poolIndicadores">
+		<div id="indicadores">
 			<f:for each="{indicadores_a_mostrar}" as="indicador" iteration="iterator"  key="index">
-				<li class="{f:if(condition:'{iterator.isFirst}',then:'active',else:'')} tabPreviewIndicador switchingTab" data-index="{index}">
+				<div class="{f:if(condition:'{iterator.isFirst}',then:'active',else:'')} tabPreviewIndicador switchingTab" data-index="{index}">
 					<a class="colour-shifter" data-toggle="tab" href="#tab{iterator.index}">
 						<div class="row">
 							<div class="col-md-12">
 								<img src="{indicador.badge.originalResource.publicUrl}"
-								class="unBadgeImg img-responsive unBadgeImgOriginal hidden" >
+								class="unBadgeImg img-responsive unBadgeImgOriginal " >
 								<img src="{indicador.altBadge.originalResource.publicUrl}"
 								class="unBadgeImg img-responsive unBadgeImgAlternative hidden " >
 							</div>
@@ -27,30 +28,11 @@
 						</div>
 
 					</a>
-				</li>
+				</div>
 			</f:for>
-		</ul>
 
-		<ul class="nav nav-tabs nav-justified" id="previewIndicadores">			
-
-				<li class="tabPreviewIndicador">
-					<f:link.typolink class="colour-shifter" parameter="{uri_link_boton_ver_mas}" >
-						<div class="row">
-							<div class="col-md-12">
-								<img src="{uri_badge_ver_mas}" 
-									 data-altbadge="{uri_altBadge_ver_mas}" 
-									 data-badge="{uri_badge_ver_mas}"
-									 class="unBadgeImg img-responsive" >
-							</div>
-							<div class="unBadgeData col-md-12">
-								<h5><f:format.case mode="upper">{texto_boton_ver_mas}</f:format.case></h5>
-								<h3>{subtexto_boton_ver_mas} </h3>
-							</div>
-						</div>
-
-					</f:link.typolink>
-				</li>
-		</ul>
+				
+		</div>
 
 
 		<div class="tab-content">
@@ -65,6 +47,15 @@
 			</f:for>
 		</div>
 
+		<f:link.typolink class="btn btn-info btn-block" parameter="{uri_link_boton_ver_mas}" >
+						<div class="row">							
+							<div class="col-md-12">
+								<h3><f:format.case mode="upper">{texto_boton_ver_mas}</f:format.case></h3>
+							</div>
+						</div>
+
+		</f:link.typolink>
+	
 	</div>
 
 </f:section>

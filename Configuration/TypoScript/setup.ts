@@ -69,15 +69,24 @@ page{
         indicadores-preview = EXT:estadistica_unal/Resources/Public/Css/indicadores-preview.scss
         estadisticas-unal = EXT:estadistica_unal/Resources/Public/Css/estadisticas-unal.scss
         estadisticas-protocolo = EXT:estadistica_unal/Resources/Public/Css/estadisticas-protocolo.scss
+        slick = EXT:estadistica_unal/Resources/Public/Css/slick.css
+        slick-theme = EXT:estadistica_unal/Resources/Public/Css/slick-theme.css
     }
     
     includeJS{
-        jquery = EXT:estadistica_unal/Resources/Public/Js/jquery-3.2.1.js
+
+        jquery = EXT:estadistica_unal/Resources/Public/Js/jquery-3.2.1.js      
         dragscroll = EXT:estadistica_unal/Resources/Public/Js/dragscroll.js
-        estadistica-unal = EXT:estadistica_unal/Resources/Public/Js/estadistica-unal.js
         modal-estadisticas = EXT:estadistica_unal/Resources/Public/Js/modal-estadisticas.js
         protocolo = EXT:estadistica_unal/Resources/Public/Js/protocolo.js
         full-screen-helper = EXT:estadistica_unal/Resources/Public/Js/full-screen-helper.js
+        
+    }
+
+    includeJSFooter{
+        slick = EXT:estadistica_unal/Resources/Public/Js/slick.min.js
+        estadistica-unal = EXT:estadistica_unal/Resources/Public/Js/estadistica-unal.js   
+
     }
 }
 
