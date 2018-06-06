@@ -44,6 +44,8 @@ $(document).ready(function(){
 
     initBannerList()
 
+    //codigo para estadisticas preview
+
     $('[data-toggle="tooltip"]').tooltip();
 
     $(".colour-shifter").hover(
@@ -61,156 +63,76 @@ $(document).ready(function(){
 
     period=$('#periodoTransicion').val();
 
-    //initWidthPreviewtabs();
-    //initPreviewFlow();   
-
-
-});
-
-$(document).on("click", ".tempTab, .switchingTab", function() {
-    $('.tempTab').remove();
-    countPreviewChange=period;
-    index=$(this).data('index');
-    putFiveIndicadoresCenteredAtIndex(index);
-});
-
-$('#indicadores').slick({
-    centerMode: true,
-    centerPadding: '1%',
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: $('#periodoTransicion').val(),
-    slidesToShow: 5,
-    focusOnSelect: true,
-    responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: true,
+    $('#indicadores').slick({
         centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: true,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-    ]
-});
-
-// On before slide change
-$('#indicadores').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    $('.tabPreviewIndicador').removeClass("active"); 
-    $('.slick-center').find(".tabPreviewIndicador").addClass('active');  
-    $('.slick-center').find(".tabPreviewIndicador").find('a').trigger('click')
-    $('.slick-center').find(".unBadgeImgAlternative").removeClass('hidden');
-    $('.slick-center').find(".unBadgeImgOriginal").addClass('hidden');
-
-
-})
-
-$('#indicadores').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    $('.tabPreviewIndicador').removeClass("active");
-    $(".slick-slide").find(".unBadgeImgAlternative").addClass('hidden');
-    $(".slick-slide").find(".unBadgeImgOriginal").removeClass('hidden');
-
-
-})
-
-
-$('.slick-center').find('a').trigger('click')
-
-
-
-
-
-function putFiveIndicadoresCenteredAtIndex(index){
-
-
-    var indicadores = $('#poolIndicadores').children();
-
-    var k= 0
-
-    for (var j = index+2; j >=index-2; j--) {
-        var newIndicador = indicadores.eq(j%indicadores.length).clone()
-        newIndicador.addClass('tempTab')
-        newIndicador.removeClass('switchingTab')        
-        newIndicador.removeClass('active')
-
-        if(k==2){
-            newIndicador.addClass('active')
-            newIndicador.find('.colour-shifter').each(function() {
-                var imgOriginal = $(this).find('.unBadgeImgOriginal')                       
-                var imgAlternative = $(this).find('.unBadgeImgAlternative')
-                imgOriginal.addClass('hidden');
-                imgAlternative.removeClass('hidden');                       
-           });
-        }else{
-
-            newIndicador.find('.colour-shifter').each(function() {
-                var imgOriginal = $(this).find('.unBadgeImgOriginal')                       
-                var imgAlternative = $(this).find('.unBadgeImgAlternative')
-                imgAlternative.addClass('hidden');
-                imgOriginal.removeClass('hidden'); 
-
-            });
-        }             
-         
-        $('#indicadores').prepend(newIndicador);
-       
-        k++
-
-    }
-
-    
-
-}
-
-function initWidthPreviewtabs(){
-
-    var tabsPreviewIndicador = $('.tabPreviewIndicador');
-    // tabsPreviewIndicador.width((100/tabsPreviewIndicador.length)+"%");
-    tabsPreviewIndicador.width((100/6)+"%");
-
-}
-
-function initPreviewFlow(){  
-    setInterval(function() { previewFlowChanger() }, 1);
-
-}
-
-function previewFlowChanger(){
-    countPreviewChange--;
-    if(countPreviewChange==0){      
-        countPreviewChange=period;
-        nextTabPreview();
-    }
-}
-
-function nextTabPreview(){
-
-    var switchingTabs =$('.switchingTab');
-    var switchingTabsSize=switchingTabs.length;
-    var nextIndex=0;
-
-    switchingTabs.each(function(index){
-        if($(this).hasClass('active')){
-            nextIndex=(index+1)%switchingTabsSize;
+        centerPadding: '1%',
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: $('#periodoTransicion').val(),
+        slidesToShow: 5,
+        focusOnSelect: true,
+        responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: true,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
         }
-
-        $(this).find("a").blur();
+        ]
     });
 
+    // On before slide change
+    $('#indicadores').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        $('.slick-center').find(".tabPreviewIndicador").first().find('a').trigger('click')
+        $('.slick-center').find(".unBadgeImgAlternative").removeClass('hidden');
+        $('.slick-center').find(".unBadgeImgOriginal").addClass('hidden');
 
-    var nextTab = switchingTabs.eq(nextIndex);
 
-    nextTab.find("a").trigger("click");
-    nextTab.trigger("click");
+    })
 
-}
+    $('#indicadores').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $(".slick-slide").find(".unBadgeImgAlternative").addClass('hidden');
+        $(".slick-slide").find(".unBadgeImgOriginal").removeClass('hidden');
+
+    })
+
+
+    $('.slick-center').first().find('a').trigger('click')
+
+   
+    function setHeightsTabPreviewIndicador(){
+
+        var maxHeight=0;
+
+        $('.tabPreviewIndicador').each(function( index ) {
+            if($(this).height()>maxHeight){
+                maxHeight=$(this).height()
+            }
+        });
+
+        $('.tabPreviewIndicador').each(function( index ) {
+            $(this).height(maxHeight);           
+        });
+    
+    }
+
+    setHeightsTabPreviewIndicador();
+
+
+});
+
+
+
+
