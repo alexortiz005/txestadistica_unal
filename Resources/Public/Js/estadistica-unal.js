@@ -115,6 +115,7 @@ $(document).ready(function(){
     function setHeightsTabPreviewIndicador(){
 
         var maxHeight=0;
+        $('.tabPreviewIndicador').css({"height": "auto"})
 
         $('.tabPreviewIndicador').each(function( index ) {
             if($(this).height()>maxHeight){
@@ -125,13 +126,21 @@ $(document).ready(function(){
         $('.tabPreviewIndicador').each(function( index ) {
             $(this).height(maxHeight);           
         });
+
+        console.log(maxHeight)
+
     
     }
 
-    setHeightsTabPreviewIndicador();
+    //setHeightsTabPreviewIndicador();
+  
+    $( window ).resize(function() {
+        //setHeightsTabPreviewIndicador();
+    });
 
 
 });
+
 
 
 

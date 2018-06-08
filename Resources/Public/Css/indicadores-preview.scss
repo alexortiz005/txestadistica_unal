@@ -28,7 +28,7 @@
 	#indicadores .tabPreviewIndicador{
 
 		margin-top: 30px;	
-		margin-bottom: 5%;	
+		margin-bottom: 10%;	
 		border-radius: 10% 10% 0% 0%;
 		padding-bottom: 10px;
 
@@ -94,6 +94,9 @@
 	.unBadgeData{
 		text-align: center;
 		font-size: 25px;
+		@media only screen and (max-width: 1024px) {
+			font-size: 20px;
+		}
 		@media only screen and (max-width: 996px) {
 			font-size: 14px;
 		}
