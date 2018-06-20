@@ -12,7 +12,7 @@
 
 		<div id="indicadores">
 			<f:for each="{indicadores_a_mostrar}" as="indicador" iteration="iterator"  key="index">
-				<div class="{f:if(condition:'{iterator.isFirst}',then:'active',else:'')} tabPreviewIndicador switchingTab" data-index="{index}">
+				<div class="{f:if(condition:'{iterator.isFirst}',then:'active',else:'')} tabPreviewIndicador" data-index="{index}">
 					<a class="colour-shifter" data-toggle="tab" href="#tab{iterator.index}">
 						<div class="row">
 							<div class="col-md-12">
