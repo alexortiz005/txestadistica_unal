@@ -11,6 +11,7 @@ $(document).on("click",".estadistica",function(event){
 
         $("#modalTitle").html(nombreEstadistica);
         $("#linkDashboardTitle").attr("href", urlProtocoloEstadistica)
+        $("#linkDashboardTitle").attr("target", "_blank")
 
         urlModal=this.href;
 
