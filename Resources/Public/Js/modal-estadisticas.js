@@ -152,19 +152,8 @@ function updateTabPaneDesagregacionRegular(archivos){
         var archivoPrescedente=$("#archivo"+archivo['uid']);
 
         if(archivoPrescedente.length==0){
-            var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
-            paneArchivo.attr("id","archivo"+archivo['uid']);
-
-            var iframe = $("<iframe frameborder=\"0\"></iframe>");
-            iframe.attr("id","iframe"+archivo['uid']);
-            iframe.attr("src",archivo['link']);
-
-            var buttonFullscreen=$("<button type=\"button\" class=\"btn btn-info btn-block\"data-toggle=\"tooltip\"data-placement=\"bottom\"title=\"Pantalla Completa\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['uid']+"'));\"> <span class=\"glyphicon glyphicon-fullscreen\"> </button> ")
-
-            paneArchivo.append(iframe);
-            paneArchivo.append(buttonFullscreen);
-
-            $("#tabContentArchivosDesagregacionRegularHistorico").append(paneArchivo);
+            var paneArchivo = generarPaneArchivo(archivo);
+            $("#tabContentArchivosDesagregacionRegularHistorico").append(paneArchivo);            
         }
        
         
@@ -180,22 +169,35 @@ function updateTabPaneDesagregacionRegular(archivos){
         var archivoPrescedente=$("#archivo"+archivo['uid']);
 
         if(archivoPrescedente.length==0){
-            var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
-            paneArchivo.attr("id","archivo"+archivo['uid']);
 
-            var iframe = $("<iframe frameborder=\"0\"></iframe>");
-            iframe.attr("id","iframe"+archivo['uid']);
-            iframe.attr("src",archivo['link']);
-
-            var buttonFullscreen=$("<button type=\"button\" class=\"btn btn-info btn-block\"data-toggle=\"tooltip\"data-placement=\"bottom\"title=\"Pantalla Completa\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['uid']+"'));\"> <span class=\"glyphicon glyphicon-fullscreen\"> </button> ")
-
-            paneArchivo.append(iframe);
-            paneArchivo.append(buttonFullscreen);
-
+            var paneArchivo = generarPaneArchivo(archivo);  
             $("#tabContentArchivosDesagregacionRegularActual").append(paneArchivo);
         }
         
     });
+
+    function generarPaneArchivo(archivo) {
+        var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
+        paneArchivo.attr("id","archivo"+archivo['uid']);
+
+        var iframe = $("<iframe frameborder=\"0\"></iframe>");
+        iframe.attr("id","iframe"+archivo['uid']);
+        iframe.attr("src",archivo['link']);
+
+        var btnGroup=$("<div class=\"btn-group btn-group-justified\"></div>");
+
+        var buttonFullscreen=$("<a  class=\"btn btn-info\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['uid']+"'));\"> Pantalla Completa <span class=\"glyphicon glyphicon-fullscreen\"> </a> ")
+        var buttonShare=$("<a  class=\"btn btn-success\"> Compartir <span class=\"glyphicon glyphicon-share-alt\"> </a> ")
+
+        btnGroup.append(buttonFullscreen);
+        btnGroup.append(buttonShare);
+
+        paneArchivo.append(iframe);
+        paneArchivo.append(btnGroup);
+
+        return paneArchivo;
+
+    }
 
     $("#pillsArchivosDesagregacionRegularActual").find("a").first().trigger("click");
 
