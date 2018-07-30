@@ -7,7 +7,7 @@
 
 	<div class="container-fluid">
 		<div class="row row-eq-height">
-			<f:for each="{categorias}" as="categoria">
+			<f:for each="{categorias}" as="categoria" iteration="iterator">
 
 				<div class="col-md-3 col-sm-6 col-xs-12 badgeCategoria" >
 					<f:link.action class="colour-shifter" action="show" arguments="{categoria : categoria}" >
@@ -20,6 +20,13 @@
 						</div>
 					</f:link.action>
 				</div>
+
+				<f:if condition="{iterator.cycle}%2==0">
+					 <f:then>
+						<div class="clearfix hidden-xs hidden-md"></div>
+					</f:then>			    
+				</f:if>	
+
 
 			</f:for>
 		</div>
