@@ -18,6 +18,38 @@ $(document).on("click",".estadistica",function(event){
         ajaxCallModal(urlModal);
 });
 
+$(document).on("click",".fullscreen-button",function(event){ 
+
+    idFullscreenElement= $(this).data('iframe');
+    FullScreenHelper.toggle(document.getElementById(idFullscreenElement));
+        
+});
+
+$(document).on("click",".share-button",function(event){ 
+
+    sharePanelId=$(this).data('sharePanel');
+    link=$(this).data('link');
+
+    sharePanel =$("#"+sharePanelId);
+    shareSocials=sharePanel.find(".share-socials");
+
+    sharePanel.toggle(500);
+
+    shareSocials.jsSocials({
+        showCount: false,
+        showLabel: true,
+        shareIn: "popup",
+        url: link,
+        text:document.title,
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "whatsapp"]
+    });
+
+
+
+    console.log();
+        
+});
+
 function ajaxCallModal(urlAction){
      $.ajax({url: urlAction,
 
@@ -177,25 +209,35 @@ function updateTabPaneDesagregacionRegular(archivos){
     });
 
     function generarPaneArchivo(archivo) {
-        var paneArchivo = $("<div  class=\"player tab-pane fade\"></div>");
-        paneArchivo.attr("id","archivo"+archivo['uid']);
 
-        var iframe = $("<iframe frameborder=\"0\"></iframe>");
+        var tabPaneArchivo = $("#tab-pane-template").clone();
+        tabPaneArchivo.attr("id","archivo"+archivo['uid']);
+
+        var iframe= tabPaneArchivo.find("iframe");
+
         iframe.attr("id","iframe"+archivo['uid']);
         iframe.attr("src",archivo['link']);
 
-        var btnGroup=$("<div class=\"btn-group btn-group-justified\"></div>");
+        var btnGroup=tabPaneArchivo.find(".btn-group");
 
-        var buttonFullscreen=$("<a  class=\"btn btn-info\" onclick=\"FullScreenHelper.toggle(document.getElementById('iframe"+archivo['uid']+"'));\"> Pantalla Completa <span class=\"glyphicon glyphicon-fullscreen\"> </a> ")
-        var buttonShare=$("<a  class=\"btn btn-success\"> Compartir <span class=\"glyphicon glyphicon-share-alt\"> </a> ")
+        var buttonFullscreen=tabPaneArchivo.find(".fullscreen-button");
+        buttonFullscreen.data("iframe","iframe"+archivo['uid']);
 
-        btnGroup.append(buttonFullscreen);
-        btnGroup.append(buttonShare);
+        var buttonShare=tabPaneArchivo.find(".share-button");
+        buttonShare.data("share-panel","share-panel"+archivo['uid']);
+        buttonShare.data("link",archivo['link']);
+        buttonShare.data("text",archivo['nombreDisplay']);
 
-        paneArchivo.append(iframe);
-        paneArchivo.append(btnGroup);
+        var sharePanel=tabPaneArchivo.find(".share-panel");
+        sharePanel.attr("id","share-panel"+archivo['uid']);
 
-        return paneArchivo;
+        var shareURL=sharePanel.find(".share-url");
+        shareURL.val(archivo['link']);
+
+        var embedURL=sharePanel.find(".embed-url");
+        embedURL.val(embedURL.val().replace('LINK-TOKEN',archivo['link']));
+
+        return tabPaneArchivo;
 
     }
 

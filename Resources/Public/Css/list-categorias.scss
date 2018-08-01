@@ -302,15 +302,45 @@ $headings : h1 h2 h3 h4 h5 h6;
 	    box-shadow: 0px 0px 10px 1px #ffe0e0;
 		margin-bottom: 10px; 
 		margin-top: 10px;
+     	padding: 1% 0.5%;
 
 		.nav-pills{	
 
 			background: transparent;
 		    box-shadow: unset;
-		    padding-top: 0px;
-			padding-bottom: 0px;
+			padding: 0% 0.5%;
 
 		}	
+
+		li + li {
+		    padding-left: 0.2em;
+		}
+
+		.jssocials-share {
+		    display: initial;
+		    margin: -0.2em;
+		    padding: 5px;
+		    overflow: hidden;
+		    a{
+		    	border-radius:5px;
+		    }
+		}
+
+		.share-panel{
+		    background: gainsboro;
+		    margin: 0%;
+		    margin-top: 0.4em;
+		    border-radius: 5px;
+		    padding:1%;
+		    label{
+		    	margin:1% 0%;
+		    }
+
+		    .form-control{
+		    	border-radius: 5px;
+		    }
+
+		}
 		
 		
 	}
@@ -391,6 +421,7 @@ $headings : h1 h2 h3 h4 h5 h6;
 	.btn-group {
 	    overflow: hidden;
 	    border-radius: 5px;
+     	margin-top: 0.2em;	
 	    a.btn {
 	    	color:white;
 		}

@@ -71,6 +71,9 @@ page{
         estadisticas-protocolo = EXT:estadistica_unal/Resources/Public/Css/estadisticas-protocolo.scss
         slick = EXT:estadistica_unal/Resources/Public/Css/slick.css
         slick-theme = EXT:estadistica_unal/Resources/Public/Css/slick-theme.css
+        font-awesome = EXT:estadistica_unal/Resources/Public/Css/font-awesome.min.css
+        jssocials-theme-flat = EXT:estadistica_unal/Resources/Public/Css/jssocials-theme-flat.css
+        jssocials = EXT:estadistica_unal/Resources/Public/Css/jssocials.css
     }
     
     includeJS{
@@ -80,12 +83,14 @@ page{
         modal-estadisticas = EXT:estadistica_unal/Resources/Public/Js/modal-estadisticas.js
         protocolo = EXT:estadistica_unal/Resources/Public/Js/protocolo.js
         full-screen-helper = EXT:estadistica_unal/Resources/Public/Js/full-screen-helper.js
+
         
     }
 
     includeJSFooter{
         slick = EXT:estadistica_unal/Resources/Public/Js/slick.min.js
         estadistica-unal = EXT:estadistica_unal/Resources/Public/Js/estadistica-unal.js   
+        jssocials = EXT:estadistica_unal/Resources/Public/Js/jssocials.min.js   
 
     }
 }

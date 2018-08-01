@@ -1,19 +1,46 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
+
 <div id="tabPaneDesagregacionRegular" class="tab-pane fade">   
+
+	
 	<div class="container-fluid">
 
+		<!-- Begin Template for the tab-pane -->
+
+		<div class="hidden">
+			<div class="tab-pane fade active in" id="tab-pane-template">
+				<iframe frameborder="0"></iframe>
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-info fullscreen-button"> 
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.fullscreen" />
+						<span class="glyphicon glyphicon-fullscreen"></span>
+					</a>
+					<a class="btn btn-success share-button"> 
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share" />
+						<span class="glyphicon glyphicon-share-alt"></span>
+					</a>					
+				</div>
+				<div class="row share-panel" style="display: none">
+					<label><f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share_social" /></label>
+					<div class="share-socials">						
+					</div>	
+
+					<label><f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share_link" /></label>
+					<input class="form-control share-url" readonly>			
+
+					<label><f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share_embed" /></label>
+					<input  class="form-control embed-url"  value='<iframe width="100%" frameborder="0" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true" src="LINK-TOKEN"></iframe>' readonly>					
+					</div>				
+				</div>
+			</div>			
+		</div>
+				
+		<!-- End Template for the tab-pane -->
+
+
+
 	    <div id="panelArchivosDesagregacionRegularHistorico" class="hidden">
-	        <!-- Inicio titulo panel historico-->
-	        <h4>
-	        <b>
-	        	<!-- 
-	            <f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.texto_tipo_historico" />
-	            <span class="nombreDesagregacion"></span>
-	        	-->
-	        </b>
-	        </h4>
-	        <!-- Fin titulo panel historico-->
 
 	        <ul class="nav nav-pills nav-justified" id="pillsArchivosDesagregacionRegularHistorico"></ul>
 
@@ -22,16 +49,7 @@
 	    </div>
 
 	    <div id="panelArchivosDesagregacionRegularActual" class="hidden">
-	        <!-- Inicio titulo panel actual -->
-	        <h4>
-	        <b>
-	        	<!-- 
-	            <f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.texto_tipo_actual" />
-	            <span class="nombreDesagregacion"></span>
-	        	-->
-	        </b>
-	        </h4>
-	        <!-- Fin titulo panel actual-->
+
 	        <ul class="nav nav-pills nav-justified" id="pillsArchivosDesagregacionRegularActual"></ul>
 
 	        <div class="tab-content"  id="tabContentArchivosDesagregacionRegularActual" style="margin-bottom: 0px">

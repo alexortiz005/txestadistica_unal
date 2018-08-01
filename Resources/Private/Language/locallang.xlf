@@ -258,6 +258,21 @@
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo">
 				<source>Tipo Atributo</source>
 			</trans-unit>
+			<trans-unit id="tx_estadisticaunal.fullscreen">
+				<source>Pantalla Completa</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal.share">
+				<source>Compartir</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal.share_social">
+				<source>Compartir en redes</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal.share_link">
+				<source>Compartir URL</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal.share_embed">
+				<source>Insertar en otra página web</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
