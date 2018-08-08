@@ -7,21 +7,23 @@
 		<div class="atributos">
 			<ul class="nav nav-pills nav-justified">
 				<li class="active">
-					<a data-toggle="pill" href="#home">
+					<a data-toggle="pill" href="#atributos_estadistica">
 						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.atributos_generales" />
 					</a>
 				</li>
 				<li>
-					<a data-toggle="pill" href="#menu1">
+					<a data-toggle="pill" href="#atributos_desagregaciones">
 						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.desagregaciones_tematicas" />
 					</a>
 				</li>
 			</ul>
 
 			<div class="tab-content">
-				<div id="home" class="tab-pane fade in active">
-					<table class="header-fixed">
-					  <col width="10%"> 
+				<div id="atributos_estadistica" class="tab-pane fade in active">
+					<table class="header-fixed" id="table1">
+						 <colgroup>
+				            <col width="10%">
+				        </colgroup>
 					  	<thead>					  		
 							<tr>
 								<th>
@@ -43,10 +45,14 @@
 							</tr>							  
 						</f:for>					 		  
 					</table>
+					<button type="button" class="btn btn-info btn-lg" onClick ="$('#table1').tableExport({type:'pdf',escape:'false'});">
+					<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.descargar_pdf" />
+					<span class="glyphicon glyphicon-download-alt"></span>
+					</button>
 
 					
 				</div>
-				<div id="menu1" class="tab-pane fade protocolo-desagregaciones">
+				<div id="atributos_desagregaciones" class="tab-pane fade protocolo-desagregaciones">
 					<table>
 					  <col width="10%"> 
 						<tr>

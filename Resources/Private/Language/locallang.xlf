@@ -273,6 +273,9 @@
 			<trans-unit id="tx_estadisticaunal.share_embed">
 				<source>Insertar en otra página web</source>
 			</trans-unit>
+			<trans-unit id="tx_estadisticaunal.descargar_pdf">
+				<source>Descargar como PDF</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
