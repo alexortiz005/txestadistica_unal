@@ -40,10 +40,10 @@
 				<source>tiposAtrEstadisticas</source>
 			</trans-unit>
 			<trans-unit id="protocolo.atributos_generales">
-				<source>Atributos generales del indicador</source>
+				<source>Atributos generales de la estadística</source>
 			</trans-unit>
 			<trans-unit id="protocolo.desagregaciones_tematicas">
-				<source>Desagregaciones temáticas del indicador</source>
+				<source>Desagregaciones temáticas de la estadística</source>
 			</trans-unit>
 		</body>
 	</file>

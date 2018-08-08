@@ -81,11 +81,11 @@ page{
         jquery = EXT:estadistica_unal/Resources/Public/Js/jquery-3.2.1.js      
         dragscroll = EXT:estadistica_unal/Resources/Public/Js/dragscroll.js
         modal-estadisticas = EXT:estadistica_unal/Resources/Public/Js/modal-estadisticas.js
-        protocolo = EXT:estadistica_unal/Resources/Public/Js/protocolo.js
         full-screen-helper = EXT:estadistica_unal/Resources/Public/Js/full-screen-helper.js
         jsprintf = EXT:estadistica_unal/Resources/Public/Js/jspdf/libs/sprintf.js
         jspdf = EXT:estadistica_unal/Resources/Public/Js/jspdf/jspdf.js
         jspdf_debug = EXT:estadistica_unal/Resources/Public/Js/jspdf/jspdf.debug.js
+        jspdf_addimage = EXT:estadistica_unal/Resources/Public/Js/jspdf/jspdf.plugin.addimage.js
         base64 = EXT:estadistica_unal/Resources/Public/Js/jspdf/libs/base64.js
 
         
@@ -96,8 +96,9 @@ page{
         estadistica-unal = EXT:estadistica_unal/Resources/Public/Js/estadistica-unal.js   
         jssocials = EXT:estadistica_unal/Resources/Public/Js/jssocials.min.js   
         tableExport = EXT:estadistica_unal/Resources/Public/Js/tableExport.js
-        jquery_base64 = EXT:estadistica_unal/Resources/Public/Js/jquery.base64.js       
-
+        jquery_base64 = EXT:estadistica_unal/Resources/Public/Js/jquery.base64.js 
+        jspdf_autotable = EXT:estadistica_unal/Resources/Public/Js/jspdf/jspdf.plugin.autotable.js
+        protocolo = EXT:estadistica_unal/Resources/Public/Js/protocolo.js  
 
     }
 }
