@@ -95,8 +95,6 @@ page{
         slick = EXT:estadistica_unal/Resources/Public/Js/slick.min.js
         estadistica-unal = EXT:estadistica_unal/Resources/Public/Js/estadistica-unal.js   
         jssocials = EXT:estadistica_unal/Resources/Public/Js/jssocials.min.js   
-        tableExport = EXT:estadistica_unal/Resources/Public/Js/tableExport.js
-        jquery_base64 = EXT:estadistica_unal/Resources/Public/Js/jquery.base64.js 
         jspdf_autotable = EXT:estadistica_unal/Resources/Public/Js/jspdf/jspdf.plugin.autotable.js
         protocolo = EXT:estadistica_unal/Resources/Public/Js/protocolo.js  
 
