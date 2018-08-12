@@ -16,8 +16,13 @@ $(".tableToPDF").click(function() {
   doc.autoTable(res.columns, 
                 res.data,                
                 {theme: 'striped',
-                 styles: {overflow: 'linebreak'},
-                 columnStyles: { 
+                 styles: {overflow: 'linebreak',
+                          lineColor: [255, 255, 255],
+                          lineWidth: 2},
+                 headerStyles: {
+                      lineWidth: 0
+                  },
+                  columnStyles: { 
                                 0: { columnWidth: 'wrap' },                           
                                 2: { columnWidth: 'wrap' },                           
                                },
