@@ -17,8 +17,8 @@ $(".tableToPDF").click(function() {
                 res.data,                
                 {theme: 'striped',
                  styles: {overflow: 'linebreak',
-                          lineColor: [255, 255, 255],
-                          lineWidth: 2},
+                          lineColor: [22, 140, 183],
+                          lineWidth: 1},
                  headerStyles: {
                       lineWidth: 0
                   },
