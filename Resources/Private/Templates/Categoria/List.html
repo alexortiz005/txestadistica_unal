@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:flashMessages />
+
+	<div class="container-fluid">
+		<div class="row row-eq-height flexthis">
+			<f:for each="{categorias}" as="categoria">
+
+				<div class="col-md-3 col-sm-6 col-xs-12 badgeCategoria" >
+					<f:link.action class="colour-shifter" action="show" arguments="{categoria : categoria}" >
+						<img src="{categoria.badge.originalResource.publicUrl}"
+							 data-altbadge="{categoria.altBadge.originalResource.publicUrl}"
+							 data-badge="{categoria.badge.originalResource.publicUrl}"
+							 class="unBadge img-responsive" width=100%>
+						<div class="row">
+							<h4>{categoria.nombreDisplay}</h4>
+						</div>
+					</f:link.action>
+				</div>
+
+			</f:for>
+		</div>
+	</div>
+
+</f:section>
+</html>

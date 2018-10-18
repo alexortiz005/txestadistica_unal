@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-09-30T23:52:55Z" product-name="estadistica_unal">
+		<header/>
+		<body>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
+				<source>Categoria</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.alt_badge">
+				<source>Alt Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.estadisticas">
+				<source>Estadisticas</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion">
+				<source>Desagregacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.archivos">
+				<source>Archivos</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_desagregacion.atributos">
+				<source>Atributos</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo">
+				<source>Archivo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.contenido">
+				<source>Contenido</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_archivo.explicacion">
+				<source>Explicacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion">
+				<source>Atributo Desagregacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion.contenido">
+				<source>Contenido</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica">
+				<source>Estadistica</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.texto_protocolo">
+				<source>Texto Protocolo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.alt_badge">
+				<source>Alt Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.desagregaciones">
+				<source>Desagregaciones</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.atributos">
+				<source>Atributos</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tipos_atr_desagregaciones">
+				<source>Tipos Atr Desagregaciones</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.indicadores">
+				<source>Indicadores</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion">
+				<source>Tipo Atr Desagregacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrdesagregacion.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributoestadistica">
+				<source>Atributo Estadistica</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributoestadistica.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributoestadistica.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributoestadistica.contenido">
+				<source>Contenido</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributoestadistica.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica">
+				<source>Tipo Atr Estadistica</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatrestadistica.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador">
+				<source>Indicador</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.subtext">
+				<source>Subtext</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.descripcion">
+				<source>Descripcion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.badge">
+				<source>Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_indicador.alt_badge">
+				<source>Alt Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributodesagregacion.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.descripcion">
+				<source>Descripcion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.total">
+				<source>Total</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tipos_atr_estadisticas">
+				<source>Tipos Atr Estadisticas</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion">
+				<source>Tipo Atributo Desagregacion</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributodesagregacion.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributoestadistica">
+				<source>Tipo Atributo Estadistica</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributoestadistica.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributoestadistica.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo">
+				<source>Atributo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo.contenido">
+				<source>Contenido</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_atributo.tipo">
+				<source>Tipo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo">
+				<source>Tipo Atributo</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo.nombre">
+				<source>Nombre</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo.nombre_display">
+				<source>Nombre Display</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

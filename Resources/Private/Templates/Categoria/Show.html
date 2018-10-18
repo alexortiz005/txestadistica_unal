@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="main">
+
+    <f:flashMessages />
+    <f:render partial="Categoria/bannerList" arguments="{categorias:categorias,mainCategoria:categoria}" />
+    <f:render partial="Estadistica/List" arguments="{estadisticas:categoria.estadisticas,pagina_protocolo_pageuid:pagina_protocolo_pageuid}" />
+</f:section>
+</html>

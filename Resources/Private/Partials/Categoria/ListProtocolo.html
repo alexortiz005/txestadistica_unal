@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="row">
+	<div class="col-md-12">	
+		<div class="panel panel-default">
+		  	<div class="panel-body">
+
+		  		<div class="row">
+		  			<div class="col-md-12" style="margin-bottom: 10px">
+		  		
+						  	<div class="panel-body">
+						  		<f:format.html>{texto}</f:format.html>
+							</div>
+
+		  			</div>
+		  			<div class="col-md-12">
+
+						<div class="panel-group" id="accordion">
+							<f:for each="{categorias}" as="categoria">
+							  <div class="panel panel-info">
+							    <div class="panel-heading">
+							      <h4 class="panel-title">
+							        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{categoria.uid}">
+							        {categoria.nombreDisplay}</a>
+							      </h4>
+							    </div>
+							    <div id="collapse{categoria.uid}" class="panel-collapse collapse">
+							      	<div class="panel-body">
+							      		<div class="list-group">
+							      			<f:for each="{categoria.estadisticas}" as="estadistica">						
+										  		<a href="{f:uri.action(action: 'protocolo', arguments: {estadistica:estadistica}, controller: 'Estadistica')}" class="list-group-item">{estadistica.nombreDisplay}</a>
+											</f:for>
+										</div>	      		
+							  		</div>
+							    </div>
+							  </div>
+							</f:for>
+						</div>
+		  				
+		  			</div>
+		  		</div>
+		  		
+			</div>
+		</div>	
+	</div>
+</div>
+</html>

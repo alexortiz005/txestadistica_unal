@@ -1,0 +1,100 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="panel panel-default panel-protocolo">
+	<div class="panel-heading"><h4>{estadistica.nombreDisplay}</h4></div>
+  	<div class="panel-body">
+		<p><f:format.html>{estadistica.textoProtocolo}</f:format.html></p>
+		<div class="atributos">
+			<ul class="nav nav-pills nav-justified">
+				<li class="active">
+					<a data-toggle="pill" href="#atributos_estadistica">
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.atributos_generales" />
+					</a>
+				</li>
+				<li>
+					<a data-toggle="pill" href="#atributos_desagregaciones">
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.desagregaciones_tematicas" />
+					</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div id="atributos_estadistica" class="tab-pane fade in active">
+					<table class="header-fixed" id="table-atributos-generales">
+						 <colgroup>
+				            <col width="10%">
+				        </colgroup>
+					  	<thead>					  		
+							<tr>
+								<th>
+									<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:atributo.description" />
+								</th>
+								<th>
+									<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:definicion.description" />
+								</th>
+							</tr>		
+					  	</thead>
+					  	<f:for each="{estadistica.atributos}" as="atributo">
+							<tr>
+								<td>
+									<f:for each="{atributo.tipo}" as="tipo">
+										{tipo.nombreDisplay}
+									</f:for>
+								</td>
+								<td><f:format.html>{atributo.contenido}</f:format.html></td>
+							</tr>							  
+						</f:for>					 		  
+					</table>
+					<button type="button" class="btn btn-info btn-lg tableToPDF" data-table="table-atributos-generales" data-name="<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.atributos_generales" />  - {estadistica.nombreDisplay}  ">
+					<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.descargar_pdf" />
+					<span class="glyphicon glyphicon-download-alt"></span>
+					</button>
+
+					
+				</div>
+				<div id="atributos_desagregaciones" class="tab-pane fade protocolo-desagregaciones">
+					<table id="table-atributos-desagregaciones">
+					  <col width="10%"> 
+						<tr>
+							<th>
+								<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_atributo.xlf:desagregacion.description" />
+							</th>
+							<f:for each="{estadistica.tiposAtrDesagregaciones}" as="tipo">
+							<th>
+								{tipo.nombreDisplay}
+							</th>
+							</f:for>							
+						</tr>		
+					  	<f:for each="{estadistica.desagregaciones}" as="desagregacion">			  		
+							<tr>
+								<td>
+									{desagregacion.nombreDisplay}
+								</td>
+								<!--me excuso con la persona que tenga que leer este codigo, pero fue la unica manera que pude lograr esto-->
+								<f:for each="{estadistica.tiposAtrDesagregaciones}" as="aux_tipo_desagregacion">			  		
+								<td>
+									<f:for each="{desagregacion.atributos}" as="atributo">
+										<f:for each="{atributo.tipo}" as="tipo_atributo">
+											<f:if condition="({tipo_atributo.uid} == {aux_tipo_desagregacion.uid})">
+											  <f:format.html>{atributo.contenido}</f:format.html>
+											</f:if>
+										</f:for>
+									</f:for>									
+								</td>
+								</f:for>								
+							</tr>							  
+						</f:for>					 		  
+					</table>
+					<button type="button" class="btn btn-info btn-lg tableToPDF" data-table="table-atributos-desagregaciones" data-name="<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.desagregaciones_tematicas" /> - {estadistica.nombreDisplay}  ">
+					<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.descargar_pdf" />
+					<span class="glyphicon glyphicon-download-alt"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+
+</html>

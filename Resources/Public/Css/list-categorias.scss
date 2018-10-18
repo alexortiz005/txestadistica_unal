@@ -1,0 +1,455 @@
+.flexthis.container:before,
+.flexthis.container:after,
+.flexthis.row:before,
+.flexthis.row:after {
+ content: normal; // IE doesn't support `initial`
+}
+
+.protocolo{
+	margin-top:30px;
+	padding:0px;
+}
+
+$headings : h1 h2 h3 h4 h5 h6;
+
+/*Inicio estilos para la lista de categorias*/
+
+@keyframes in {
+	0%   {opacity: 1;}
+	10%  {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes out {
+	0%   {opacity: 1;}
+	10%  {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+
+.unBadge:hover {
+	animation-name: in;
+	animation-duration: 1.5s;
+}
+
+.unBadge {
+	animation-name: out;
+	animation-duration: 1s;
+	color: #333333;
+}
+
+.container{
+	margin-top: 10px;
+}
+
+.badgeCategoria{
+
+	padding: 35px;
+	border-radius: 5%;
+
+	img{
+		border-radius: 20% 20% 5% 5%;
+	}
+
+	img:hover{
+		background: whitesmoke;
+		box-shadow: 0px 0px 15px 10px #f5f5f5;
+	}
+
+	> a{
+		color: #333333;
+	}
+
+	> h1,h2,h3,h4,h5,h6{
+		text-align: center;
+	}
+
+	.row{
+		margin: 10px ;
+		padding: 0px;
+		background: whitesmoke;
+		border-radius: 5%;
+		box-shadow: 0px 0px 15px 20px #f5f5f5;
+	}
+
+	@media only screen and (max-width: 2560px) {
+		font-size: 1vw;
+	}
+
+	@media only screen and (max-width: 991px) {
+		font-size: 3vw;
+	}
+
+	@media only screen and (max-width: 765px) {
+		font-size: 5vw;
+	}
+
+
+}
+
+/*Fin estilos para la lista de categorias*/
+
+/*Inicio estilos para la lista de estadisticas*/
+
+@keyframes in {
+	0%   {opacity: 1;}
+	10%  {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes out {
+	0%   {opacity: 1;}
+	10%  {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.unBadgeData{
+	text-align: center;
+
+}
+
+.unBadge.estadistica{
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media all and (max-width: 320px)  {
+	.unBadge{
+		font-size: 15px;
+	}
+}
+
+.unBadge:hover {
+	background: whitesmoke;
+	box-shadow: 0px 0px 10px 5px #f5f5f5;
+	border-radius: 10%;
+}
+
+.unContainer{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.close{
+	margin-left: 5px;
+}
+
+.closePipe{
+	pointer-events:none;
+}
+
+@media (min-width: 768px){
+	.modal-dialog {
+		width: 700px;
+	}	
+	.modal-lg {
+		width: 92%;
+	}			
+}
+
+
+
+.blurry-box{
+	padding: 0.6%;
+	font-size: 10px;
+	text-align: center;
+	vertical-align: middle;
+	margin-bottom: 3em;
+	margin-top: 0.5em;
+	border-radius: 2%;
+	background: whitesmoke;
+	box-shadow: 0px 0px 15px 15px #f5f5f5;
+	text-shadow: 0px 0px 5px #888888;
+}
+
+
+/*Fin estilos para la lista de estadisticas*/
+
+
+/*Inicio estilos para el banner de categorias en estadisticas*/
+
+.bannerList{
+	
+	margin-top:15px;
+
+	ul{
+		margin-left: 0px;
+	}
+
+	.nav-tabs{
+		margin-bottom: -5px;
+	}	
+
+	.nav-tabs.nav-justified > li.active{
+		width: 1.35%;
+		margin-bottom: 2em;
+		background: whitesmoke;
+		box-shadow: 0px 0px 25px 8px #f5f5f5;
+		border-radius: 50% 50% 0% 0%;
+		z-index: 0;
+	}
+
+	.nav-tabs.nav-justified > li.active > a{
+		border:none;
+		background-color: transparent;
+	}
+
+	.nav-pills.nav-stacked > li{
+		font-size: 15px;
+	}
+
+	.nav-pills.nav-stacked > li > a {
+		border-radius: 5px;
+	}
+
+	.nav-pills.nav-stacked > li.active > a {
+		background-color: #4f7ca9;
+	}
+
+	.nav-tabs.nav-justified > li{
+		z-index: 1;
+		vertical-align: middle;
+	}
+
+	.nav-tabs.nav-justified > li  > a:hover{
+		background: none;
+		border: none !important;
+	}
+
+	.nav-tabs.nav-justified > li > a{
+		padding: 2px;
+	}
+
+	.bannerUnBadgeImg:hover{
+		background: #eeeeee;
+		box-shadow: 0px 0px 6px 3px #eeeeee;
+		border-radius: 40%;
+	}
+
+	.btnUnal {
+		font-size: 30px;
+		font-weight: bold;
+		border-radius: 15px 15px 15px 15px;
+		display: block;
+		width: 100%;
+		padding: 7%;
+		background: whitesmoke;
+		border-style: solid;
+		border-width: 5px;
+		border-color: grey;
+
+	}
+
+	.btnUnal:hover{
+		background: lightgrey;
+	}
+
+	#bannerCategoriasSmall{
+		margin-top: 5%;
+	}
+
+}
+
+/*Fin estilos para el banner de categorias en estadisticas*/
+
+
+/*Inicio estilos para el modal del dashboard*/
+.modal{
+
+	.unModal-content{
+
+		background-color: #f6f7f7;
+		border-radius: 15px;
+		border: dimgrey;
+		border-style: solid;
+		border-width: 4px;
+
+		.tab-content{
+			background-color: transparent;
+			box-shadow: none;
+			padding: unset;			
+    		text-align: center;
+    		margin:5px;
+		}
+
+		.nav-pills{			
+		    padding: 10px;
+		    background-color: white;
+		    border-radius: 10px;
+		    box-shadow: 0px 0px 10px 1px #ffe0e0;
+		}
+
+		.container-fluid{			
+		    padding: unset;
+		}		
+	}
+
+
+
+
+	iframe{
+		width: 100%;
+		height: 50vh;
+		background: url(/typo3conf/ext/estadistica_unal/Resources/Public/Images/loader.gif) center center no-repeat;
+	}	
+
+	.panelArchivos{
+
+		@each $heading in $headings{
+		  #{$heading} {
+		    margin-bottom: 15px;
+		  }
+		}
+
+		font-size: 16px;
+		padding: 5px 5px 15px 5px;
+	    font-size: 16px;
+	    background-color: white;
+	    border-radius: 20px;
+	    box-shadow: 0px 0px 10px 1px #ffe0e0;
+		margin-bottom: 10px; 
+		margin-top: 10px;     	
+     	padding: 0.5em;
+
+		.nav-pills{	
+
+			background: transparent;
+		    box-shadow: unset;
+			padding: 0% 0.5%;
+
+		}	
+
+		@media(min-width:766px){		
+			li + li {
+			    padding-left: 0.2em;
+			}
+		}
+
+		.jssocials-share {
+		    display: initial;
+		    margin: -0.2em;
+		    padding: 5px;
+		    overflow: hidden;
+		    a{
+		    	border-radius:5px;
+     			margin: 0.1em 0;
+		    }
+		}
+
+		.share-panel{
+		    background: gainsboro;
+		    margin: 0%;
+		    margin-top: 0.4em;
+		    border-radius: 5px;
+		    padding:1%;
+		    label{
+		    	margin:1% 0%;
+		    }
+
+		    .form-control{
+		    	border-radius: 5px;
+		    }
+
+		}	
+
+		.share-button {
+		    background-color: lightslategray;
+		    border-color: gray;
+		}
+	    .share-button:hover{
+	    	background-color: slategray;
+	    	border-color: darkgray;
+	    }
+		
+		
+	}
+
+	.halfTabPane{
+		@media screen and (min-width: 992px) {
+			width :49.1%;			
+		}
+
+		@media screen and (max-width: 992px) {
+			width :100%;
+		}
+	}
+
+
+	.regularActual{
+		float: right !important;
+	}
+
+	.nav li.active > a.historico {
+		background-color: #88ad84!important;
+	}
+
+	.nav li.active > a.actual{
+		background-color: #debfbf	!important;
+	}
+
+	.tooltip{
+		font-size: 0.85em;
+	}
+
+	.glyphicon{
+		margin-left: 5px;
+	}
+
+	a{
+		color : #333333;
+	}
+
+	ul{
+		margin-left:0px;
+	}
+
+	.modal-title{
+		line-height: 25px;
+	}
+
+	.modal-body{
+
+		font-size: 20px;
+
+		.nav li.active > a{
+			background-color: #636363;
+		}
+
+		.tab-content{
+			.nav li > a{
+				margin: 10px 3px;
+    			box-shadow: 0px 0px 15px rgba(136, 136, 136, 0.5);
+			}
+
+		}
+
+		.nav li > a{
+			border-radius: 5px;
+			padding: 15px 15px;
+
+		}
+
+		.nav{
+			overflow-x: auto;
+			cursor: grab;
+			cursor : -o-grab;
+			cursor : -moz-grab;
+			cursor : -webkit-grab;
+		}
+	}
+
+	.btn-group {
+	    overflow: hidden;
+	    border-radius: 5px;     	
+    	margin: 0.5em 0em;
+    	
+	    a.btn {
+	    	color:white;
+		}
+	}
+}
+/*Fin estilos para el modal del dashboard*/
+
+
+

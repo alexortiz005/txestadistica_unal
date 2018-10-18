@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="container-fluid">
+    <style type="text/css" scoped>
+
+    </style>
+    <!-- Lista de nombres  Inicio-->
+    <ul  id="desagregaciones" class="nav nav-pills nav-justified dragscroll">
+        <f:for each="{estadistica.desagregaciones}" as="desagregacion" iteration="iterator">
+            <li data-nombre="{desagregacion.nombreDisplay}" data-tipo="{desagregacion.tipo}" data-url="{f:uri.action(action: 'getArchivos',pageType:'476', arguments: {desagregacion:desagregacion}, controller: 'Desagregacion', pageUid: pagina_protocolo_pageuid)}"  class="desagregacion {f:if(condition: "{iterator.isFirst}", then: 'active', else: '')}">
+                <a data-toggle="pill">{desagregacion.nombreDisplay}</a>
+            </li>
+        </f:for>
+
+    </ul>
+    <!-- Lista de nombres  Fin-->
+
+    <!-- Paneles con las desagregaciones Inicio-->
+    <div class="tab-content" style="margin-bottom: 0px">   
+           <f:render partial="Desagregacion/Regular"/>   
+    </div>
+    <!-- Paneles con las desagregaciones Fin-->
+</div>
+
+
+</html>

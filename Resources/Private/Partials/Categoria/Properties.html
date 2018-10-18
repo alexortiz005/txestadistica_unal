@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-estadistica-unal" >
+	<tr>
+		<td>
+			<f:translate key="tx_estadisticaunal_domain_model_categoria.nombre" />
+		</td>
+		<td>
+		{categoria.nombre}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_estadisticaunal_domain_model_categoria.nombre_display" />
+		</td>
+		<td>
+		{categoria.nombreDisplay}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_estadisticaunal_domain_model_categoria.badge" />
+		</td>
+		<td>
+				<f:image src="{categoria.badge.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_estadisticaunal_domain_model_categoria.alt_badge" />
+		</td>
+		<td>
+				<f:image src="{categoria.altBadge.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+</table>
+</html>

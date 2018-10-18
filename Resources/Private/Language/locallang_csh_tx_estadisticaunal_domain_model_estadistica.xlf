@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-09-30T23:52:55Z" product-name="estadistica_unal">
+		<header/>
+		<body>
+			<trans-unit id="nombre.description">
+				<source>nombre</source>
+			</trans-unit>
+			<trans-unit id="nombre_display.description">
+				<source>nombreDisplay</source>
+			</trans-unit>
+			<trans-unit id="texto_protocolo.description">
+				<source>textoProtocolo</source>
+			</trans-unit>
+			<trans-unit id="badge.description">
+				<source>badge</source>
+			</trans-unit>
+			<trans-unit id="alt_badge.description">
+				<source>altBadge</source>
+			</trans-unit>
+			<trans-unit id="link.description">
+				<source>link</source>
+			</trans-unit>
+			<trans-unit id="desagregaciones.description">
+				<source>desagregaciones</source>
+			</trans-unit>
+			<trans-unit id="atributos.description">
+				<source>atributos</source>
+			</trans-unit>
+			<trans-unit id="tipos_atr_desagregaciones.description">
+				<source>tiposAtrDesagregaciones</source>
+			</trans-unit>
+			<trans-unit id="indicadores.description">
+				<source>indicadores</source>
+			</trans-unit>
+			<trans-unit id="descripcion.description">
+				<source>descripcion</source>
+			</trans-unit>
+			<trans-unit id="total.description">
+				<source>total</source>
+			</trans-unit>
+			<trans-unit id="tipos_atr_estadisticas.description">
+				<source>tiposAtrEstadisticas</source>
+			</trans-unit>
+			<trans-unit id="protocolo.atributos_generales">
+				<source>Atributos generales de la estadística</source>
+			</trans-unit>
+			<trans-unit id="protocolo.desagregaciones_tematicas">
+				<source>Desagregaciones temáticas de la estadística</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

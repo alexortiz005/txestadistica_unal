@@ -1,0 +1,77 @@
+.panel-protocolo{
+	.panel-body{
+		padding:30px;
+	}
+	.atributos{
+
+		margin-top:30px;
+
+		.tab-pane{
+			padding-top:15px;
+		}
+
+		.nav-pills > li.active > a {
+		    color: #fff;
+		    background-color: #026c9b;
+		}
+
+		.nav-pills > li > a {
+			color: #333333;			
+   			border-radius: 10px;
+			font-size: 2.3em;
+			line-height: 1.2em;
+			font-weight: bold;
+			padding: 15px;
+			padding-left:10%;
+			padding-right:10%;
+		}
+
+		.protocolo-desagregaciones{
+
+			table{
+				th{
+					font-size:1em;
+				}
+			}
+
+		}
+
+		table{
+			margin-bottom:10px;
+			th {
+			    background:#1c5e83;
+			    color:white;
+			    border-left: 2px solid #c5c6c7;
+			    padding:10px;
+			    font-size:1.7em;
+			    vertical-align:middle;
+			}
+			tr:nth-child(even) {
+				background: #dfdfdf;
+				td:first-child {
+					color:white;			
+					font-weight: bold;
+					background: #438cb7
+				}
+			}
+			tr:nth-child(odd) {
+				background: #ffffff;
+				td:first-child {
+					color:white;					
+					font-weight: bold;
+					background: #4c9bcc
+				}
+			}
+
+			tr{
+				border-left: 2px solid #c5c6c7;
+				border-top: 2px solid #c5c6c7;
+			}
+
+			td{
+    			vertical-align: middle;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,65 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+
+<div id="tabPaneDesagregacionRegular" class="tab-pane fade">   
+
+	
+	<div class="container-fluid">
+
+		<!-- Begin Template for the tab-pane -->
+
+		<div class="hidden">
+			<div class="tab-pane fade active in" id="tab-pane-template">
+				<div style="overflow: auto">					
+					<iframe frameborder="0" class="useless"></iframe>
+				</div>
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-info fullscreen-button"> 
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.fullscreen" />
+						<span class="glyphicon glyphicon-fullscreen"></span>
+					</a>
+					<a class="btn share-button"> 
+						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share" />
+						<span class="glyphicon glyphicon-share-alt"></span>
+					</a>					
+				</div>
+				<div class="row share-panel" style="display: none">
+					<label><f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share_social" /></label>
+					<div class="share-socials">						
+					</div>	
+
+					<label><f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share_link" /></label>
+					<input class="form-control share-url" readonly>			
+
+					<label><f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.share_embed" /></label>
+					<input  class="form-control embed-url"  value='<iframe width="100%" height="50vh" frameborder="0" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true" src="LINK-TOKEN"></iframe>' readonly>					
+					</div>				
+				</div>
+			</div>			
+		</div>
+				
+		<!-- End Template for the tab-pane -->
+
+
+
+	    <div id="panelArchivosDesagregacionRegularHistorico" class="hidden">
+
+	        <ul class="nav nav-pills nav-justified" id="pillsArchivosDesagregacionRegularHistorico"></ul>
+
+	        <div class="tab-content" id="tabContentArchivosDesagregacionRegularHistorico" style="margin-bottom: 0px">
+	        </div>
+	    </div>
+
+	    <div id="panelArchivosDesagregacionRegularActual" class="hidden">
+
+	        <ul class="nav nav-pills nav-justified" id="pillsArchivosDesagregacionRegularActual"></ul>
+
+	        <div class="tab-content"  id="tabContentArchivosDesagregacionRegularActual" style="margin-bottom: 0px">
+	        </div>
+
+	    </div>
+
+	</div>     
+</div>
+
+</html>
