@@ -55,6 +55,13 @@ class Categoria extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $estadisticas = null;
 
     /**
+     * link
+     *
+     * @var string
+     */
+    protected $link = '';
+
+    /**
      * __construct
      */
     public function __construct()
@@ -201,5 +208,26 @@ class Categoria extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setEstadisticas(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $estadisticas)
     {
         $this->estadisticas = $estadisticas;
+    }
+
+    /**
+     * Returns the link
+     *
+     * @return string $link
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * Sets the link
+     *
+     * @param string $link
+     * @return void
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
     }
 }

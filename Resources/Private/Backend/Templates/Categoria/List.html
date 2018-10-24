@@ -23,6 +23,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<th><f:translate key="tx_estadisticaunal_domain_model_categoria.nombre_display" /></th>
 		<th><f:translate key="tx_estadisticaunal_domain_model_categoria.badge" /></th>
 		<th><f:translate key="tx_estadisticaunal_domain_model_categoria.alt_badge" /></th>
+		<th><f:translate key="tx_estadisticaunal_domain_model_categoria.link" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
@@ -33,6 +34,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td><f:link.action action="show" arguments="{categoria : categoria}"> {categoria.nombreDisplay}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{categoria : categoria}"> {categoria.badge.originalResource.name}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{categoria : categoria}"> {categoria.altBadge.originalResource.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{categoria : categoria}"> {categoria.link}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{categoria : categoria}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{categoria : categoria}">Delete</f:link.action></td>
 		</tr>

@@ -10,6 +10,7 @@ CREATE TABLE tx_estadisticaunal_domain_model_categoria (
 	nombre_display varchar(255) DEFAULT '' NOT NULL,
 	badge int(11) unsigned NOT NULL default '0',
 	alt_badge int(11) unsigned NOT NULL default '0',
+	link varchar(255) DEFAULT '' NOT NULL,
 	estadisticas int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-09-30T23:52:55Z" product-name="estadistica_unal">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-10-24T05:40:34Z" product-name="estadistica_unal">
 		<header/>
 		<body>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria">
@@ -17,6 +17,9 @@
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria.alt_badge">
 				<source>Alt Badge</source>
+			</trans-unit>
+			<trans-unit id="tx_estadisticaunal_domain_model_categoria.link">
+				<source>Link</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_categoria.estadisticas">
 				<source>Estadisticas</source>

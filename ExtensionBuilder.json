@@ -72,6 +72,16 @@
                             "propertyName": "altBadge",
                             "propertyType": "Image",
                             "uid": "1470476220950"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "link",
+                            "propertyType": "String",
+                            "uid": "1097567420749"
                         }
                     ]
                 },
@@ -985,7 +995,7 @@
         }
     ],
     "log": {
-        "last_modified": "2018-09-30 11:52",
+        "last_modified": "2018-10-24 05:40",
         "extension_builder_version": "8.6.0",
         "be_user": " (1)"
     }
