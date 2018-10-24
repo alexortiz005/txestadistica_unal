@@ -48,18 +48,18 @@ class Categoria extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $altBadge = null;
 
     /**
-     * estadisticas
-     *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Estadistica>
-     */
-    protected $estadisticas = null;
-
-    /**
      * link
      *
      * @var string
      */
     protected $link = '';
+
+    /**
+     * estadisticas
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Estadistica>
+     */
+    protected $estadisticas = null;
 
     /**
      * __construct

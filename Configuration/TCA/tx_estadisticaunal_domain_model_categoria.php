@@ -222,9 +222,8 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_categoria.link',
             'config' => [
-                'type' => 'inputLink',
-                'size' => 30,
-                'eval' => 'trim'
+                'type' => 'input',
+                'renderType' => 'inputLink',
             ],
         ],
         'estadisticas' => [
