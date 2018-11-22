@@ -17,11 +17,22 @@
 							</f:then>
 							<f:else>
 								<li>
-									<f:link.action action="show" arguments="{categoria : categoria}" >
-										<img src="{categoria.badge.originalResource.publicUrl}"
-											 class="bannerUnBadgeImg img-responsive" width=100%
-											 data-toggle="tooltip" data-placement="top" title="{categoria.nombreDisplay}">
-									</f:link.action>
+									<f:if condition="{categoria.link}">
+										<f:then>
+											<f:link.typolink parameter="{categoria.link}" target="_blank" additionalAttributes="{type:'button'}">
+													<img src="{categoria.badge.originalResource.publicUrl}"
+													 class="bannerUnBadgeImg img-responsive" width=100%
+													 data-toggle="tooltip" data-placement="top" title="{categoria.nombreDisplay}">												
+											</f:link.typolink>
+										</f:then>
+										<f:else>
+											<f:link.action action="show" arguments="{categoria : categoria}" >
+												<img src="{categoria.badge.originalResource.publicUrl}"
+													 class="bannerUnBadgeImg img-responsive" width=100%
+													 data-toggle="tooltip" data-placement="top" title="{categoria.nombreDisplay}">
+											</f:link.action>								
+										</f:else>
+									</f:if>
 								</li>
 							</f:else>
 						</f:if>
@@ -53,9 +64,18 @@
 							</f:then>
 							<f:else>
 								<li>
-									<f:link.action action="show" arguments="{categoria : categoria}" >
-										{categoria.nombreDisplay}
-									</f:link.action>
+									<f:if condition="{categoria.link}">
+										<f:then>
+											<f:link.typolink parameter="{categoria.link}" target="_blank" additionalAttributes="{type:'button'}">
+													{categoria.nombreDisplay}	
+											</f:link.typolink>
+										</f:then>
+										<f:else>
+											<f:link.action action="show" arguments="{categoria : categoria}" >
+												{categoria.nombreDisplay}
+											</f:link.action>			
+										</f:else>
+									</f:if>
 								</li>
 							</f:else>
 						</f:if>
