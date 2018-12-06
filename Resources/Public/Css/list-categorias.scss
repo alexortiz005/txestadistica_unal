@@ -48,7 +48,12 @@ $headings : h1 h2 h3 h4 h5 h6;
 	border-radius: 5%;
 
 	img{
-		border-radius: 20% 20% 5% 5%;
+		border-radius: 50% !important;
+		padding:2%;
+		max-width: 86%;
+		height: auto;
+		margin-left: 7%;
+		margin-bottom: -1%;
 	}
 
 	img:hover{
@@ -173,6 +178,10 @@ $headings : h1 h2 h3 h4 h5 h6;
 	
 	margin-top:15px;
 
+	.tooltip{
+		font-size:1.3em;
+	}
+
 	ul{
 		margin-left: 0px;
 	}
@@ -221,10 +230,14 @@ $headings : h1 h2 h3 h4 h5 h6;
 		padding: 2px;
 	}
 
+	.bannerUnBadgeImg{
+		border-radius: 50%;	
+		transition: 0.2s;
+	}
 	.bannerUnBadgeImg:hover{
 		background: #eeeeee;
 		box-shadow: 0px 0px 6px 3px #eeeeee;
-		border-radius: 40%;
+		padding: 2%;
 	}
 
 	.btnUnal {
@@ -292,7 +305,7 @@ $headings : h1 h2 h3 h4 h5 h6;
 	iframe{
 		width: 100%;
 		height: 50vh;
-		background: url(/typo3conf/ext/estadistica_unal/Resources/Public/Images/loader.gif) center center no-repeat;
+		background: url(../Images/loader.gif) center center no-repeat;
 	}	
 
 	.panelArchivos{
