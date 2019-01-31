@@ -1,6 +1,10 @@
-.panel-protocolo{
+.protocolo.container-fluid{
+
+	margin-top:30px;
+	padding:unset;
+
 	.panel-body{
-		padding:30px;
+		padding: 1.5em;
 	}
 	.atributos{
 
@@ -8,6 +12,12 @@
 
 		ul{
 			margin-left:unset;
+		}
+
+		p {overflow: auto;}
+
+		.tab-content {
+		    overflow-x: scroll;
 		}
 
 		.tab-pane{
@@ -44,6 +54,7 @@
 
 		table{
 			margin-bottom:10px;
+			width: 100%;
 			th {
 			    background:#1c5e83;
 			    color:white;
@@ -100,3 +111,4 @@
 		}
 	}
 }
+

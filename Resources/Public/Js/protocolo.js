@@ -16,8 +16,10 @@ $(".tableToPDF").click(function() {
                       lineWidth: 0
                   },
                   columnStyles: { 
-                                0: { columnWidth: 'wrap' },                           
-                                2: { columnWidth: 'wrap' },                           
+                                0: { columnWidth: 100 },  
+                                1: { columnWidth: 120 },   
+                                3: { columnWidth: 120 },  
+                                4: { columnWidth: 200 },                           
                                },
                 margin: {top: 80},
                 addPageContent: function(data) {
