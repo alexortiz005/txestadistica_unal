@@ -32,13 +32,6 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $nombreDisplay = '';
 
     /**
-     * tipo
-     *
-     * @var int
-     */
-    protected $tipo = 0;
-
-    /**
      * archivos
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Archivo>
@@ -115,27 +108,6 @@ class Desagregacion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setNombreDisplay($nombreDisplay)
     {
         $this->nombreDisplay = $nombreDisplay;
-    }
-
-    /**
-     * Returns the tipo
-     *
-     * @return int $tipo
-     */
-    public function getTipo()
-    {
-        return $this->tipo;
-    }
-
-    /**
-     * Sets the tipo
-     *
-     * @param int $tipo
-     * @return void
-     */
-    public function setTipo($tipo)
-    {
-        $this->tipo = $tipo;
     }
 
     /**

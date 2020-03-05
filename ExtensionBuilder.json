@@ -27,6 +27,7 @@
                     "description": "Categorias que separan los diferentes estadisticos",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "891989013851"
@@ -38,6 +39,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -48,6 +50,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
@@ -58,6 +61,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "badge",
                             "propertyType": "Image",
@@ -68,6 +72,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "altBadge",
                             "propertyType": "Image",
@@ -78,6 +83,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "link",
                             "propertyType": "String",
@@ -129,6 +135,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "362886285393"
@@ -140,6 +147,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -150,20 +158,11 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
                             "uid": "1135045305425"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "tipo",
-                            "propertyType": "Select",
-                            "uid": "1167971406626"
                         }
                     ]
                 },
@@ -222,6 +221,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "976495426869"
@@ -233,6 +233,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -243,6 +244,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
@@ -253,6 +255,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "link",
                             "propertyType": "Text",
@@ -263,6 +266,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "contenido",
                             "propertyType": "File",
@@ -273,6 +277,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "tipo",
                             "propertyType": "Select",
@@ -283,6 +288,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "explicacion",
                             "propertyType": "RichText",
@@ -322,6 +328,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "720531953828"
@@ -333,6 +340,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -343,6 +351,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "contenido",
                             "propertyType": "RichText",
@@ -394,6 +403,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "88525784170"
@@ -405,6 +415,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -415,6 +426,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
@@ -425,6 +437,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "textoProtocolo",
                             "propertyType": "RichText",
@@ -435,6 +448,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "badge",
                             "propertyType": "Image",
@@ -445,6 +459,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "altBadge",
                             "propertyType": "Image",
@@ -455,6 +470,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "link",
                             "propertyType": "String",
@@ -496,17 +512,6 @@
                             "relationWire": "[wired]",
                             "renderType": "selectMultipleSideBySide",
                             "uid": "1043721064176"
-                        },
-                        {
-                            "foreignRelationClass": "",
-                            "lazyLoading": false,
-                            "propertyIsExcludeField": true,
-                            "relationDescription": "",
-                            "relationName": "indicadores",
-                            "relationType": "manyToMany",
-                            "relationWire": "[wired]",
-                            "renderType": "selectMultipleSideBySide",
-                            "uid": "1469741095455"
                         }
                     ]
                 }
@@ -539,6 +544,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "725452541595"
@@ -550,6 +556,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -560,6 +567,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
@@ -599,6 +607,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "1466780546962"
@@ -610,6 +619,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -620,6 +630,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
@@ -630,6 +641,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "contenido",
                             "propertyType": "RichText",
@@ -681,6 +693,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
+                    "skipTypeConfiguration": false,
                     "sorting": false,
                     "type": "Entity",
                     "uid": "1252806700407"
@@ -692,6 +705,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombre",
                             "propertyType": "String",
@@ -702,6 +716,7 @@
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
                             "propertyIsRequired": false,
                             "propertyName": "nombreDisplay",
                             "propertyType": "String",
@@ -713,121 +728,10 @@
                     "relations": []
                 }
             }
-        },
-        {
-            "config": {
-                "position": [
-                    529,
-                    118
-                ]
-            },
-            "name": "New Model Object",
-            "value": {
-                "actionGroup": {
-                    "_default0_list": true,
-                    "_default1_show": false,
-                    "_default2_new_create": false,
-                    "_default3_edit_update": false,
-                    "_default4_delete": false,
-                    "customActions": []
-                },
-                "name": "Indicador",
-                "objectsettings": {
-                    "addDeletedField": true,
-                    "addHiddenField": true,
-                    "addStarttimeEndtimeFields": true,
-                    "aggregateRoot": true,
-                    "categorizable": false,
-                    "description": "",
-                    "mapToTable": "",
-                    "parentClass": "",
-                    "sorting": false,
-                    "type": "Entity",
-                    "uid": "334708760534"
-                },
-                "propertyGroup": {
-                    "properties": [
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "nombre",
-                            "propertyType": "String",
-                            "uid": "392771324360"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "nombreDisplay",
-                            "propertyType": "String",
-                            "uid": "451492773861"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "subtext",
-                            "propertyType": "String",
-                            "uid": "101442491739"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "descripcion",
-                            "propertyType": "RichText",
-                            "uid": "393054102410"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "badge",
-                            "propertyType": "Image",
-                            "uid": "755803287297"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
-                            "propertyName": "altBadge",
-                            "propertyType": "Image",
-                            "uid": "420064756252"
-                        }
-                    ]
-                },
-                "relationGroup": {
-                    "relations": []
-                }
-            }
         }
     ],
     "properties": {
-        "backendModules": [
-            {
-                "actions": {
-                    "controllerActionCombinations": ""
-                },
-                "description": "Modulo desarrollado para apoyar el funcionamiento del proyecto",
-                "key": "cifrasunalbe",
-                "mainModule": "web",
-                "name": "Fortalecimiento de la Actividad Estad\u00edstica BE",
-                "tabLabel": ""
-            }
-        ],
+        "backendModules": [],
         "description": "Extension dise\u00f1ada para dar soporte a la exposicion de datos estadisticos para el proyecto de fortalecimiento de la actividad estadistica",
         "emConf": {
             "category": "plugin",
@@ -838,7 +742,7 @@
             "skipGenerateDocumentationTemplate": false,
             "sourceLanguage": "en",
             "state": "alpha",
-            "targetVersion": "8.6.0-8.6.99",
+            "targetVersion": "8.7.0-8.7.99",
             "version": "1.0.0"
         },
         "extensionKey": "estadistica_unal",
@@ -860,15 +764,7 @@
                     "noncacheableActions": "",
                     "switchableActions": ""
                 },
-                "key": "estadisticaspreview",
-                "name": "Cifras Preview"
-            },
-            {
-                "actions": {
-                    "controllerActionCombinations": "",
-                    "noncacheableActions": "",
-                    "switchableActions": ""
-                },
+                "description": "",
                 "key": "listcategorias",
                 "name": "Categorias"
             },
@@ -878,6 +774,7 @@
                     "noncacheableActions": "",
                     "switchableActions": ""
                 },
+                "description": "",
                 "key": "showprotocolo",
                 "name": "Protocolo"
             }
@@ -980,23 +877,11 @@
                 "terminal": "SOURCES",
                 "uid": "725452541595"
             }
-        },
-        {
-            "src": {
-                "moduleId": 4,
-                "terminal": "relationWire_3",
-                "uid": "1469741095455"
-            },
-            "tgt": {
-                "moduleId": 8,
-                "terminal": "SOURCES",
-                "uid": "334708760534"
-            }
         }
     ],
     "log": {
-        "last_modified": "2018-10-24 06:35",
-        "extension_builder_version": "8.6.0",
+        "last_modified": "2020-03-05 08:25",
+        "extension_builder_version": "8.10.4",
         "be_user": " (1)"
     }
 }

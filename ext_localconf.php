@@ -7,29 +7,6 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Unal.EstadisticaUnal',
-            'Estadisticaspreview',
-            [
-                'Indicador' => 'preview',
-                'Categoria' => 'list, show',
-                'Desagregacion' => 'list, show',
-                'Archivo' => 'list, show',
-                'AtributoDesagregacion' => 'list, show',
-                'Estadistica' => 'list, show'
-                
-            ],
-            // non-cacheable actions
-            [
-                'Categoria' => '',
-                'Desagregacion' => '',
-                'Archivo' => '',
-                'AtributoDesagregacion' => '',
-                'Estadistica' => '',
-                'Indicador' => ''
-            ]
-        );
-
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Unal.EstadisticaUnal',
             'Listcategorias',
             [
                 'Categoria' => 'list, show',
@@ -44,8 +21,7 @@ call_user_func(
                 'Desagregacion' => '',
                 'Archivo' => '',
                 'AtributoDesagregacion' => '',
-                'Estadistica' => '',
-                'Indicador' => ''
+                'Estadistica' => ''
             ]
         );
 
@@ -61,8 +37,7 @@ call_user_func(
                 'Desagregacion' => '',
                 'Archivo' => '',
                 'AtributoDesagregacion' => '',
-                'Estadistica' => '',
-                'Indicador' => ''
+                'Estadistica' => ''
             ]
         );
 
@@ -71,15 +46,6 @@ call_user_func(
         'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
-                    estadisticaspreview {
-                        icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('estadistica_unal') . 'Resources/Public/Icons/user_plugin_estadisticaspreview.svg
-                        title = LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadistica_unal_domain_model_estadisticaspreview
-                        description = LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadistica_unal_domain_model_estadisticaspreview.description
-                        tt_content_defValues {
-                            CType = list
-                            list_type = estadisticaunal_estadisticaspreview
-                        }
-                    }
                     listcategorias {
                         icon = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('estadistica_unal') . 'Resources/Public/Icons/user_plugin_listcategorias.svg
                         title = LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadistica_unal_domain_model_listcategorias

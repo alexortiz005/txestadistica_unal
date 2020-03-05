@@ -77,31 +77,6 @@ class DesagregacionTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function getTipoReturnsInitialValueForInt()
-    {
-        self::assertSame(
-            0,
-            $this->subject->getTipo()
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function setTipoForIntSetsTipo()
-    {
-        $this->subject->setTipo(12);
-
-        self::assertAttributeEquals(
-            12,
-            'tipo',
-            $this->subject
-        );
-    }
-
-    /**
-     * @test
-     */
     public function getArchivosReturnsInitialValueForArchivo()
     {
         $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();

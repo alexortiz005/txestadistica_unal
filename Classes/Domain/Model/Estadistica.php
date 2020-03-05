@@ -83,13 +83,6 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $tiposAtrDesagregaciones = null;
 
     /**
-     * indicadores
-     *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Indicador>
-     */
-    protected $indicadores = null;
-
-    /**
      * __construct
      */
     public function __construct()
@@ -111,7 +104,6 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->desagregaciones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->atributos = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $this->tiposAtrDesagregaciones = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->indicadores = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -346,49 +338,6 @@ class Estadistica extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTiposAtrDesagregaciones(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $tiposAtrDesagregaciones)
     {
         $this->tiposAtrDesagregaciones = $tiposAtrDesagregaciones;
-    }
-
-    /**
-     * Adds a Indicador
-     *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Indicador $indicadore
-     * @return void
-     */
-    public function addIndicadore(\Unal\EstadisticaUnal\Domain\Model\Indicador $indicadore)
-    {
-        $this->indicadores->attach($indicadore);
-    }
-
-    /**
-     * Removes a Indicador
-     *
-     * @param \Unal\EstadisticaUnal\Domain\Model\Indicador $indicadoreToRemove The Indicador to be removed
-     * @return void
-     */
-    public function removeIndicadore(\Unal\EstadisticaUnal\Domain\Model\Indicador $indicadoreToRemove)
-    {
-        $this->indicadores->detach($indicadoreToRemove);
-    }
-
-    /**
-     * Returns the indicadores
-     *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Indicador> $indicadores
-     */
-    public function getIndicadores()
-    {
-        return $this->indicadores;
-    }
-
-    /**
-     * Sets the indicadores
-     *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Unal\EstadisticaUnal\Domain\Model\Indicador> $indicadores
-     * @return void
-     */
-    public function setIndicadores(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $indicadores)
-    {
-        $this->indicadores = $indicadores;
     }
 
     /**

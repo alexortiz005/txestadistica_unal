@@ -6,12 +6,7 @@ call_user_func(
     {
 
 
-      //lineas magicas para crear plugins
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Unal.EstadisticaUnal',
-            'Estadisticaspreview',
-            'Cifras Preview'
-        );
+       //lineas magicas para crear plugins
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Unal.EstadisticaUnal',

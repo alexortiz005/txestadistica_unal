@@ -1,4 +1,4 @@
-
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 
 This Template is responsible for creating a table of domain objects.
@@ -21,7 +21,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	<tr>
 		<th><f:translate key="tx_estadisticaunal_domain_model_desagregacion.nombre" /></th>
 		<th><f:translate key="tx_estadisticaunal_domain_model_desagregacion.nombre_display" /></th>
-		<th><f:translate key="tx_estadisticaunal_domain_model_desagregacion.tipo" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
@@ -30,7 +29,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<tr>
 			<td><f:link.action action="show" arguments="{desagregacion : desagregacion}"> {desagregacion.nombre}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{desagregacion : desagregacion}"> {desagregacion.nombreDisplay}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{desagregacion : desagregacion}"> {desagregacion.tipo}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{desagregacion : desagregacion}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{desagregacion : desagregacion}">Delete</f:link.action></td>
 		</tr>
@@ -38,4 +36,5 @@ Otherwise your changes will be overwritten the next time you save the extension 
 </table>
 
 <f:link.action action="new">New Desagregacion</f:link.action>
-</f:section>
+	</f:section>
+</html>
