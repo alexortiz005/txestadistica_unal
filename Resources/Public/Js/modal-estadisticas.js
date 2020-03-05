@@ -85,24 +85,16 @@ $(document).on("click",".desagregacion",function(event){
         var urlGetArchivos = $(this).data('url');
 
         var nombreDesagregacion = $(this).data('nombre');
-        var tipo = $(this).data('tipo')
+        
+        $("#tabPaneDesagregacionRegular").fadeOut(500, function(){
+            $(".nombreDesagregacion").html(nombreDesagregacion)
+            ajaxCallGetArchivosDesagregacionRegular(urlGetArchivos);
+        });
 
-        if(tipo==0){
-           
-
-            $("#tabPaneDesagregacionRegular").fadeOut(500, function(){
-                $(".nombreDesagregacion").html(nombreDesagregacion)
-                ajaxCallGetArchivosDesagregacionRegular(urlGetArchivos);
-            });
-
-            $("#tabPaneDesagregacionRegular").addClass("in active");
-           
-            $("#tabPaneDesagregacionRegular").fadeIn(500);
-        }else{
-
-            $("#tabPaneDesagregacionRegular").fadeOut(500);
-
-        }
+        $("#tabPaneDesagregacionRegular").addClass("in active");
+        
+        $("#tabPaneDesagregacionRegular").fadeIn(500);
+        
 
      
 });

@@ -5,7 +5,7 @@
     <!-- Lista de nombres  Inicio-->
     <ul  id="desagregaciones" class="nav nav-pills nav-justified dragscroll">
         <f:for each="{desagregaciones}" as="desagregacion" iteration="iterator">
-            <li data-nombre="{desagregacion.nombreDisplay}" data-tipo="{desagregacion.tipo}" data-url="{f:uri.action(action: 'getArchivos',pageType:'476', arguments: {desagregacion:desagregacion}, controller: 'Desagregacion', pageUid: pagina_protocolo_pageuid)}"  class="desagregacion {f:if(condition: "{iterator.isFirst}", then: 'active', else: '')}">
+            <li data-nombre="{desagregacion.nombreDisplay}" data-url="{f:uri.action(action: 'getArchivos',pageType:'476', arguments: {desagregacion:desagregacion}, controller: 'Desagregacion', pageUid: pagina_protocolo_pageuid)}"  class="desagregacion {f:if(condition: "{iterator.isFirst}", then: 'active', else: '')}">
                 <a data-toggle="pill">{desagregacion.nombreDisplay}</a>
             </li>
         </f:for>
