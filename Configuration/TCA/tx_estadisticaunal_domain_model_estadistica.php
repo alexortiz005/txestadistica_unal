@@ -331,7 +331,6 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatrdesagregacion',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatrdesagregacion.pid=###CURRENT_PID###',
                 'enableMultiSelectFilterTextfield' => true,
                 'MM' => 'tx_estadisticaunal_estadistica_tipoatrdesagregacion_mm',
                 'size' => 10,

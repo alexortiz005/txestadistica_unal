@@ -26,14 +26,16 @@ $(document).on("click",".fullscreen-button",function(event){
 });
 
 $(document).on("click",".share-button",function(event){ 
+   
+    sharePanel.toggle(500);
 
     sharePanelId=$(this).data('sharePanel');
     link=$(this).data('link');
 
     sharePanel =$("#"+sharePanelId);
+
     shareSocials=sharePanel.find(".share-socials");
 
-    sharePanel.toggle(500);
 
     shareSocials.jsSocials({
         showCount: false,
