@@ -27,29 +27,28 @@ $(document).on("click",".fullscreen-button",function(event){
 
 $(document).on("click",".share-button",function(event){ 
    
-    sharePanel.toggle(500);
-
-    sharePanelId=$(this).data('sharePanel');
-    link=$(this).data('link');
-
-    sharePanel =$("#"+sharePanelId);
-
-    shareSocials=sharePanel.find(".share-socials");
-
-
+    
+    var sharePanelId=$(this).data('sharePanel');
+    var link=$(this).data('link');
+    
+    var sharePanel =$("#"+sharePanelId);
+    
+    var shareSocials=sharePanel.find(".share-socials");
+    
+    
     shareSocials.jsSocials({
         showCount: false,
         showLabel: true,
         shareIn: "popup",
         url: link,
         text:document.title,
-        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "whatsapp"]
+        shares: ["email", "twitter", "facebook", "messenger", "linkedin", "whatsapp"]
     });
-
-
-
-    console.log();
-        
+    
+    
+    sharePanel.toggle(500);
+    
+    
 });
 
 function ajaxCallModal(urlAction){
