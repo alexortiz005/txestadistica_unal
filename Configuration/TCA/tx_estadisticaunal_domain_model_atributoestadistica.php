@@ -117,15 +117,7 @@ return [
                 'eval' => 'trim'
             ],
         ],
-        'nombre_display' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_atributoestadistica.nombre_display',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
+
         'contenido' => [
             'exclude' => true,
             'label' => 'LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_db.xlf:tx_estadisticaunal_domain_model_atributoestadistica.contenido',
@@ -144,12 +136,11 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatrestadistica',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatrestadistica.pid=###CURRENT_PID###',
                 'MM' => 'tx_estadisticaunal_atributoestadistica_tipoatrestadistica_mm',
                 'size' => 1,
             ],
-            
+
         ],
-    
+
     ],
 ];

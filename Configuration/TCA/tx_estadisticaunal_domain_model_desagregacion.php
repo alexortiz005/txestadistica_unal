@@ -147,6 +147,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_archivo',
+                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_archivo.pid=###CURRENT_PID###',
                 'MM' => 'tx_estadisticaunal_desagregacion_archivo_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
@@ -180,7 +181,7 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
         'atributos' => [
             'exclude' => true,
@@ -224,8 +225,8 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
-    
+
     ],
 ];

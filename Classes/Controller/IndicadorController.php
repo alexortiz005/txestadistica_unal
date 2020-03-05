@@ -51,7 +51,7 @@ class IndicadorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $periodoTransicion = $this->settings['periodo'];
         //se obtienen las uids que el editor selecciono en el backend a traves de la variable settings
         $uids_indicadores_a_mostrar = explode(',', $this->settings['indicadores_a_mostrar']);
-        //se crea un arreglo que contenera las indicadores que se van a mostrar en el preview
+        //se crea un arreglo que contendra las indicadores que se van a mostrar en el preview
         $indicadores_a_mostrar = [];
         //se usa el repositorio para encontrar cada una de las indicadores y cargar el arreglo
         foreach ($uids_indicadores_a_mostrar as $uid) {

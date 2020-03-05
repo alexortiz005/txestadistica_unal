@@ -244,6 +244,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_desagregacion',
+                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_desagregacion.pid=###CURRENT_PID###',
                 'MM' => 'tx_estadisticaunal_estadistica_desagregacion_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
@@ -277,7 +278,7 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
         'atributos' => [
             'exclude' => true,
@@ -321,7 +322,7 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
         'tipos_atr_desagregaciones' => [
             'exclude' => true,
@@ -365,7 +366,7 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
         'indicadores' => [
             'exclude' => true,
@@ -407,8 +408,8 @@ return [
                     ],
                 ],
             ],
-            
+
         ],
-    
+
     ],
 ];

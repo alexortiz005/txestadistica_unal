@@ -41,21 +41,13 @@
 										{tipo.nombreDisplay}
 									</f:for>
 								</td>
-								<td>
-									<f:format.html>{atributo.contenido}</f:format.html>
-								</td>
+								<td><f:format.html>{atributo.contenido}</f:format.html></td>
 							</tr>							  
 						</f:for>					 		  
 					</table>
-					<button 
-					type="button" 
-					class="btn btn-info btn-lg tableToPDF" 
-					data-table="table-atributos-generales" 
-					data-name="<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.atributos_generales" />  - {estadistica.nombreDisplay}  "
-					data-colwidths='["auto","auto"]'
-					>
-						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.descargar_pdf" />
-						<span class="glyphicon glyphicon-download-alt"></span>
+					<button type="button" class="btn btn-info btn-lg tableToPDF" data-table="table-atributos-generales" data-name="<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.atributos_generales" />  - {estadistica.nombreDisplay}  ">
+					<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.descargar_pdf" />
+					<span class="glyphicon glyphicon-download-alt"></span>
 					</button>
 
 					
@@ -99,15 +91,9 @@
 							</tr>							  
 						</f:for>					 		  
 					</table>
-					<button 
-					type="button" 
-					class="btn btn-info btn-lg tableToPDF" 
-					data-table="table-atributos-desagregaciones" 
-					data-name="<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.desagregaciones_tematicas" /> - {estadistica.nombreDisplay}  "
-					data-colwidths="[100,120,120,200]"
-					>
-						<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.descargar_pdf" />
-						<span class="glyphicon glyphicon-download-alt"></span>
+					<button type="button" class="btn btn-info btn-lg tableToPDF" data-table="table-atributos-desagregaciones" data-name="<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_estadistica.xlf:protocolo.desagregaciones_tematicas" /> - {estadistica.nombreDisplay}  ">
+					<f:translate key="LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal.descargar_pdf" />
+					<span class="glyphicon glyphicon-download-alt"></span>
 					</button>
 				</div>
 			</div>

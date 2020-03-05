@@ -191,10 +191,6 @@ return [
                     ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_desagregacion.tipo_regular', '--div--'],
                     ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.tipo_historico', 0],
                     ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.tipo_actual', 1],
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_desagregacion.tipo_geografico', '--div--'],
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.tipo_mundial', 2],
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.tipo_nacional', 3],
-                    ['LLL:EXT:estadistica_unal/Resources/Private/Language/locallang.xlf:tx_estadisticaunal_domain_model_archivo.tipo_departamental', 4],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
@@ -212,6 +208,6 @@ return [
             ],
             'defaultExtras' => 'richtext:rte_transform'
         ],
-    
+
     ],
 ];

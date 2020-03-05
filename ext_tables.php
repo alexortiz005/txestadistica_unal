@@ -5,6 +5,8 @@ call_user_func(
     function()
     {
 
+
+      //lineas magicas para crear plugins
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Unal.EstadisticaUnal',
             'Estadisticaspreview',
@@ -28,15 +30,7 @@ call_user_func(
             $_EXTKEY='estadistica_unal';
             $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
 
-            //pi_flexform value for cifras preview
-            $frontendpluginName = 'Estadisticaspreview';
-            $pluginSignature = strtolower($extensionName).'_'.strtolower($frontendpluginName);
 
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
-            $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature]= 'select_key, pages, recursive';
-
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/cifras_preview.xml');
-    
 
             //pi_flexform value for categorias
             $frontendpluginName = 'Listcategorias';
@@ -74,6 +68,7 @@ call_user_func(
 
         }
 
+        //linea magica ara acoplar el typoscript
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('estadistica_unal', 'Configuration/TypoScript', 'Estadistica Unal');
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_estadisticaunal_domain_model_categoria', 'EXT:estadistica_unal/Resources/Private/Language/locallang_csh_tx_estadisticaunal_domain_model_categoria.xlf');
