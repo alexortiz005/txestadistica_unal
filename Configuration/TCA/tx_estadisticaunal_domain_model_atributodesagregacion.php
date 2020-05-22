@@ -135,7 +135,6 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'foreign_table' => 'tx_estadisticaunal_domain_model_tipoatrdesagregacion',
-                'foreign_table_where' => 'AND tx_estadisticaunal_domain_model_tipoatrdesagregacion.pid=###CURRENT_PID###',
                 'MM' => 'tx_estadisticaunal_atributodesagregacion_tipoatrdesagregacion_mm',                
             ],
             

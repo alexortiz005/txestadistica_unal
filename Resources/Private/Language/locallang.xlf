@@ -259,7 +259,7 @@
 				<source>Tipo</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_estadistica.tooltip_dashboard">
-				<source>Haga clic en el título para ver en detalle</source>
+				<source>Ver Metadatos</source>
 			</trans-unit>
 			<trans-unit id="tx_estadisticaunal_domain_model_tipoatributo">
 				<source>Tipo Atributo</source>
