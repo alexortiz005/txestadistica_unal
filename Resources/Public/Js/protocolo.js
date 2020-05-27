@@ -17,7 +17,7 @@ $(".tableToPDF").click(function() {
                   },
                   columnStyles: { 
                                 0: { columnWidth: 100 },  
-                                1: { columnWidth: 120 },   
+                                2: { columnWidth: 120 },   
                                 3: { columnWidth: 120 },  
                                 4: { columnWidth: 200 },                           
                                },
